@@ -8,7 +8,7 @@ import {
 import {white, black, backgroundColor} from '../Constants/index';
 import {moderateScale} from 'react-native-size-matters';
 
-const Button = ({
+const CutomButton = ({
   backgroundColor,
   text,
   width,
@@ -50,4 +50,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Button;
+export default CutomButton;

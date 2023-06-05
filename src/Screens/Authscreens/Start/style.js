@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     width: moderateScale(179, 0.1),
     height: moderateScale(164, 0.1),
     left: moderateScale(10, 0.1),
-    top: moderateScale(74, 0.1),
+    top: moderateScale(12, 0.1),
   },
 });
 
