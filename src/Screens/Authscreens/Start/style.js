@@ -1,6 +1,6 @@
 import {Dimensions, StyleSheet} from 'react-native';
 import {moderateScale} from 'react-native-size-matters';
-import {backgroundColor} from '../../../Constants';
+import {backgroundColor, screenHeight, screenWidth} from '../../../Constants';
 
 const Poppins = '';
 const PoppinsBold = '';
@@ -8,8 +8,8 @@ const PoppinsBold = '';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-
-    // backgroundColor: backgroundColor,
+    backgroundColor: backgroundColor,
+    paddingHorizontal: moderateScale(20, 0.1),
   },
   imgRow1: {
     paddingTop: moderateScale(18, 0.1),
