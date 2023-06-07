@@ -9,7 +9,38 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: backgroundColor,
-    paddingHorizontal: moderateScale(20, 0.1),
+    // paddingHorizontal: moderateScale(20, 0.1),
+    position: 'relative',
+  },
+  backImg: {
+    flex: 1,
+    position: 'relative',
+    height: '100%',
+    width: '100%',
+    backgroundColor: backgroundColor,
+  },
+  arrow: {
+    position: 'absolute',
+    top: 0,
+    right: 0,
+  },
+  arrImg: {
+    height: 130,
+    width: 60,
+  },
+  center: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    top: moderateScale(210, 0.1),
+    position: 'relative',
+  },
+  logo: {
+    marginBottom: moderateScale(12, 0.1),
+  },
+  text: {
+    marginVertical: moderateScale(-40, 0.1),
+    width: moderateScale(110, 0.1),
+    height: moderateScale(110, 0.1),
   },
   imgRow1: {
     paddingTop: moderateScale(18, 0.1),
@@ -43,7 +74,7 @@ const styles = StyleSheet.create({
     // justifyContent: 'center',
     flexDirection: 'column',
     // justifyContent: 'space-between',
-    top: moderateScale(68, 0.1),
+    // top: moderateScale(68, 0.1),
   },
   i13: {
     // position: 'absolute',

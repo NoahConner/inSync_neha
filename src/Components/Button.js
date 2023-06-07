@@ -44,14 +44,15 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: black,
     justifyContent: 'center',
-    width: moderateScale(173, 0.1),
+    width: moderateScale(156, 0.1),
     height: moderateScale(40, 0.1),
     color: white,
+    // marginTop: moderateScale(-10),
   },
   view: {
     backgroundColor: black,
     justifyContent: 'center',
-    width: moderateScale(163, 0.1),
+    width: moderateScale(146, 0.1),
     height: moderateScale(34, 0.1),
     borderWidth: 1,
     borderColor: white,
