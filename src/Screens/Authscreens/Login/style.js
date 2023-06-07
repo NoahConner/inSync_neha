@@ -19,9 +19,11 @@ const styles = StyleSheet.create({
   backImg: {
     flex: 1,
     backgroundColor: backgroundColor,
-    position: 'relative',
+    // position: 'absolute',
     height: '100%',
     width: '100%',
+    // alignSelf:'stretch'
+
   },
   center: {
     alignSelf: 'center',
@@ -45,6 +47,15 @@ const styles = StyleSheet.create({
   input: {
     marginVertical: moderateScale(30, 0.1),
   },
+  fTxt:{
+    justifyContent:'flex-end',
+    alignItems:'flex-end'
+  },
+  btn:{
+    justifyContent:'center',
+    alignItems:'center',
+    marginVertical: moderateScale(15,0.1)
+  }
 });
 
 export default styles;

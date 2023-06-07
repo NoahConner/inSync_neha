@@ -182,8 +182,9 @@ const Input = ({
 
 const styles = StyleSheet.create({
   inputContainer: {
-    flex: 1,
-    backgroundColor: 'red',
+    // flex: 1,
+    // backgroundColor: 'red',
+    marginVertical: moderateScale(8,0.1)
   },
   activeContainer: {
     borderBottomColor: purple,
@@ -193,8 +194,9 @@ const styles = StyleSheet.create({
     height: moderateScale(42, 0.1),
     borderColor: black,
     borderWidth: 1,
-    alignItems: 'center',
+    textAlign:'center',
     paddingHorizontal: moderateScale(12, 0.1),
+    // backgroundColor:'red'
   },
   eyeButton: {
     padding: 8,

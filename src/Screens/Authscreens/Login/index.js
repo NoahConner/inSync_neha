@@ -2,6 +2,7 @@ import {View, Text, ImageBackground, Image} from 'react-native';
 import React from 'react';
 import s from './style';
 import Input from '../../../Components/input';
+import Button from '../../../Components/Button';
 import {backgroundColor, black} from '../../../Constants';
 const Login = () => {
   return (
@@ -20,7 +21,14 @@ const Login = () => {
         <Text style={s.txt2}>Glad to see you!</Text>
         <View style={s.input}>
           <Input placeholder={'Email/Username'} type={'text'} />
-          <Input placeholder={'Email/Username'} type={'text'} />
+          <Input placeholder={'Password'} type={'password'} />
+          <View style={s.fTxt}>
+          <Text>Forgot Password ?</Text>
+          </View>
+          <View style={s.btn}>
+
+          <Button text={'Login'}/>
+          </View>
         </View>
       </View>
 
