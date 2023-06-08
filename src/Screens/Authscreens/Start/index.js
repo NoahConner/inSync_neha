@@ -42,7 +42,10 @@ const StartScreen = ({navigation}) => {
             <CutomButton text="Login" onPress={navigation.navigate('Login')} />
           </View>
           <View>
-            <CutomButton text="Sign Up" />
+            <CutomButton
+              text="Sign Up"
+              onPress={navigation.navigate('SignUp')}
+            />
           </View>
         </View>
       </View>

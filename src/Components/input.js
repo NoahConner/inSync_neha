@@ -7,19 +7,12 @@ import {
   Animated,
   Modal,
 } from 'react-native';
-import {
-  KumbhSansExtraBold,
-  black,
-  gray,
-  purple,
-  red,
-  screenWidth,
-  white,
-} from '../Constants/index';
+import {black, purple, emailReg, screenWidth, white} from '../Constants/index';
 // import Icon from 'react-native-vector-icons/FontAwesome5';
 // import DatePicker from 'react-native-date-picker';
 import Button from './Button';
 import {moderateScale} from 'react-native-size-matters';
+import Feather from 'react-native-vector-icons/Feather';
 
 const Input = ({
   placeholder,
@@ -37,7 +30,8 @@ const Input = ({
   const [isActive, setIsActive] = useState(false);
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [showModal, setShowModal] = useState(false);
-
+  const [showPass, setshowPass] = useState(true);
+  const [showConfPass, setShowConfpass] = useState(true);
   return (
     <View style={styles.inputContainer}>
       {/* {type === 'date' && (
@@ -116,9 +110,17 @@ const Input = ({
       )} */}
       {type === 'text' && (
         <TextInput
-          disabled={disabled}
-          editable={!disabled}
-          selectTextOnFocus={!disabled}
+          placeholderTextColor={black}
+          style={styles.input}
+          placeholder={placeholder}
+          value={value}
+          onChangeText={setValue}
+          // onFocus={() => setIsActive(true)}
+          // onBlur={() => setIsActive(false)}
+        />
+      )}
+      {type === 'number' && (
+        <TextInput
           placeholderTextColor={black}
           style={styles.input}
           placeholder={placeholder}
@@ -126,54 +128,68 @@ const Input = ({
           onChangeText={setValue}
           onFocus={() => setIsActive(true)}
           onBlur={() => setIsActive(false)}
-          textAlign={textAlign}
-          fontFamily={fontFamily}
-          fontSize={fontSize}
+          keyboardType={'numeric'}
         />
       )}
-      {type === 'number' && (
+      {type === 'email' && (
         <TextInput
-          disabled={disabled}
-          editable={!disabled}
-          selectTextOnFocus={!disabled}
-          placeholderTextColor={placeholderTextColor}
+          placeholderTextColor={black}
           style={styles.input}
           placeholder={placeholder}
           value={value}
           onChangeText={setValue}
-          onFocus={() => setIsActive(true)}
-          onBlur={() => setIsActive(false)}
-          fontSize={fontSize}
-          keyboardType={'numeric'}
         />
       )}
       {type === 'password' && (
         <>
-          <TextInput
-            disabled={disabled}
-            editable={!disabled}
-            selectTextOnFocus={!disabled}
-            placeholderTextColor={black}
-            style={styles.input}
-            placeholder={placeholder}
-            value={value}
-            onChangeText={setValue}
-            onFocus={() => setIsActive(true)}
-            onBlur={() => setIsActive(false)}
-            textAlign={textAlign}
-            fontFamily={fontFamily}
-            fontSize={fontSize}
-            secureTextEntry={secureTextEntry}
-          />
-          {/* <TouchableOpacity
-            style={styles.eyeButton}
-            onPress={toggleSecureTextEntry}>
-            <Icon
-              name={secureTextEntry ? 'eye' : 'eye-slash'}
-              size={15}
-              color={purple}
+          <View style={[styles.input, {flexDirection: 'row'}]}>
+            <TextInput
+              style={{flex: 0.9}}
+              placeholderTextColor={black}
+              placeholder={placeholder}
+              value={value}
+              onChangeText={setValue}
+              secureTextEntry={showPass}
             />
-          </TouchableOpacity> */}
+            <TouchableOpacity
+              style={{
+                alignSelf: 'center',
+                flex: 0.1,
+              }}
+              onPress={() => setshowPass(!showPass)}>
+              <Feather
+                name={showPass ? 'eye' : 'eye-off'}
+                color={black}
+                size={20}
+              />
+            </TouchableOpacity>
+          </View>
+        </>
+      )}
+      {type === 'Confirm password' && (
+        <>
+          <View style={[styles.input, {flexDirection: 'row'}]}>
+            <TextInput
+              style={{flex: 0.9}}
+              placeholderTextColor={black}
+              placeholder={placeholder}
+              value={value}
+              onChangeText={setValue}
+              secureTextEntry={showConfPass}
+            />
+            <TouchableOpacity
+              style={{
+                alignSelf: 'center',
+                flex: 0.1,
+              }}
+              onPress={() => setShowConfpass(!showConfPass)}>
+              <Feather
+                name={showConfPass ? 'eye' : 'eye-off'}
+                color={black}
+                size={20}
+              />
+            </TouchableOpacity>
+          </View>
         </>
       )}
     </View>
@@ -184,17 +200,19 @@ const styles = StyleSheet.create({
   inputContainer: {
     // flex: 1,
     // backgroundColor: 'red',
-    marginVertical: moderateScale(8,0.1)
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginVertical: moderateScale(7, 0.1),
   },
   activeContainer: {
     borderBottomColor: purple,
   },
   input: {
     width: moderateScale(270, 0.1),
-    height: moderateScale(42, 0.1),
+    height: moderateScale(37, 0.1),
     borderColor: black,
     borderWidth: 1,
-    textAlign:'center',
+    // textAlign: 'center',
     paddingHorizontal: moderateScale(12, 0.1),
     // backgroundColor:'red'
   },

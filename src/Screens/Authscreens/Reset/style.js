@@ -13,7 +13,6 @@ const PoppinsBold = '';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'red',
   },
   backImg: {
     flex: 1,
@@ -23,28 +22,15 @@ const styles = StyleSheet.create({
   },
   center: {
     alignSelf: 'center',
-    top: moderateScale(87, 0.1),
-    height: '84%',
+    top: moderateScale(82, 0.1),
+    // backgroundColor: 'red',
+    height: '86%',
   },
   txt1: {
     fontSize: moderateScale(25, 0.1),
     lineHeight: moderateScale(30, 0.1),
     color: black,
     fontWeight: moderateScale(400, 0.1),
-    alignSelf: 'center',
-  },
-  txt2: {
-    fontSize: moderateScale(15, 0.1),
-    lineHeight: moderateScale(20, 0.1),
-    color: black,
-    fontWeight: moderateScale(300, 0.1),
-    alignSelf: 'center',
-  },
-  txt3: {
-    fontSize: moderateScale(14, 0.1),
-    lineHeight: moderateScale(17, 0.1),
-    color: black,
-    fontWeight: moderateScale(300, 0.1),
     alignSelf: 'center',
   },
 
@@ -59,25 +45,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     paddingVertical: moderateScale(10, 0.1),
-  },
-  Ftxt: {
-    color: 'black',
-    fontSize: moderateScale(13, 0.1),
-  },
-  SLogin: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignSelf: 'center',
+    // backgroundColor: 'red',
   },
   vector: {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     paddingVertical: moderateScale(7, 0.1),
-  },
-  link: {
-    flexDirection: 'row',
-    alignSelf: 'center',
   },
 });
 
