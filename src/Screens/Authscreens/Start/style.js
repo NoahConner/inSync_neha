@@ -83,6 +83,12 @@ const styles = StyleSheet.create({
     left: moderateScale(10, 0.1),
     top: moderateScale(12, 0.1),
   },
+  vector: {
+    flex: 1,
+    alignItems: 'flex-end',
+    justifyContent: 'flex-end',
+    bottom: 0,
+  },
 });
 
 export default styles;

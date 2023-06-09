@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   },
   center: {
     alignSelf: 'center',
-    top: moderateScale(87, 0.1),
+    top: moderateScale(70, 0.1),
     height: '84%',
   },
   txt1: {

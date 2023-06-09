@@ -14,20 +14,17 @@ import {moderateScale} from 'react-native-size-matters';
 import Header from '../../../Components/Header';
 import {AppContext} from '../../../Context/AppContext';
 
-const SignUp = ({navigation}) => {
+const Form = ({navigation}) => {
   const [name, setName] = useState(null);
   const [last, setLast] = useState(null);
-  const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
   const [confPassword, setConfPass] = useState(null);
+  const context = useContext(AppContext);
 
-  const signUp = () => {
-    navigation.navigate('choose');
-  };
   return (
     <ImageBackground
       style={s.backImg}
-      source={require('../../../assets/images/SignUp.png')}
+      source={require('../../../assets/images/form.jpg')}
       resizeMode="contain">
       <View>
         <Image
@@ -37,8 +34,7 @@ const SignUp = ({navigation}) => {
       </View>
       <Header navigation={navigation} />
       <View style={s.center}>
-        <Text style={s.txt1}>Create Account!</Text>
-        <Text style={s.txt2}>To get started now</Text>
+        <Text style={s.txt1}>Detailed Form</Text>
         <View style={s.input}>
           <Input
             placeholder={'First Name'}
@@ -52,50 +48,24 @@ const SignUp = ({navigation}) => {
             value={last}
             setValue={v => setLast(v)}
           />
-          <Input
-            placeholder={'Email'}
-            type={'email'}
-            setValue={v => setEmail(v)}
-            value={email}
-          />
-          <Input
-            placeholder={'Password'}
-            type={'password'}
-            value={password}
-            setValue={setPassword}
-          />
-          <Input
-            placeholder={'Confirm Password'}
-            type={'Confirm password'}
-            value={confPassword}
-            setValue={setConfPass}
-          />
+          <Input placeholder={'DOB'} type={'DOB'} />
+          <Input placeholder={'Cycle Duration'} type={'cycle'} />
+          <Input placeholder={'Expected Date'} type={'expected date'} />
+          <Input placeholder={'Period Duration'} type={'period duration'} />
+          <Input placeholder={'Relation'} type={'relation'} />
 
           <View style={s.btn}>
-            <Button text={'Create Now'} onPress={signUp()} />
-          </View>
-
-          <View style={s.vector1}>
-            <Image source={require('../../../assets/images/PNG/line.png')} />
-            <Text style={s.txt3}> Or Sign UP With </Text>
-            <Image source={require('../../../assets/images/PNG/line.png')} />
-          </View>
-          <View style={s.SLogin}>
-            <SocialLogin
-              source={require('../../../assets/images/PNG/google.png')}
-            />
-            <SocialLogin
-              source={require('../../../assets/images/PNG/fb.png')}
+            <Button
+              text={'Submit'}
+              onPress={() => {
+                context.setToken('abc');
+                navigation.navigate('home');
+              }}
             />
           </View>
         </View>
       </View>
-      <TouchableOpacity
-        onPress={() => navigation.navigate('Login')}
-        style={s.link}>
-        <Text style={s.Ftxt}>Already have an account?</Text>
-        <Text style={[s.Ftxt, {fontWeight: 'bold'}]}> Login</Text>
-      </TouchableOpacity>
+
       <View style={s.vector}>
         <Image
           style={{transform: [{rotate: '180deg'}]}}
@@ -106,4 +76,4 @@ const SignUp = ({navigation}) => {
     </ImageBackground>
   );
 };
-export default SignUp;
+export default Form;

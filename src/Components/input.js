@@ -8,12 +8,12 @@ import {
   Modal,
 } from 'react-native';
 import {black, purple, emailReg, screenWidth, white} from '../Constants/index';
-// import Icon from 'react-native-vector-icons/FontAwesome5';
-// import DatePicker from 'react-native-date-picker';
+import Icon from 'react-native-vector-icons/FontAwesome5';
+import Entypo from 'react-native-vector-icons/Entypo';
 import Button from './Button';
 import {moderateScale} from 'react-native-size-matters';
 import Feather from 'react-native-vector-icons/Feather';
-
+import DateTimePickerModal from 'react-native-modal-datetime-picker';
 const Input = ({
   placeholder,
   value,
@@ -29,85 +29,61 @@ const Input = ({
   const [secureTextEntry, setSecureTextEntry] = useState(true);
   const [isActive, setIsActive] = useState(false);
   const [selectedDate, setSelectedDate] = useState(new Date());
-  const [showModal, setShowModal] = useState(false);
   const [showPass, setshowPass] = useState(true);
   const [showConfPass, setShowConfpass] = useState(true);
+  const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
+
+  const showDatePicker = () => {
+    setDatePickerVisibility(true);
+  };
+
+  const hideDatePicker = () => {
+    setDatePickerVisibility(false);
+  };
+
+  const handleConfirm = date => {
+    console.warn('A date has been picked: ', date);
+    hideDatePicker();
+  };
   return (
     <View style={styles.inputContainer}>
-      {/* {type === 'date' && (
+      {(type === 'DOB' ||
+        type === 'cycle' ||
+        type === 'expected date' ||
+        type === 'period duration') && (
         <>
-          <TextInput
-            disabled={disabled}
-            editable={!disabled}
-            selectTextOnFocus={!disabled}
-            placeholderTextColor={placeholderTextColor}
-            style={styles.input}
-            placeholder={placeholder}
-            value={selectedDate.toDateString()}
-            onChangeText={setValue}
-            onFocus={() => setIsActive(true)}
-            onBlur={() => setIsActive(false)}
-            textAlign={textAlign}
-            fontFamily={fontFamily}
-            fontSize={fontSize}
-          />
-          <TouchableOpacity
-            style={styles.calendarButton}
-            onPress={() => setShowModal(true)}>
-            <Icon name="calendar-alt" size={15} color={purple} />
-          </TouchableOpacity>
-          <Modal
-            visible={showModal}
-            transparent
-            animationType="slide"
-            onRequestClose={() => setShowModal(false)}>
-            <View style={styles.modalContainer}>
-              <View style={styles.modalContent}>
-                <View style={styles.rowContainer}>
-                  <DatePicker
-                    date={selectedDate}
-                    onDateChange={handleDateChange}
-                    mode="date"
-                    textColor={black}
-                    style={styles.datePicker}
-                  />
-                  <View style={styles.buttonContainer}>
-                    <Button
-                      style={styles.modalButton}
-                      fontSize={moderateScale(14)}
-                      backgroundColor={purple}
-                      color={white}
-                      text="Select"
-                      padding={moderateScale(0)}
-                      textAlign="center"
-                      borderRadius={moderateScale(0)}
-                      width={moderateScale(screenWidth / 2 - 30)}
-                      onPress={() => {
-                        setValue(selectedDate.toISOString());
-                        setShowModal(false);
-                      }}
-                    />
-                    <Button
-                      style={styles.modalButton}
-                      fontSize={moderateScale(14)}
-                      backgroundColor={red}
-                      color={white}
-                      text="Cancel"
-                      padding={moderateScale(0)}
-                      textAlign="center"
-                      borderRadius={moderateScale(0)}
-                      width={moderateScale(screenWidth / 2 - 30)}
-                      onPress={() => {
-                        setShowModal(false);
-                      }}
-                    />
-                  </View>
-                </View>
-              </View>
-            </View>
-          </Modal>
+          <View style={[styles.input, {flexDirection: 'row'}]}>
+            <TextInput
+              placeholderTextColor={black}
+              style={{flex: 0.9}}
+              placeholder={placeholder}
+              // value={selectedDate.toDateString()}
+              onChangeText={setValue}
+            />
+
+            <TouchableOpacity
+              style={{
+                alignSelf: 'center',
+                flex: 0.1,
+              }}
+              onPress={showDatePicker}>
+              <Icon
+                name="calendar-alt"
+                size={18}
+                color={black}
+                style={styles.icon}
+              />
+            </TouchableOpacity>
+
+            <DateTimePickerModal
+              isVisible={isDatePickerVisible}
+              mode="date"
+              onConfirm={handleConfirm}
+              onCancel={hideDatePicker}
+            />
+          </View>
         </>
-      )} */}
+      )}
       {type === 'text' && (
         <TextInput
           placeholderTextColor={black}
@@ -192,6 +168,29 @@ const Input = ({
           </View>
         </>
       )}
+      {type === 'relation' && (
+        <View style={[styles.input, {flexDirection: 'row'}]}>
+          <TextInput
+            placeholderTextColor={black}
+            style={{flex: 0.9}}
+            placeholder={placeholder}
+            onChangeText={setValue}
+          />
+
+          <TouchableOpacity
+            style={{
+              alignSelf: 'center',
+              flex: 0.1,
+            }}>
+            <Entypo
+              name="chevron-down"
+              size={18}
+              color={black}
+              style={styles.icon}
+            />
+          </TouchableOpacity>
+        </View>
+      )}
     </View>
   );
 };
@@ -219,39 +218,9 @@ const styles = StyleSheet.create({
   eyeButton: {
     padding: 8,
   },
-  calendarButton: {
-    padding: 8,
-    marginLeft: 8,
-  },
-  modalContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-  },
-  modalContent: {
-    backgroundColor: white,
-    borderRadius: 10,
-    padding: 16,
-    width: screenWidth,
-    alignSelf: 'center',
-  },
-  modalCloseButton: {
-    marginTop: 16,
-    alignSelf: 'flex-end',
-  },
-  modalCloseButtonText: {
-    color: purple,
-    fontWeight: 'bold',
-  },
-  buttonContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  modalButton: {
-    padding: moderateScale(10),
-    borderRadius: moderateScale(10),
+  icon: {
+    // padding: 8,
+    paddingLeft: moderateScale(6.5, 0.1),
   },
 });
 

@@ -39,12 +39,15 @@ const StartScreen = ({navigation}) => {
         </View>
         <View style={s.btn}>
           <View style={{paddingVertical: 15}}>
-            <CutomButton text="Login" onPress={navigation.navigate('Login')} />
+            <CutomButton
+              text="Login"
+              onPress={() => navigation.navigate('Login')}
+            />
           </View>
           <View>
             <CutomButton
               text="Sign Up"
-              onPress={navigation.navigate('SignUp')}
+              onPress={() => navigation.navigate('SignUp')}
             />
           </View>
         </View>
@@ -65,13 +68,7 @@ const StartScreen = ({navigation}) => {
             source={require('../../../assets/images/PNG/i14.png')}
           />
         </View>
-        <View
-          style={{
-            flex: 1,
-            alignItems: 'flex-end',
-            justifyContent: 'flex-end',
-            bottom: 0,
-          }}>
+        <View style={s.vector}>
           <Image
             style={{transform: [{rotate: '180deg'}]}}
             resizeMode="contain"

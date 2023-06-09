@@ -19,23 +19,16 @@ const styles = StyleSheet.create({
   backImg: {
     flex: 1,
     backgroundColor: backgroundColor,
-    overflow: 'hidden',
     // position: 'absolute',
-    // height: '100%',
-    // width: '100%',
-    position: 'absolute',
-    top: 0,
-    right: 0,
-    bottom: 0,
-    left: 0,
-
-    // alignSelf:'stretch'
+    // overflow: 'hidden',
+    height: '100%',
+    width: '100%',
   },
   center: {
     alignSelf: 'center',
     top: moderateScale(82, 0.1),
     // backgroundColor: 'red',
-    height: '84%',
+    height: '83%',
   },
   txt1: {
     fontSize: moderateScale(25, 0.1),
@@ -81,7 +74,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignSelf: 'center',
   },
-  vector: {
+  vector1: {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
@@ -93,10 +86,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   vector: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingVertical: moderateScale(7, 0.1),
+    flex: 1,
+    alignItems: 'flex-end',
+    justifyContent: 'flex-end',
+    bottom: 0,
   },
 });
 
