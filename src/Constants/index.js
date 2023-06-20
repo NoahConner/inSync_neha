@@ -7,4 +7,4 @@ export const black = '#000000';
 export const backgroundColor = '#ffff';
 export const white = 'white';
 export const emailReg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-export const linearGradient = ['#7452B0', '#A78DD5'];
+export const linearGradient = ['#717171', '#0D0D0D'];

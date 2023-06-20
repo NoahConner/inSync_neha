@@ -8,17 +8,20 @@ import {
   TouchableWithoutFeedback,
   Keyboard,
 } from 'react-native';
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import s from './style';
 import Input from '../../../Components/input';
 import Button from '../../../Components/Button';
 import SocialLogin from '../../../Components/socialLogin';
 import {moderateScale} from 'react-native-size-matters';
 import {screenHeight} from '../../../Constants';
+import {AppContext, useAppContext} from '../../../Context/AppContext';
 
 const Login = ({navigation}) => {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
+  const {setToken} = useAppContext(AppContext);
+
   return (
     <KeyboardAvoidingView
       style={{flex: 1}}
@@ -26,7 +29,7 @@ const Login = ({navigation}) => {
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <ImageBackground
           style={s.backImg}
-          source={require('../../../assets/images/Login.png')}
+          source={require('../../../assets/images/login.jpg')}
           resizeMode="contain">
           <View>
             <Image
@@ -51,12 +54,12 @@ const Login = ({navigation}) => {
                 value={password}
               />
               <TouchableOpacity
-                onPress={() => navigation.navigate('Forgot')}
+                onPress={() => navigation.navigate('forgot')}
                 style={s.fTxt}>
                 <Text style={s.Ftxt}>Forgot Password ?</Text>
               </TouchableOpacity>
               <View style={s.btn}>
-                <Button text={'Login'} />
+                <Button text={'Login'} onPress={() => setToken('dfjkf')} />
               </View>
               <View style={s.vector1}>
                 <Image

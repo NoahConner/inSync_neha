@@ -34,7 +34,10 @@ const Forgot = ({navigation}) => {
           <Input placeholder={'Email'} type={'text'} setValue={setEmail} />
 
           <View style={s.btn}>
-            <Button text={'Send'} onPress={navigation.navigate('Reset')} />
+            <Button
+              text={'Send'}
+              onPress={() => navigation.navigate('reset')}
+            />
           </View>
         </View>
       </View>

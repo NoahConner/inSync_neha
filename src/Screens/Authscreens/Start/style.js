@@ -13,11 +13,10 @@ const styles = StyleSheet.create({
     position: 'relative',
   },
   backImg: {
-    flex: 1,
-    position: 'relative',
-    height: '100%',
-    width: '100%',
+    position: 'absolute',
     backgroundColor: backgroundColor,
+    height: screenHeight,
+    width: screenWidth,
   },
   arrow: {
     position: 'absolute',
@@ -31,7 +30,7 @@ const styles = StyleSheet.create({
   center: {
     justifyContent: 'center',
     alignItems: 'center',
-    top: moderateScale(210, 0.1),
+    top: moderateScale(150, 0.1),
     position: 'relative',
   },
   logo: {
@@ -70,11 +69,8 @@ const styles = StyleSheet.create({
     left: moderateScale(-10, 0.1),
   },
   btn: {
-    // alignItems: 'center',
-    // justifyContent: 'center',
+    marginVertical: moderateScale(12, 0.1),
     flexDirection: 'column',
-    // justifyContent: 'space-between',
-    // top: moderateScale(68, 0.1),
   },
   i13: {
     // position: 'absolute',

@@ -24,7 +24,7 @@ const CutomButton = ({
 }) => {
   return (
     <TouchableOpacity
-      style={[styles.button]}
+      style={[styles.button, style]}
       activeOpacity={0.8}
       onPress={onPress}>
       <View style={styles.view}>

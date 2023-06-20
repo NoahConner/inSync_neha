@@ -7,8 +7,7 @@ import {
   black,
 } from '../../../Constants';
 
-const Poppins = '';
-const PoppinsBold = '';
+const robik = 'Rubik-Black';
 
 const styles = StyleSheet.create({
   container: {
@@ -17,57 +16,60 @@ const styles = StyleSheet.create({
     // position: 'relative',
   },
   backImg: {
-    flex: 1,
+    position: 'absolute',
     backgroundColor: backgroundColor,
-    // position: 'absolute',
-    // overflow: 'hidden',
-    height: '100%',
-    width: '100%',
+    height: screenHeight,
+    width: screenWidth,
   },
   center: {
     alignSelf: 'center',
-    top: moderateScale(82, 0.1),
+    top: moderateScale(83, 0.1),
     // backgroundColor: 'red',
     height: '83%',
   },
   txt1: {
-    fontSize: moderateScale(25, 0.1),
-    lineHeight: moderateScale(30, 0.1),
+    fontSize: moderateScale(24, 0.1),
+    lineHeight: moderateScale(26, 0.1),
     color: black,
-    fontWeight: moderateScale(400, 0.1),
+    fontWeight: '700',
     alignSelf: 'center',
+    fontFamily: robik,
   },
   txt2: {
     fontSize: moderateScale(15, 0.1),
     lineHeight: moderateScale(20, 0.1),
     color: black,
-    fontWeight: moderateScale(300, 0.1),
+    fontWeight: '300',
     alignSelf: 'center',
+    fontFamily: robik,
   },
   txt3: {
     fontSize: moderateScale(14, 0.1),
     lineHeight: moderateScale(17, 0.1),
     color: black,
-    fontWeight: moderateScale(300, 0.1),
+    fontWeight: '300',
     alignSelf: 'center',
+    fontFamily: robik,
   },
 
   input: {
     marginVertical: moderateScale(10, 0.1),
+    fontFamily: robik,
   },
   fTxt: {
     justifyContent: 'flex-end',
     alignItems: 'flex-end',
+    fontFamily: robik,
   },
   btn: {
     justifyContent: 'center',
     alignItems: 'center',
     paddingVertical: moderateScale(10, 0.1),
-    // backgroundColor: 'red',
   },
   Ftxt: {
     color: 'black',
     fontSize: moderateScale(12, 0.1),
+    fontFamily: robik,
   },
   SLogin: {
     flexDirection: 'row',
@@ -78,18 +80,20 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: moderateScale(8, 0.1),
-    bottom: moderateScale(2, 0.1),
+    paddingVertical: moderateScale(20, 0.1),
+    // bottom: moderateScale(5, 0.1),
   },
   link: {
     flexDirection: 'row',
     justifyContent: 'center',
+    paddingVertical: moderateScale(5, 0.1),
   },
   vector: {
     flex: 1,
     alignItems: 'flex-end',
     justifyContent: 'flex-end',
-    bottom: 0,
+    bottom: -1,
+    // position: 'absolute',
   },
 });
 

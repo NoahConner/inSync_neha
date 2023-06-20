@@ -7,18 +7,16 @@ import {
   black,
 } from '../../../Constants';
 
-const Poppins = '';
-const PoppinsBold = '';
-
+const robik = 'Rubik-Black';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
   backImg: {
-    flex: 1,
+    position: 'absolute',
     backgroundColor: backgroundColor,
-    height: '100%',
-    width: '100%',
+    height: screenHeight,
+    width: screenWidth,
   },
   center: {
     alignSelf: 'center',
@@ -27,15 +25,15 @@ const styles = StyleSheet.create({
     height: '83%',
   },
   txt1: {
-    fontSize: moderateScale(25, 0.1),
-    lineHeight: moderateScale(30, 0.1),
+    fontSize: moderateScale(24, 0.1),
+    lineHeight: moderateScale(26, 0.1),
     color: black,
-    fontWeight: moderateScale(400, 0.1),
+    fontWeight: '700',
     alignSelf: 'center',
+    fontFamily: robik,
   },
-
   input: {
-    marginVertical: moderateScale(10, 0.1),
+    marginVertical: moderateScale(30, 0.1),
   },
   fTxt: {
     justifyContent: 'flex-end',
@@ -44,7 +42,7 @@ const styles = StyleSheet.create({
   btn: {
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: moderateScale(20, 0.1),
+    paddingVertical: moderateScale(30, 0.1),
     // backgroundColor: 'red',
   },
   vector: {

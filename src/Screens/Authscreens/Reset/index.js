@@ -27,7 +27,7 @@ const Reset = ({navigation}) => {
           source={require('../../../assets/images/PNG/Vector.png')}
         />
       </View>
-      <Header />
+      <Header navigation={navigation} />
       <View style={s.center}>
         <Text style={s.txt1}>Change Password</Text>
 
@@ -54,7 +54,14 @@ const Reset = ({navigation}) => {
         </View>
       </View>
 
-      <View style={s.vector}>
+      <View
+        style={{
+          flex: 1,
+          position: 'absolute',
+          bottom: 0,
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+        }}>
         <View
           style={{
             flex: 1,

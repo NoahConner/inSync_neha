@@ -1,17 +1,50 @@
-import {
-  View,
-  Text,
-  ImageBackground,
-  Image,
-  TouchableOpacity,
-  KeyboardAvoidingView,
-  TouchableWithoutFeedback,
-  Keyboard,
-} from 'react-native';
-import React, {useState} from 'react';
+import {View, Text, ImageBackground, Image, ScrollView} from 'react-native';
+import React, {useState, useEffect, useContext} from 'react';
 import s from './style';
+import {moderateScale} from 'react-native-size-matters';
+import {linearGradient, screenWidth} from '../../../Constants';
+import LinearGradient from 'react-native-linear-gradient';
+import {Linear, Calender, RadioButton} from '../../../Components/gradient';
+import {AppContext, useAppContext} from '../../../Context/AppContext';
+import Button from '../../../Components/Button';
+import ModalView from '../../../Components/Modal';
 
 const Home = ({navigation}) => {
+  const {setExpected, setPeriod, period, expected} = useContext(AppContext);
+  const [modalVisible, setModalVisible] = useState(false);
+
+  const [isSelected, setIsSelected] = useState([
+    {
+      id: 1,
+      name: 'Period',
+      selected: true,
+    },
+    {
+      id: 2,
+      name: 'Expected Period',
+      selected: false,
+    },
+  ]);
+
+  const onRadioBtnClick = item => {
+    let updatedState = isSelected.map(
+      isSelectedItem =>
+        isSelectedItem.name === item.name
+          ? {...isSelectedItem, selected: true}
+          : {...isSelectedItem, selected: false},
+      // item.name == 'Period' ? setPeriod(true) : setPeriod(false),
+      // item.name == 'Expected Period' ? setExpected(true) : setExpected(false),
+    );
+
+    setIsSelected(updatedState);
+  };
+  useEffect(() => {
+    setTimeout(() => {
+      setModalVisible(true);
+    }, 2000);
+    setPeriod(true);
+  }, []);
+
   return (
     <ImageBackground
       style={s.backImg}
@@ -23,14 +56,61 @@ const Home = ({navigation}) => {
           source={require('../../../assets/images/PNG/Vector.png')}
         />
       </View>
+      <ScrollView>
+        <View style={s.center}>
+          <Text style={s.txt1}>Period Cycle</Text>
+          <Linear
+            type={'text'}
+            text1={period ? '02' : '65'}
+            text2={'Days To Go'}
+            text3={'For your next period'}
+          />
+          {period ? <Calender type={'period'} /> : <Calender />}
 
-      <View style={s.vector}>
-        <Image
-          style={{transform: [{rotate: '180deg'}]}}
-          resizeMode="contain"
-          source={require('../../../assets/images/PNG/Vector.png')}
-        />
-      </View>
+          <View
+            style={{
+              justifyContent: 'flex-end',
+              alignItems: 'flex-end',
+              marginTop: moderateScale(-25, 0.1),
+            }}>
+            {isSelected.map((item, i) => (
+              <View style={s.radio} key={i}>
+                <RadioButton
+                  onPress={() => {
+                    onRadioBtnClick(item);
+                    console.log('item', item);
+                  }}
+                  selected={item.selected}
+                  key={item.id}
+                  text={item.name}></RadioButton>
+              </View>
+            ))}
+          </View>
+          {period ? (
+            <Linear type={'graph'} />
+          ) : (
+            <View style={s.btn}>
+              <Button text={'Resume Your Cycle'} />
+            </View>
+          )}
+          {/* <View style={{height: moderateScale(50, 0.1)}}></View> */}
+        </View>
+        <View style={s.vector}>
+          <Image
+            style={{transform: [{rotate: '180deg'}]}}
+            resizeMode="contain"
+            source={require('../../../assets/images/PNG/Vector.png')}
+          />
+        </View>
+      </ScrollView>
+      <ModalView
+        type={'period'}
+        visible={modalVisible}
+        text={'Reminder'}
+        title1={'Your Cycle Is About To Start'}
+        title2={'In 2 Days '}
+        cancel={() => setModalVisible(!modalVisible)}
+      />
     </ImageBackground>
   );
 };

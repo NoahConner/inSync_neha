@@ -11,40 +11,36 @@ const Poppins = '';
 const PoppinsBold = '';
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'red',
-  },
   backImg: {
-    flex: 1,
     backgroundColor: backgroundColor,
-    height: '100%',
-    width: '100%',
+    height: screenHeight - moderateScale(50, 0.1),
+    width: screenWidth,
   },
   center: {
     alignSelf: 'center',
     top: moderateScale(70, 0.1),
-    height: '84%',
+    height: screenHeight - 140,
+    marginBottom: moderateScale(80, 0.1),
   },
   txt1: {
-    fontSize: moderateScale(25, 0.1),
-    lineHeight: moderateScale(30, 0.1),
+    fontSize: moderateScale(20, 0.1),
+    lineHeight: moderateScale(24, 0.1),
     color: black,
-    fontWeight: moderateScale(400, 0.1),
+    fontWeight: '700',
     alignSelf: 'center',
   },
   txt2: {
     fontSize: moderateScale(15, 0.1),
     lineHeight: moderateScale(20, 0.1),
     color: black,
-    fontWeight: moderateScale(300, 0.1),
+    fontWeight: '300',
     alignSelf: 'center',
   },
   txt3: {
     fontSize: moderateScale(14, 0.1),
     lineHeight: moderateScale(17, 0.1),
     color: black,
-    fontWeight: moderateScale(300, 0.1),
+    fontWeight: '300',
     alignSelf: 'center',
   },
 
@@ -58,7 +54,7 @@ const styles = StyleSheet.create({
   btn: {
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: moderateScale(10, 0.1),
+    paddingVertical: moderateScale(12, 0.1),
   },
   Ftxt: {
     color: 'black',
@@ -84,7 +80,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'flex-end',
     justifyContent: 'flex-end',
-    bottom: 0,
+    bottom: moderateScale(5, 0.1),
   },
 });
 

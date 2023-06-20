@@ -13,6 +13,8 @@ export const AppProvider = ({children}) => {
   const [state, setState] = useState('');
   const [loader, setLoader] = useState('');
   const [token, setToken] = useState(null);
+  const [expected, setExpected] = useState(false);
+  const [period, setPeriod] = useState(false);
 
   useEffect(() => {
     async function fetchStoredValues() {
@@ -42,14 +44,32 @@ export const AppProvider = ({children}) => {
     saveValuesToStorage();
   }, [token]);
 
-  const contextValues = useMemo(() => ({
-    state,
-    setState,
-    loader,
-    setLoader,
-    token,
-    setToken,
-  }));
+  const contextValues = useMemo(
+    () => ({
+      state,
+      setState,
+      loader,
+      setLoader,
+      token,
+      setToken,
+      period,
+      setPeriod,
+      expected,
+      setExpected,
+    }),
+    [
+      state,
+      setState,
+      loader,
+      setLoader,
+      token,
+      setToken,
+      period,
+      setPeriod,
+      expected,
+      setExpected,
+    ],
+  );
 
   return (
     <AppContext.Provider value={contextValues}>{children}</AppContext.Provider>
