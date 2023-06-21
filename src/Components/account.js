@@ -123,7 +123,7 @@ const Account = ({
             <View style={{flex: 0.4}}>
               <Switch
                 trackColor={{false: '#D9D9D9', true: '#D9D9D9'}}
-                thumbColor={isEnabled1 ? '#006B58' : '#D9D9D9'}
+                thumbColor={isEnabled1 ? '#006B58' : '#FC0F0F'}
                 onValueChange={toggleSwitch1}
                 value={isEnabled1}
               />
@@ -135,8 +135,8 @@ const Account = ({
             </View>
             <View style={{flex: 0.4}}>
               <Switch
-                trackColor={{false: '#D9D9D9', true: '#FC0F0F'}}
-                thumbColor={isEnabled2 ? '#D9D9D9' : '#FC0F0F'}
+                trackColor={{false: '#D9D9D9', true: '#D9D9D9'}}
+                thumbColor={isEnabled2 ? '#006B58' : '#FC0F0F'}
                 onValueChange={toggleSwitch2}
                 value={isEnabled2}
               />

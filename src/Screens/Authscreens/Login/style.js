@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     lineHeight: moderateScale(17, 0.1),
     color: black,
     fontWeight: '300',
-    alignSelf: 'center',
+    textAlign: 'center',
     fontFamily: robik,
   },
 
@@ -64,7 +64,8 @@ const styles = StyleSheet.create({
   btn: {
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: moderateScale(10, 0.1),
+
+    marginTop: moderateScale(25, 0.1),
   },
   Ftxt: {
     color: 'black',

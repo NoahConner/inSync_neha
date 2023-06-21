@@ -6,6 +6,7 @@ import {
   screenHeight,
   screenWidth,
 } from '../../../../Constants';
+const robik = 'Rubik-Black';
 
 const styles = StyleSheet.create({
   backImg: {
@@ -27,6 +28,7 @@ const styles = StyleSheet.create({
     color: black,
     fontWeight: '700',
     alignSelf: 'center',
+    fontFamily: robik,
   },
   txt2: {
     // paddingVertical: moderateScale(30, 0.1),
@@ -38,7 +40,8 @@ const styles = StyleSheet.create({
     // textAlign: 'center',
   },
   input: {
-    marginVertical: moderateScale(10, 0.1),
+    marginVertical: moderateScale(20, 0.1),
+    paddingHorizontal: moderateScale(12, 0.1),
   },
   btn: {
     justifyContent: 'center',

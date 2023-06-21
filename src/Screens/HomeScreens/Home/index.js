@@ -27,13 +27,10 @@ const Home = ({navigation}) => {
   ]);
 
   const onRadioBtnClick = item => {
-    let updatedState = isSelected.map(
-      isSelectedItem =>
-        isSelectedItem.name === item.name
-          ? {...isSelectedItem, selected: true}
-          : {...isSelectedItem, selected: false},
-      // item.name == 'Period' ? setPeriod(true) : setPeriod(false),
-      // item.name == 'Expected Period' ? setExpected(true) : setExpected(false),
+    let updatedState = isSelected.map(isSelectedItem =>
+      isSelectedItem.name === item.name
+        ? {...isSelectedItem, selected: true}
+        : {...isSelectedItem, selected: false},
     );
 
     setIsSelected(updatedState);
@@ -44,6 +41,17 @@ const Home = ({navigation}) => {
     }, 2000);
     setPeriod(true);
   }, []);
+  useEffect(() => {
+    if (expected == true) {
+      console.log('ssssss', expected);
+
+      onRadioBtnClick({
+        id: 2,
+        name: 'Expected Period',
+        selected: false,
+      });
+    }
+  }, [expected]);
 
   return (
     <ImageBackground
@@ -58,12 +66,15 @@ const Home = ({navigation}) => {
       </View>
       <ScrollView>
         <View style={s.center}>
-          <Text style={s.txt1}>Period Cycle</Text>
+          <Text style={s.txt1}>
+            {' '}
+            {expected ? 'Expected Days' : 'Period Cycle'}{' '}
+          </Text>
           <Linear
             type={'text'}
-            text1={period ? '02' : '65'}
+            text1={expected ? '65' : '02'}
             text2={'Days To Go'}
-            text3={'For your next period'}
+            text3={expected ? ' for Delivery' : 'For your next period'}
           />
           {period ? <Calender type={'period'} /> : <Calender />}
 
@@ -86,11 +97,14 @@ const Home = ({navigation}) => {
               </View>
             ))}
           </View>
-          {period ? (
+          {!expected ? (
             <Linear type={'graph'} />
           ) : (
             <View style={s.btn}>
-              <Button text={'Resume Your Cycle'} />
+              <Button
+                text={'Resume Your Cycle'}
+                onPress={() => setExpected(false)}
+              />
             </View>
           )}
           {/* <View style={{height: moderateScale(50, 0.1)}}></View> */}

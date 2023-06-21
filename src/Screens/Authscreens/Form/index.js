@@ -73,7 +73,17 @@ const Form = ({navigation}) => {
                 type={'number'}
                 maxLength={2}
               />
-              <Input placeholder={'Relation'} type={'relation'} />
+              <Input
+                placeholder={'Relation'}
+                type={'relation'}
+                style={
+                  {
+                    // justifyContent: 'flex-start',
+                    // paddingHorizontal: moderateScale(18, 0.1),
+                    // backgroundColor: '#D9D9D9',
+                  }
+                }
+              />
 
               <View style={s.btn}>
                 <Button
@@ -121,6 +131,7 @@ const Form = ({navigation}) => {
         text={`Get Sync With`}
         text2={'Your Partner'}
         close={() => setModalVisible(!modalVisible)}
+        cancel={() => setModalVisible(!modalVisible)}
       />
     </ImageBackground>
   );

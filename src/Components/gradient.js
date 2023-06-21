@@ -36,8 +36,8 @@ export function Linear({type, text1, text2, text3}) {
       },
     ],
   };
-  const {setExpected, setPeriod, period, expected} = useAppContext(AppContext);
   const [checked, setChecked] = React.useState(false);
+  const {setExpected, setPeriod, period, expected} = useAppContext(AppContext);
   const [modalVisible, setModalVisible] = useState(false);
   return (
     <LinearGradient
@@ -60,16 +60,34 @@ export function Linear({type, text1, text2, text3}) {
           <Text
             style={[
               styles.buttonText,
-              {fontWeight: '800', lineHeight: moderateScale(30, 0.1)},
+              {
+                fontWeight: '800',
+                lineHeight: moderateScale(53, 0.1),
+                fontSize: moderateScale(45, 0.1),
+              },
             ]}>
             {' '}
             {text1}{' '}
           </Text>
-          <Text style={[styles.buttonText, {fontSize: moderateScale(14, 0.1)}]}>
+          <Text
+            style={[
+              styles.buttonText,
+              {
+                fontSize: moderateScale(15, 0.1),
+                lineHeight: moderateScale(18, 0.1),
+              },
+            ]}>
             {' '}
             {text2}{' '}
           </Text>
-          <Text style={[styles.buttonText, {fontSize: moderateScale(14, 0.1)}]}>
+          <Text
+            style={[
+              styles.buttonText,
+              {
+                fontSize: moderateScale(15, 0.1),
+                lineHeight: moderateScale(18, 0.1),
+              },
+            ]}>
             {' '}
             {text3}{' '}
           </Text>
@@ -91,11 +109,10 @@ export function Linear({type, text1, text2, text3}) {
             <View style={{flex: 0.7}}>
               <Text
                 style={{
-                  width: '55%',
+                  width: '60%',
                   color: white,
                   fontSize: moderateScale(14, 0.1),
                 }}>
-                {' '}
                 Chances Of Getting Pregnant{' '}
               </Text>
             </View>
@@ -103,14 +120,17 @@ export function Linear({type, text1, text2, text3}) {
               <Text style={{color: white, fontSize: moderateScale(14, 0.1)}}>
                 Are You Expecting?
               </Text>
-              <Checkbox
-                color="white"
-                status={checked ? 'checked' : 'unchecked'}
-                onPress={() => {
-                  setChecked(!checked);
-                  setModalVisible(true);
-                }}
-              />
+              <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                <Checkbox
+                  color="white"
+                  status={checked ? 'checked' : 'unchecked'}
+                  onPress={() => {
+                    setChecked(!checked);
+                    setModalVisible(true);
+                  }}
+                />
+                <Text>Yes</Text>
+              </View>
             </View>
           </View>
           <View>

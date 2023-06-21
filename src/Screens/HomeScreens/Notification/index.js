@@ -14,7 +14,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import Icon1 from 'react-native-vector-icons/Feather';
 import Icon2 from 'react-native-vector-icons/AntDesign';
 
-import {black} from '../../../Constants';
+import {black, textColor} from '../../../Constants';
 
 const NotificationList = [
   {
@@ -80,8 +80,6 @@ const Notification = ({navigation}) => {
                 justifyContent: 'space-evenly',
                 alignItems: 'center',
                 backgroundColor: '#EDEDED',
-
-                flex: 1,
                 marginVertical: moderateScale(5, 0.1),
               }
             : {
@@ -94,11 +92,11 @@ const Notification = ({navigation}) => {
           <Text
             style={{
               alignItems: 'center',
-              paddingHorizontal: moderateScale(20, 0.1),
+              paddingHorizontal: moderateScale(30, 0.1),
               paddingVertical: moderateScale(10, 0.1),
-              fontSize: moderateScale(10, 0.1),
-              lineHeight: moderateScale(12, 0.1),
-              color: reminder ? black : item.index < 2 ? '#FFFFFF' : black,
+              fontSize: moderateScale(9, 0.1),
+              lineHeight: moderateScale(11, 0.1),
+              color: reminder ? textColor : item.index < 2 ? '#FFFFFF' : black,
               fontFamily: 'Rubik-Black',
             }}>
             {item.item.text}{' '}
@@ -109,7 +107,8 @@ const Notification = ({navigation}) => {
             style={{
               flex: 0.2,
               flexDirection: 'row',
-              justifyContent: 'space-between',
+              justifyContent: 'space-evenly',
+              paddingRight: moderateScale(12, 0.1),
             }}>
             {reminder ? <>{item.item.editIcon}</> : null}
             <View style={{paddingRight: moderateScale(5, 0.1)}}>
@@ -138,34 +137,16 @@ const Notification = ({navigation}) => {
         }}>
         <View style={s.center}>
           <Text style={s.txt1}>Notifications & Reminders</Text>
-
-          <View style={s.container}>
-            <TouchableOpacity
-              style={notification ? s.viewT : null}
-              onPress={() => {
-                setNotification(true);
-                setReminder(false);
-              }}>
-              <Text style={s.txt}>Notifications</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              style={reminder ? s.viewT : null}
-              onPress={() => {
-                setReminder(true);
-                setNotification(false);
-              }}>
-              <Text style={s.txt}>Reminder</Text>
-            </TouchableOpacity>
-          </View>
-          <View style={{justifyContent: 'center', alignItems: 'center'}}>
+          <View style={{justifyContent: 'flex-end', alignItems: 'flex-end'}}>
             {reminder ? (
               <View
                 style={{
                   flexDirection: 'row',
                   justifyContent: 'space-between',
                   marginVertical: moderateScale(10, 0.1),
+                  marginBottom: moderateScale(-30, 0.1),
                   alignItems: 'center',
+                  paddingHorizontal: moderateScale(20, 0.1),
                 }}>
                 <TouchableOpacity
                   onPress={() => navigation.navigate('reminder')}>
@@ -174,16 +155,50 @@ const Notification = ({navigation}) => {
                 <Text
                   style={{
                     color: black,
-                    fontSize: moderateScale(12, 0.1),
+                    fontSize: moderateScale(13, 0.1),
                     lineHeight: moderateScale(13, 0.1),
                     textAlign: 'center',
-                    fontWeight: '800',
+                    fontWeight: '900',
+                    fontFamily: 'Rubik-Black',
                   }}>
                   Add Reminder
                 </Text>
               </View>
             ) : null}
           </View>
+
+          <View style={s.container}>
+            <TouchableOpacity
+              style={notification ? s.viewT : null}
+              onPress={() => {
+                setNotification(true);
+                setReminder(false);
+              }}>
+              <Text
+                style={[
+                  s.txt,
+                  notification ? {fontWeight: '800'} : {fontWeight: '400'},
+                ]}>
+                Notifications
+              </Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={reminder ? s.viewT : null}
+              onPress={() => {
+                setReminder(true);
+                setNotification(false);
+              }}>
+              <Text
+                style={[
+                  s.txt,
+                  reminder ? {fontWeight: '800'} : {fontWeight: '300'},
+                ]}>
+                Reminder
+              </Text>
+            </TouchableOpacity>
+          </View>
+
           <View>
             <FlatList
               data={reminder == true ? ReminderList : NotificationList}

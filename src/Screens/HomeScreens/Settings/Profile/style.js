@@ -3,8 +3,7 @@ import {moderateScale} from 'react-native-size-matters';
 import {backgroundColor, black} from '../../../../Constants';
 import {screenWidth, screenHeight} from '../../../../Constants';
 
-const Poppins = '';
-const PoppinsBold = '';
+const robik = 'Rubik-Black';
 
 const styles = StyleSheet.create({
   container: {
@@ -39,11 +38,12 @@ const styles = StyleSheet.create({
     paddingVertical: moderateScale(5, 0.1),
   },
   txt1: {
-    fontSize: moderateScale(20, 0.1),
-    lineHeight: moderateScale(24, 0.1),
+    fontSize: moderateScale(24, 0.1),
+    lineHeight: moderateScale(26, 0.1),
     color: black,
     fontWeight: '700',
     alignSelf: 'center',
+    fontFamily: robik,
   },
   txt2: {
     fontSize: moderateScale(15, 0.1),

@@ -22,7 +22,13 @@ const StartScreen = ({navigation}) => {
           source={require('../../../assets/images/PNG/i14.png')}
         />
       </View>
-      <View style={s.center}>
+      <View
+        style={{
+          flex: 1,
+          // alignSelf: 'center',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}>
         <View>
           <Image
             style={s.logo}

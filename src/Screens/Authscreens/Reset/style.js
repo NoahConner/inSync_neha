@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   },
   center: {
     alignSelf: 'center',
-    top: moderateScale(82, 0.1),
+    top: moderateScale(75, 0.1),
     // backgroundColor: 'red',
     height: '83%',
   },
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     fontFamily: robik,
   },
   input: {
-    marginVertical: moderateScale(30, 0.1),
+    marginVertical: moderateScale(20, 0.1),
   },
   fTxt: {
     justifyContent: 'flex-end',
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   btn: {
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: moderateScale(30, 0.1),
+    paddingVertical: moderateScale(20, 0.1),
     // backgroundColor: 'red',
   },
   vector: {

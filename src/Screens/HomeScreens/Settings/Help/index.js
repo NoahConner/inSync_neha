@@ -42,20 +42,22 @@ const Help = ({navigation}) => {
 
               <View style={s.input}>
                 <Text style={s.txt2}>How can we help you?</Text>
-                <View
+                <Input
+                  placeholder={'Type Here..'}
+                  placeholderTextColor={''}
                   style={{
-                    width: moderateScale(324, 0.1),
-                    height: moderateScale(156, 0.1),
+                    paddingVertical: moderateScale(10, 0.1),
                     backgroundColor: '#EEEEEE',
-                    alignSelf: 'center',
-                    marginVertical: moderateScale(5, 0.1),
-                  }}>
-                  <TextInput
-                    style={{paddingHorizontal: moderateScale(10, 0.1)}}
-                    placeholder="Type here....."
-                    placeholderTextColor={'#909090'}
-                  />
-                </View>
+                    color: 'black',
+                    width: moderateScale(300, 0.1),
+                    height: moderateScale(156, 0.1),
+
+                    borderWidth: 0,
+                  }}
+                  type={'reminder'}
+                  setValue={v => setReminder(v)}
+                  value={reminder}
+                />
 
                 <View style={s.btn}>
                   <Button text={'Send'} />

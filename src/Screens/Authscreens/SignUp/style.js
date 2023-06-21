@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     top: moderateScale(83, 0.1),
     marginBottom: moderateScale(30, 0.1),
-    height: screenHeight - 110,
+    height: screenHeight - 140,
   },
   txt1: {
     fontSize: moderateScale(24, 0.1),

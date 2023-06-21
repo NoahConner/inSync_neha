@@ -30,10 +30,10 @@ const styles = StyleSheet.create({
     color: black,
     fontWeight: '700',
     alignSelf: 'center',
-    fontFamily: robik,
+    fontFamily: 'Rubik-Black',
   },
   input: {
-    marginVertical: moderateScale(30, 0.1),
+    marginVertical: moderateScale(20, 0.1),
   },
   fTxt: {
     justifyContent: 'flex-end',

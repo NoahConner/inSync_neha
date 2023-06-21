@@ -39,7 +39,9 @@ const Reminder = ({navigation}) => {
           }}>
           <View style={s.center}>
             <Text style={s.txt1}>Notifications & Reminders</Text>
-            <Text style={s.txt2}>Add Reminder</Text>
+            <View style={{marginVertical: moderateScale(15, 0.1)}}>
+              <Text style={s.txt2}>Add Reminder</Text>
+            </View>
             <View style={s.input}>
               <Input
                 placeholder={'Day'}
@@ -54,8 +56,16 @@ const Reminder = ({navigation}) => {
                 setValue={v => setSelectHour(v)}
                 value={selectHour}
               />
+
               <Input
                 placeholder={'Reminder'}
+                // placeholderTextColor={'#929292'}
+                style={{
+                  paddingVertical: moderateScale(2, 0.1),
+                  color: 'black',
+                  width: moderateScale(270, 0.1),
+                  height: moderateScale(58, 0.1),
+                }}
                 type={'reminder'}
                 setValue={v => setReminder(v)}
                 value={reminder}

@@ -22,11 +22,12 @@ const styles = StyleSheet.create({
     bottom: 0,
   },
   txt1: {
-    fontSize: moderateScale(20, 0.1),
-    lineHeight: moderateScale(24, 0.1),
+    fontSize: moderateScale(24, 0.1),
+    lineHeight: moderateScale(26, 0.1),
     color: black,
     fontWeight: '700',
     alignSelf: 'center',
+    fontFamily: 'Rubik-Black',
   },
   center: {
     paddingHorizontal: moderateScale(30, 0.1),

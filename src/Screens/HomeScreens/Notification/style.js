@@ -6,6 +6,7 @@ import {
   screenHeight,
   screenWidth,
 } from '../../../Constants';
+const robik = 'Rubik-Black';
 
 const styles = StyleSheet.create({
   backImg: {
@@ -22,33 +23,36 @@ const styles = StyleSheet.create({
     bottom: 0,
   },
   txt1: {
-    fontSize: moderateScale(20, 0.1),
-    lineHeight: moderateScale(24, 0.1),
+    fontSize: moderateScale(24, 0.1),
+    lineHeight: moderateScale(26, 0.1),
     color: black,
     fontWeight: '700',
     alignSelf: 'center',
+    fontFamily: robik,
   },
   center: {
-    paddingHorizontal: moderateScale(20, 0.1),
+    // paddingHorizontal: moderateScale(20, 0.1),
     top: moderateScale(45, 0.1),
   },
   container: {
     // width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-evenly',
-    marginVertical: moderateScale(30, 0.1),
-    bottom: moderateScale(-10, 0.1),
+    marginVertical: moderateScale(50, 0.1),
+    marginBottom: moderateScale(10, 0.1),
+
+    // bottom: moderateScale(-10, 0.1),
     borderRadius: moderateScale(5, 0.1),
   },
   txt: {
     paddingBottom: moderateScale(6, 0.1),
     color: black,
-    fontWeight: '800',
     fontSize: moderateScale(13, 0.1),
     lineHeight: moderateScale(14, 0.1),
+    fontFamily: robik,
   },
   viewT: {
-    borderBottomWidth: 1,
+    borderBottomWidth: 2,
     borderBottomColor: black,
   },
 });

@@ -78,7 +78,6 @@ const Profile = ({navigation}) => {
                 type={'number'}
                 maxLength={2}
               />
-              <Input placeholder={'Relation'} type={'relation'} />
 
               <View style={s.btn}>
                 <Button

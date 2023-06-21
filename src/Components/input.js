@@ -17,7 +17,15 @@ import DateTimePickerModal from 'react-native-modal-datetime-picker';
 import SelectDropdown from 'react-native-select-dropdown';
 import {populateEvents} from 'react-native-calendars/src/timeline/Packer';
 
-const Input = ({placeholder, value, setValue, type, maxLength, style}) => {
+const Input = ({
+  placeholder,
+  value,
+  setValue,
+  type,
+  maxLength,
+  style,
+  placeholderTextColor,
+}) => {
   const [secureTextEntry, setSecureTextEntry] = useState(true);
   const [isActive, setIsActive] = useState(false);
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -141,13 +149,7 @@ const Input = ({placeholder, value, setValue, type, maxLength, style}) => {
       {type === 'reminder' && (
         <TextInput
           placeholderTextColor={'#929292'}
-          style={[
-            styles.input,
-            {
-              paddingVertical: moderateScale(2, 0.1),
-              color: black,
-            },
-          ]}
+          style={[styles.input, style]}
           placeholder={placeholder}
           value={value}
           onChangeText={setValue}
@@ -161,6 +163,7 @@ const Input = ({placeholder, value, setValue, type, maxLength, style}) => {
           style={[
             styles.input,
             {paddingVertical: moderateScale(2, 0.1), color: black},
+            style,
           ]}
           placeholder={placeholder}
           value={value}
@@ -251,6 +254,7 @@ const Input = ({placeholder, value, setValue, type, maxLength, style}) => {
           </View>
         </>
       )}
+
       {type === 'relation' ||
         (type === 'hourOptions' && (
           <SelectDropdown
@@ -269,16 +273,23 @@ const Input = ({placeholder, value, setValue, type, maxLength, style}) => {
               styles.input,
               {
                 justifyContent: 'space-between',
-                alignItems: 'center',
+                // alignItems: 'center',
+                flexDirection: 'row-reverse',
+
                 // backgroundColor: '#D9D9D9',
               },
               style,
             ]}
+            rowTextStyle={{
+              fontSize: moderateScale(15, 0.1),
+            }}
             buttonTextStyle={{
+              // flexDirection: 'row-reverse',
               color: '#929292',
-
-              textAlign: 'center',
-              right: moderateScale(-80, 0.1),
+              // justifyContent: 'flex-start', // Removed
+              // alignItems: 'flex-start', // Removed
+              textAlign: 'left',
+              left: moderateScale(10, 0.1),
               fontSize: moderateScale(13, 0.1),
             }}
             renderDropdownIcon={() => {
@@ -287,7 +298,7 @@ const Input = ({placeholder, value, setValue, type, maxLength, style}) => {
                   name="chevron-down"
                   size={18}
                   color={black}
-                  style={styles.icon}
+                  style={[styles.icon, {marginLeft: 5}]} // Added marginLeft to create space between text and icon
                 />
               );
             }}
@@ -298,75 +309,7 @@ const Input = ({placeholder, value, setValue, type, maxLength, style}) => {
               return item;
             }}
           />
-          // <View style={[styles.input, {flexDirection: 'row'}, style]}>
-          //   <TextInput
-          //     placeholderTextColor={'#929292'}
-          //     style={{flex: 0.9, paddingVertical: moderateScale(5, 0.1)}}
-          //     placeholder={placeholder}
-          //     onChangeText={setValue}
-          //   />
-
-          //   <TouchableOpacity
-          //     style={{
-          //       alignSelf: 'center',
-          //       flex: 0.1,
-          //     }}>
-          //     <Entypo
-          //       name="chevron-down"
-          //       size={18}
-          //       color={black}
-          //       style={styles.icon}
-          //     />
-          //   </TouchableOpacity>
-          // </View>
         ))}
-      {type === 'relation' && (
-        <SelectDropdown
-          data={
-            type === 'relation'
-              ? relation
-              : type === 'hourOptions'
-              ? hour
-              : null
-          }
-          onSelect={(selectedItem, index) => {
-            console.log(selectedItem, index);
-          }}
-          defaultButtonText={placeholder}
-          buttonStyle={[
-            styles.input,
-            {
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              // backgroundColor: '#D9D9D9',
-            },
-            style,
-          ]}
-          buttonTextStyle={{
-            color: '#929292',
-
-            textAlign: 'center',
-            right: moderateScale(-80, 0.1),
-            fontSize: moderateScale(13, 0.1),
-          }}
-          renderDropdownIcon={() => {
-            return (
-              <Entypo
-                name="chevron-down"
-                size={18}
-                color={black}
-                style={styles.icon}
-              />
-            );
-          }}
-          buttonTextAfterSelection={(selectedItem, index) => {
-            return selectedItem;
-          }}
-          rowTextForSelection={(item, index) => {
-            return item;
-          }}
-        />
-      )}
     </View>
   );
 };
@@ -387,7 +330,8 @@ const styles = StyleSheet.create({
     height: moderateScale(37, 0.1),
     borderColor: black,
     borderWidth: 1,
-    alignItems: 'center',
+
+    // alignItems: 'center',
     backgroundColor: white,
     // textAlign: 'center',
     paddingHorizontal: moderateScale(12, 0.1),
