@@ -16,6 +16,7 @@ import SocialLogin from '../../../Components/socialLogin';
 import {moderateScale} from 'react-native-size-matters';
 import Header from '../../../Components/Header';
 import {AppContext} from '../../../Context/AppContext';
+import {RadioButton} from '../../../Components/gradient';
 import {screenHeight, screenWidth} from '../../../Constants';
 
 const SignUp = ({navigation}) => {
@@ -25,6 +26,28 @@ const SignUp = ({navigation}) => {
   const [password, setPassword] = useState(null);
   const [confPassword, setConfPass] = useState(null);
   const [dob, setDob] = useState(null);
+  const [isSelected, setIsSelected] = useState([
+    {
+      id: 1,
+      name: 'male',
+      selected: true,
+    },
+    {
+      id: 2,
+      name: 'female',
+      selected: false,
+    },
+  ]);
+
+  const onRadioBtnClick = item => {
+    let updatedState = isSelected.map(isSelectedItem =>
+      isSelectedItem.name === item.name
+        ? {...isSelectedItem, selected: true}
+        : {...isSelectedItem, selected: false},
+    );
+
+    setIsSelected(updatedState);
+  };
   const signUp = () => {
     navigation.navigate('form');
   };
@@ -81,6 +104,36 @@ const SignUp = ({navigation}) => {
                 value={confPassword}
                 setValue={setConfPass}
               />
+                <View
+            style={{
+              
+               flexDirection:'row',
+               paddingHorizontal: moderateScale(15,0.1),
+               paddingVertical: moderateScale(7,0.1)
+               
+              // justifyContent: 'flex-end',
+              // alignItems: 'flex-end',
+              // marginTop: moderateScale(-25, 0.1),
+            }}>
+            {isSelected.map((item, i) => (
+              <View style={s.radio} key={i}>
+                <RadioButton
+                  onPress={() => {
+                    onRadioBtnClick(item);
+                    console.log('item', item);
+                  }}
+                  type={'gender'}
+                  style={{
+                    flexDirection: 'row',
+                   height: moderateScale(22, 0.1),
+                   marginRight: moderateScale(20, 0.1),
+                }}
+                  selected={item.selected}
+                  key={item.id}
+                  text={item.name}></RadioButton>
+              </View>
+            ))}
+          </View>
 
               <View style={s.btn}>
                 <Button text={'Create Now'} onPress={signUp} />

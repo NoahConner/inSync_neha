@@ -4,11 +4,23 @@ import {AppContext, AppProvider, useAppContext} from './src/Context/AppContext';
 import Auth from './src/Stack/Auth';
 import {createStackNavigator} from '@react-navigation/stack';
 import {View, Text} from 'react-native';
+import RNBootSplash from "react-native-bootsplash";
 
 // import Home from './src/Stack/Home/HomeStack';
 import BottomTab from './src/BottomTab';
 
 export default function App() {
+  useEffect(() => {
+    const init = async () => {
+      // …do multiple sync or async tasks
+    };
+
+    init().finally(async () => {
+      await RNBootSplash.hide({ fade: true, duration: 500 });
+      console.log("BootSplash has been hidden successfully");
+    });
+  }, []);
+
   return (
     <AppProvider>
       <AppContent />

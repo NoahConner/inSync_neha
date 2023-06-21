@@ -13,16 +13,15 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   backImg: {
-    position: 'absolute',
     backgroundColor: backgroundColor,
-    height: screenHeight,
+    height: screenHeight-55,
     width: screenWidth,
   },
   center: {
     alignSelf: 'center',
     top: moderateScale(75, 0.1),
     // backgroundColor: 'red',
-    height: '83%',
+    height: '81%',
   },
   txt1: {
     fontSize: moderateScale(24, 0.1),

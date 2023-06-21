@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   center: {
     alignSelf: 'center',
     top: moderateScale(30, 0.1),
-    height: '81%',
+    height: '85%',
     marginBottom: moderateScale(40, 0.1),
   },
   imgView: {
@@ -91,10 +91,10 @@ const styles = StyleSheet.create({
     // flex: 1,
     // height: moderateScale(50, 0.1),
     // backgroundColor: 'yellow',
-    // position: 'absolute',
+    //  position: 'absolute',
     alignItems: 'flex-end',
     justifyContent: 'flex-end',
-    // bottom: 0,
+     bottom: 0,
   },
 });
 

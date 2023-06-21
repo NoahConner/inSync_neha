@@ -52,7 +52,7 @@ const Input = ({
   };
   const Econfirm = date => {
     console.warn('A date has been picked: ', date);
-    setExpected(toDateString());
+    setExpected(date.toDateString());
     hideDatePicker();
   };
   const Cdate = date => {
@@ -96,7 +96,7 @@ const Input = ({
               }
               placeholder={placeholder}
               // value={selectedDate.toDateString()}
-              onChangeText={setValue}
+              // onChangeText={setValue}
             />
 
             <TouchableOpacity
@@ -148,8 +148,12 @@ const Input = ({
       )}
       {type === 'reminder' && (
         <TextInput
+        textAlignVertical='top'
           placeholderTextColor={'#929292'}
-          style={[styles.input, style]}
+          style={[styles.input, style,{
+            paddingVertical: moderateScale(7, 0.1),
+            color: black,
+          }]}
           placeholder={placeholder}
           value={value}
           onChangeText={setValue}
@@ -273,10 +277,7 @@ const Input = ({
               styles.input,
               {
                 justifyContent: 'space-between',
-                // alignItems: 'center',
                 flexDirection: 'row-reverse',
-
-                // backgroundColor: '#D9D9D9',
               },
               style,
             ]}
@@ -284,10 +285,7 @@ const Input = ({
               fontSize: moderateScale(15, 0.1),
             }}
             buttonTextStyle={{
-              // flexDirection: 'row-reverse',
               color: '#929292',
-              // justifyContent: 'flex-start', // Removed
-              // alignItems: 'flex-start', // Removed
               textAlign: 'left',
               left: moderateScale(10, 0.1),
               fontSize: moderateScale(13, 0.1),
@@ -298,7 +296,7 @@ const Input = ({
                   name="chevron-down"
                   size={18}
                   color={black}
-                  style={[styles.icon, {marginLeft: 5}]} // Added marginLeft to create space between text and icon
+                  style={[styles.icon, {marginLeft: 5}]}
                 />
               );
             }}
@@ -320,7 +318,7 @@ const styles = StyleSheet.create({
     // backgroundColor: 'red',
     justifyContent: 'center',
     alignItems: 'center',
-    marginVertical: moderateScale(7, 0.1),
+    marginVertical: moderateScale(4, 0.1),
   },
   activeContainer: {
     borderBottomColor: purple,

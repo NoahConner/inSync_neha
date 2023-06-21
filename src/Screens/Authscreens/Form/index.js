@@ -45,7 +45,7 @@ const Form = ({navigation}) => {
       </View>
       <Header navigation={navigation} />
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-        <ScrollView style={{}}>
+        <ScrollView>
           <View style={s.center}>
             <Text style={s.txt1}>Detailed Form</Text>
             <View style={s.input}>

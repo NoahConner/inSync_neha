@@ -251,9 +251,9 @@ export function Calender({type}) {
     />
   );
 }
-export function RadioButton({data, onPress, selected, text}) {
+export function RadioButton({data, onPress, selected, text, style, type}) {
   return (
-    <View style={styles.radioButtonContainer}>
+    <View style={[ type == 'gender' ? style: styles.radioButtonContainer,]}>
       <TouchableOpacity onPress={onPress} style={[styles.radioButton]}>
         {selected ? <View style={styles.radioButtonIcon} /> : null}
       </TouchableOpacity>

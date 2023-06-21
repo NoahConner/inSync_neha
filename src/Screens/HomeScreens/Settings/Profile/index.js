@@ -40,10 +40,7 @@ const Profile = ({navigation}) => {
       <Header navigation={navigation} />
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <ScrollView
-          style={{
-            height: screenHeight,
-            width: screenWidth,
-          }}>
+          >
           <View style={s.center}>
             <Text style={s.txt1}>Edit Profile</Text>
             <View style={styles.imgView}>
@@ -88,7 +85,7 @@ const Profile = ({navigation}) => {
                 />
               </View>
 
-              <View style={{height: moderateScale(50, 0.1)}}></View>
+              {/* <View style={{height: moderateScale(50, 0.1)}}></View> */}
             </View>
           </View>
 
