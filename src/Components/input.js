@@ -57,7 +57,7 @@ const Input = ({
   };
   const Cdate = date => {
     console.warn('A date has been picked: ', date);
-    setConception(toDateString());
+    setConception(date.toDateString());
     hideDatePicker();
   };
   return (

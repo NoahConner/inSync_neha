@@ -19,6 +19,10 @@ import Button from '../Components/Button';
 import Modal from 'react-native-modal';
 import Inicon from 'react-native-vector-icons/Entypo';
 import Reminder from '../Screens/HomeScreens/Notification/Reminder';
+import SVGImg from '../assets/images/svg/round.svg';
+import SVGImg2 from '../assets/images/svg/small-lf.svg';
+import SVGImg3 from '../assets/images/svg/lob.svg';
+import SVGImg1 from '../assets/images/svg/wIcon';
 
 const ModalView = ({
   visible,
@@ -128,24 +132,69 @@ const ModalView = ({
                 </View>
               </ImageBackground>
             ) : (
-              <ImageBackground
-                style={styles.backImg}
-                source={require('../assets/images/chances.png')}
-                resizeMode="contain">
+              // <ImageBackground
+              //   style={styles.backImg}
+              //   source={require('../assets/images/chances.png')}
+              //   resizeMode="contain">
+              <View
+                style={{
+                  width: moderateScale(324, 0.1),
+                  height: moderateScale(348, 0.1),
+                  backgroundColor: backgroundColor,
+                }}>
+                <View
+                  style={{
+                    position: 'absolute',
+                    top: moderateScale(30, 0.1),
+                    left: moderateScale(10, 0.1),
+                  }}>
+                  <SVGImg2 width={70} height={70} />
+                </View>
+                <View
+                  style={{
+                    position: 'absolute',
+                    left: moderateScale(15, 0.1),
+                    bottom: moderateScale(20, 0.1),
+                  }}>
+                  <SVGImg width={90} height={90} />
+                </View>
+
+                {/* left leaf */}
+
+                {/* left leaf */}
+                <View
+                  style={{
+                    position: 'absolute',
+                    top: moderateScale(50, 0.1),
+                    right: 25,
+                  }}>
+                  <SVGImg3 />
+                </View>
+                <View
+                  style={{
+                    position: 'absolute',
+                    bottom: moderateScale(10, 0.1),
+                    right: 15,
+                  }}>
+                  <SVGImg1 />
+                </View>
+
                 <View style={styles.center}>
                   <TouchableOpacity
                     onPress={cancel}
                     style={{
                       justifyContent: 'flex-end',
                       alignItems: 'flex-end',
+                      top: moderateScale(-10, 0.1),
+                      right: moderateScale(-10, 0.1),
                     }}>
                     <Inicon
                       name="cross"
-                      size={moderateScale(30)}
+                      size={moderateScale(32)}
                       color="black"
                     />
                   </TouchableOpacity>
-                  <View style={{marginTop: moderateScale(-10, 0.1)}}>
+                  <View>
                     <Text style={styles.txt1}> {text} </Text>
                     <Text style={styles.txt1}>{text2} </Text>
                   </View>
@@ -200,7 +249,9 @@ const ModalView = ({
                     </View>
                   )}
                 </View>
-              </ImageBackground>
+              </View>
+
+              // </ImageBackground>
             )}
           </TouchableWithoutFeedback>
         </View>

@@ -12,10 +12,6 @@ import SVGImg3 from '../../../../assets/images/svg/leaf2.svg';
 
 const Privacy = ({navigation}) => {
   return (
-    // <ImageBackground
-    //   style={s.backImg}
-    //   source={require('../../../../assets/images/privacy.jpg')}
-    //   resizeMode="contain">
     <View
       style={{
         backgroundColor: backgroundColor,
@@ -119,7 +115,6 @@ const Privacy = ({navigation}) => {
         />
       </View>
     </View>
-    // </ImageBackground>
   );
 };
 export default Privacy;

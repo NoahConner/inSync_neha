@@ -90,7 +90,7 @@ const Form = ({navigation}) => {
       </View>
       <ScrollView style={{marginBottom: moderateScale(50, 0.1)}}>
         <View style={s.center}>
-          <Text style={s.txt1}>Edit Profile</Text>
+          <Text style={s.txt1}>Detailed Form</Text>
           <View style={s.input}>
             <Input
               placeholder={'First Name'}
@@ -111,21 +111,21 @@ const Form = ({navigation}) => {
               maxLength={2}
             />
             <Input placeholder={'Expected Date'} type={'expected date'} />
+
             <Input
               placeholder={'Period Duration'}
               type={'number'}
               maxLength={2}
             />
+
             <Input
               placeholder={'Relation'}
               type={'relation'}
-              style={
-                {
-                  // justifyContent: 'flex-start',
-                  // paddingHorizontal: moderateScale(18, 0.1),
-                  // backgroundColor: '#D9D9D9',
-                }
-              }
+              style={{
+                justifyContent: 'flex-start',
+                paddingHorizontal: moderateScale(18, 0.1),
+                backgroundColor: '#D9D9D9',
+              }}
             />
 
             <View style={s.btn}>
