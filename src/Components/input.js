@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   TextInput,
@@ -7,15 +7,15 @@ import {
   Animated,
   Modal,
 } from 'react-native';
-import {black, purple, emailReg, screenWidth, white} from '../Constants/index';
+import { black, purple, emailReg, screenWidth, white } from '../Constants/index';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Button from './Button';
-import {moderateScale} from 'react-native-size-matters';
+import { moderateScale } from 'react-native-size-matters';
 import Feather from 'react-native-vector-icons/Feather';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 import SelectDropdown from 'react-native-select-dropdown';
-import {populateEvents} from 'react-native-calendars/src/timeline/Packer';
+import { populateEvents } from 'react-native-calendars/src/timeline/Packer';
 
 const Input = ({
   placeholder,
@@ -65,72 +65,72 @@ const Input = ({
       {(type === 'DOB' ||
         type === 'expected date' ||
         type === 'conception date') && (
-        <>
-          <TouchableOpacity
-            onPress={showDatePicker}
-            style={[
-              styles.input,
-              {
-                flexDirection: 'row',
-                justifyContent: 'flex-start',
-              },
-              style,
-            ]}>
-            <TextInput
-              editable={false}
-              placeholderTextColor={'#929292'}
-              style={{
-                flex: 0.9,
-                alignContent: 'center',
-                paddingVertical: moderateScale(2, 0.1),
-                left: moderateScale(-5, 0.1),
-                color: black,
-              }}
-              value={
-                type === 'DOB'
-                  ? dob
-                  : type === 'expected date'
-                  ? expected
-                  : type === 'conception date'
-                  ? conception
-                  : null
-              }
-              placeholder={placeholder}
+          <>
+            <TouchableOpacity
+              onPress={showDatePicker}
+              style={[
+                styles.input,
+                {
+                  flexDirection: 'row',
+                  justifyContent: 'flex-start',
+                },
+                style,
+              ]}>
+              <TextInput
+                editable={false}
+                placeholderTextColor={'#929292'}
+                style={{
+                  flex: 0.9,
+                  alignContent: 'center',
+                  paddingVertical: moderateScale(2, 0.1),
+                  left: moderateScale(-5, 0.1),
+                  color: black,
+                }}
+                value={
+                  type === 'DOB'
+                    ? dob
+                    : type === 'expected date'
+                      ? expected
+                      : type === 'conception date'
+                        ? conception
+                        : null
+                }
+                placeholder={placeholder}
               // value={selectedDate.toDateString()}
               // onChangeText={setValue}
-            />
+              />
 
-            <TouchableOpacity
-              style={{
-                alignSelf: 'center',
-                flex: 0.1,
-              }}
-              onPress={showDatePicker}>
-              <Icon
-                name="calendar-alt"
-                size={18}
-                color={black}
-                style={styles.icon}
+              <TouchableOpacity
+                style={{
+                  alignSelf: 'center',
+                  flex: 0.1,
+                }}
+                onPress={showDatePicker}>
+                <Icon
+                  name="calendar-alt"
+                  size={18}
+                  color={black}
+                  style={styles.icon}
+                />
+              </TouchableOpacity>
+
+              <DateTimePickerModal
+                isVisible={isDatePickerVisible}
+                mode="date"
+                onConfirm={
+                  type === 'DOB'
+                    ? handleConfirm
+                    : type === 'expected date'
+                      ? Econfirm
+                      : type === 'conception date'
+                        ? Cdate
+                        : null
+                }
+                onCancel={hideDatePicker}
               />
             </TouchableOpacity>
-
-            <DateTimePickerModal
-              isVisible={isDatePickerVisible}
-              mode="date"
-              onConfirm={
-                type === 'DOB'
-                  ? handleConfirm
-                  : type === 'expected date'
-                  ? Econfirm
-                  : type === 'conception date'
-                  ? Cdate
-                  : null
-              }
-              onCancel={hideDatePicker}
-            />
-          </TouchableOpacity>
-        </>
-      )}
+          </>
+        )}
       {type === 'text' && (
         <TextInput
           placeholderTextColor={'#929292'}
@@ -171,7 +171,7 @@ const Input = ({
           placeholderTextColor={'#929292'}
           style={[
             styles.input,
-            {paddingVertical: moderateScale(2, 0.1), color: black},
+            { paddingVertical: moderateScale(2, 0.1), color: black },
             style,
           ]}
           placeholder={placeholder}
@@ -186,7 +186,7 @@ const Input = ({
       {type === 'email' && (
         <TextInput
           placeholderTextColor={'#929292'}
-          style={[styles.input, style, {color: black}]}
+          style={[styles.input, style, { color: black }]}
           placeholder={placeholder}
           value={value}
           onChangeText={setValue}
@@ -197,7 +197,7 @@ const Input = ({
           <View
             style={[
               styles.input,
-              {flexDirection: 'row', alignItems: 'center'},
+              { flexDirection: 'row', alignItems: 'center' },
             ]}>
             <TextInput
               style={{
@@ -264,15 +264,15 @@ const Input = ({
         </>
       )}
 
-      {type === 'relation' ||
+      {/* {type === 'relation' ||
         (type === 'hourOptions' && (
           <SelectDropdown
             data={
               type === 'relation'
                 ? relation
                 : type === 'hourOptions'
-                ? hour
-                : null
+                  ? hour
+                  : null
             }
             onSelect={(selectedItem, index) => {
               console.log(selectedItem, index);
@@ -301,7 +301,7 @@ const Input = ({
                   name="chevron-down"
                   size={18}
                   color={black}
-                  style={[styles.icon, {marginLeft: 5}]}
+                  style={[styles.icon, { marginLeft: 5 }]}
                 />
               );
             }}
@@ -312,7 +312,60 @@ const Input = ({
               return item;
             }}
           />
-        ))}
+        ))
+      } */}
+      {
+        type == 'relation' || type == 'hourOptions' ? (
+          <>
+            <SelectDropdown
+              data={
+                type === 'relation'
+                  ? relation
+                  : type === 'hourOptions'
+                    ? hour
+                    : null
+              }
+              onSelect={(selectedItem, index) => {
+                console.log(selectedItem, index);
+              }}
+              defaultButtonText={placeholder}
+              buttonStyle={[
+                styles.input,
+                {
+                  justifyContent: 'space-between',
+                  flexDirection: 'row-reverse',
+                },
+                style,
+              ]}
+              rowTextStyle={{
+                fontSize: moderateScale(15, 0.1),
+              }}
+              buttonTextStyle={{
+                color: '#929292',
+                textAlign: 'left',
+                left: moderateScale(10, 0.1),
+                fontSize: moderateScale(13, 0.1),
+              }}
+              renderDropdownIcon={() => {
+                return (
+                  <Entypo
+                    name="chevron-down"
+                    size={18}
+                    color={black}
+                    style={[styles.icon, { marginLeft: 5 }]}
+                  />
+                );
+              }}
+              buttonTextAfterSelection={(selectedItem, index) => {
+                return selectedItem;
+              }}
+              rowTextForSelection={(item, index) => {
+                return item;
+              }}
+            />
+          </>
+        ) : null
+      }
     </View>
   );
 };

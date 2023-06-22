@@ -7,14 +7,10 @@ import {
   black,
 } from '../../../Constants';
 
-const robik = 'Rubik-Black';
+const robik = 'Rubik-Regular';
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'red',
-    // position: 'relative',
-  },
+  
   backImg: {
     position: 'absolute',
     backgroundColor: backgroundColor,
@@ -90,10 +86,8 @@ const styles = StyleSheet.create({
     paddingVertical: moderateScale(5, 0.1),
   },
   vector: {
-    flex: 1,
-    alignItems: 'flex-end',
-    justifyContent: 'flex-end',
-    bottom: -1,
+  right:0, position:'absolute',
+    bottom: 0,
     // position: 'absolute',
   },
 });

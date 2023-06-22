@@ -70,7 +70,7 @@ const Home = ({navigation}) => {
           source={require('../../../assets/images/PNG/Vector.png')}
         />
       </View>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View style={s.center}>
           <Text style={s.txt1}>
             {' '}
@@ -104,6 +104,7 @@ const Home = ({navigation}) => {
               </View>
             ))}
           </View>
+          <View style={{height: moderateScale(380,0.1)}}>
           {!expected ? (
             <Linear type={'graph'} />
           ) : (
@@ -114,16 +115,19 @@ const Home = ({navigation}) => {
               />
             </View>
           )}
+          </View>
+        
           {/* <View style={{height: moderateScale(50, 0.1)}}></View> */}
         </View>
-        <View style={s.vector}>
+      
+      </ScrollView>
+      <View style={s.vector}>
           <Image
             style={{transform: [{rotate: '180deg'}]}}
             resizeMode="contain"
             source={require('../../../assets/images/PNG/Vector.png')}
           />
         </View>
-      </ScrollView>
       <ModalView
         type={'period'}
         visible={modalVisible}

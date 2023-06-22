@@ -14,12 +14,13 @@ const styles = StyleSheet.create({
   },
   backImg: {
     backgroundColor: backgroundColor,
-    height: screenHeight-55,
+    height: screenHeight,
     width: screenWidth,
+    flex:1
   },
   center: {
     alignSelf: 'center',
-    top: moderateScale(75, 0.1),
+    marginTop: moderateScale(45, 0.1),
     // backgroundColor: 'red',
     height: '81%',
   },
@@ -45,10 +46,8 @@ const styles = StyleSheet.create({
     // backgroundColor: 'red',
   },
   vector: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingVertical: moderateScale(7, 0.1),
+    right: 0, position: 'absolute',
+    bottom: 0,
   },
 });
 

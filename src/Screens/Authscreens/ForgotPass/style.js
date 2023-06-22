@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   },
   center: {
     alignSelf: 'center',
-    top: moderateScale(82, 0.1),
+    top: moderateScale(45, 0.1),
     // backgroundColor: 'red',
     height: '83%',
   },
@@ -46,10 +46,8 @@ const styles = StyleSheet.create({
     // backgroundColor: 'red',
   },
   vector: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingVertical: moderateScale(7, 0.1),
+    bottom: 0,
+    right: 0 , position:'absolute'
   },
 });
 

@@ -13,58 +13,7 @@ import {backgroundColor} from '../../../Constants';
 import Header from '../../../Components/Header';
 const Choose = ({navigation}) => {
   return (
-    // <ImageBackground
-    //   style={s.backImg}
-    //   source={require('../../../assets/images/choose.jpg')}
-    //   resizeMode="contain">
-    //   <View>
-    //     <Image
-    //       resizeMode="contain"
-    //       source={require('../../../assets/images/PNG/Vector.png')}
-    //     />
-    //   </View>
-    //   <View style={s.center}>
-    //     <Text style={s.txt1}>Choose your</Text>
-    //     <Text style={s.txt1}>Relation</Text>
-    //     <View style={s.view1}>
-    //       <TouchableOpacity style={s.box}>
-    //         <Image
-    //           source={require('../../../assets/images/PNG/user-f.png')}
-    //           style={s.imgIcon}
-    //         />
-    //         <Text style={s.Ttxt}>Mother</Text>
-    //       </TouchableOpacity>
-    //       <TouchableOpacity style={s.box}>
-    //         <Image
-    //           source={require('../../../assets/images/PNG/user-f.png')}
-    //           style={s.imgIcon}
-    //         />
-    //         <Text style={s.Ttxt}>Sister</Text>
-    //       </TouchableOpacity>
-    //       <TouchableOpacity style={s.box}>
-    //         <Image
-    //           source={require('../../../assets/images/PNG/user-f.png')}
-    //           style={s.imgIcon}
-    //         />
-    //         <Text style={s.Ttxt}>Wife</Text>
-    //       </TouchableOpacity>
-    //       <TouchableOpacity
-    //         onPress={() => navigation.navigate('form')}
-    //         style={s.box}>
-    //         <Icon4 name="md-add" color="#D8D5D5" size={55} />
-    //         {/* <Text style={{color: 'gray'}}>other</Text> */}
-    //       </TouchableOpacity>
-    //     </View>
-    //   </View>
-
-    //   <View style={s.vector}>
-    //     <Image
-    //       style={{transform: [{rotate: '180deg'}]}}
-    //       // resizeMode="contain"
-    //       source={require('../../../assets/images/PNG/Vector.png')}
-    //     />
-    //   </View>
-    // </ImageBackground>
+    
     <View
       style={{
         backgroundColor: backgroundColor,
@@ -86,7 +35,7 @@ const Choose = ({navigation}) => {
           left: moderateScale(25, 0.1),
           top: moderateScale(80, 0.1),
         }}>
-        <SVGImg1 width={90} height={90} />
+        <SVGImg1 width={110} height={110} />
       </View>
       {/* butterfly */}
       <View
@@ -124,7 +73,7 @@ const Choose = ({navigation}) => {
         <View style={{height: moderateScale(50, 0.1)}}></View>
       </View>
 
-      <ScrollView style={{marginBottom: moderateScale(50, 0.1)}}>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View style={s.center}>
           <View
             style={{
@@ -163,18 +112,20 @@ const Choose = ({navigation}) => {
             </TouchableOpacity>
           </View>
           <View style={{}}>
-            <View
+            {/* <View
               style={{
-                height: moderateScale(200, 0.1),
+                height: moderateScale(300, 0.1),
                 justifyContent: 'center',
                 alignItems: 'center',
+                overflow:'hidden'
               }}>
               <Image
                 resizeMode="contain"
-                style={{width: moderateScale(300, 0.1)}}
+                style={{width: moderateScale(320, 0.1)}}
+                
                 source={require('../../../assets/images/choose-btm.jpg')}
               />
-            </View>
+            </View> */}
           </View>
         </View>
       </ScrollView>

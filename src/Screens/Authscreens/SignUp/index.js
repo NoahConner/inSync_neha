@@ -65,11 +65,7 @@ const SignUp = ({navigation}) => {
       <Header navigation={navigation} />
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <ScrollView
-          style={{
-            flex: 1,
-            width: screenWidth,
-            height: screenHeight,
-          }}>
+        >
           <View style={s.center}>
             <Text style={s.txt1}>Create Account!</Text>
             <Text style={s.txt2}>To get started now</Text>

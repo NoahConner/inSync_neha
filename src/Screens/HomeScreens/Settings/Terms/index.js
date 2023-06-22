@@ -53,7 +53,7 @@ const Terms = ({navigation}) => {
         }}>
         <Header navigation={navigation} />
       </View>
-      <ScrollView style={{marginBottom: moderateScale(50, 0.1)}}>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View style={s.center}>
           <Text style={s.txt1}>Terms & Conditions</Text>
           <View

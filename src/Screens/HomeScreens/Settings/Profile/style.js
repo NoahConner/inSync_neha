@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: moderateScale(20, 0.1),
   },
   imgView: {
-    marginVertical: moderateScale(17, 0.1),
+    marginVertical: moderateScale(25, 0.1),
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -33,6 +33,16 @@ const styles = StyleSheet.create({
     color: black,
     fontWeight: '700',
     paddingVertical: moderateScale(5, 0.1),
+    textAlign:'center'
+  },
+  name1:{
+    fontSize: moderateScale(20, 0.1),
+    lineHeight: moderateScale(22, 0.1),
+    color: black,
+   fontFamily : 'Rubik-Bold',
+    // paddingVertical: moderateScale(5, 0.1),
+    paddingBottom: moderateScale(10,0.1),
+    textAlign:'center'
   },
   txt1: {
     fontSize: moderateScale(24, 0.1),

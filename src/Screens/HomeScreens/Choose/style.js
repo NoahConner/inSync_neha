@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     // alignSelf: 'center',
     fontFamily: 'Rubik-Regular',
+    paddingTop: moderateScale(20,0.1)
   },
   imgIcon: {
     width: moderateScale(85, 0.1),

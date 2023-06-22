@@ -90,9 +90,7 @@ const styles = StyleSheet.create({
     top: moderateScale(12, 0.1),
   },
   vector: {
-    flex: 1,
-    alignItems: 'flex-end',
-    justifyContent: 'flex-end',
+    right: 0, position: 'absolute',
     bottom: 0,
   },
 });

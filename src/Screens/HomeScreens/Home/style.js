@@ -15,10 +15,8 @@ const styles = StyleSheet.create({
     width: screenWidth,
   },
   vector: {
-    flex: 1,
-    marginTop: moderateScale(30, 0.1),
-    alignItems: 'flex-end',
-    justifyContent: 'flex-end',
+   right:0,
+   position:'absolute',
     bottom: 0,
   },
   txt1: {

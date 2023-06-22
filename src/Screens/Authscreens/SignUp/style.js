@@ -7,7 +7,7 @@ import {
   black,
 } from '../../../Constants';
 
-const robik = 'Rubik-Black';
+const robik = 'Rubik-Regular';
 
 const styles = StyleSheet.create({
   container: {
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   },
   center: {
     alignSelf: 'center',
-    top: moderateScale(83, 0.1),
+    top: moderateScale(45, 0.1),
     marginBottom: moderateScale(30, 0.1),
     height: screenHeight - 140,
   },

@@ -21,69 +21,7 @@ import SVGImg3 from '../../../assets/images/svg/leaf2.svg';
 const Setting = ({navigation}) => {
   const {setToken} = useAppContext(AppContext);
   return (
-    // <ImageBackground
-    //   style={s.backImg}
-    //   source={require('../../../assets/images/setting.jpg')}
-    //   resizeMode="contain">
-    //   <View>
-    //     <Image
-    //       resizeMode="contain"
-    //       source={require('../../../assets/images/PNG/Vector.png')}
-    //     />
-    //   </View>
-    //   <Header navigation={navigation} />
-    //   <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-    //     <ScrollView
-    //       contentContainerStyle={{
-    //         flex: 1,
-    //       }}>
-    //       <View style={s.center}>
-    //         <Text style={s.txt1}>Settings</Text>
-    //         <Account
-    //           type="account"
-    //           text="Account"
-    //           text1="Edit Profile"
-    //           onPress1={() => navigation.navigate('profile')}
-    //           onPress2={() => navigation.navigate('reset')}
-    //           text2="Change Password"
-    //         />
-    //         <Account
-    //           type="notification"
-    //           text="Notification"
-    //           text1="Notifications"
-    //           text2="App Notifications"
-    //         />
-    //         <Account
-    //           type="More"
-    //           text="More"
-    //           text1="Privacy Policy"
-    //           text2="Terms & Conditions"
-    //           onPress1={() => navigation.navigate('privacy')}
-    //           onPress2={() => navigation.navigate('terms')}
-    //           onPress3={() => navigation.navigate('help')}
-    //           text3="Help"
-    //         />
-    //         <View
-    //           style={{
-    //             justifyContent: 'center',
-    //             alignItems: 'center',
-    //           }}>
-    //           <Button text={'Logout'} onPress={() => setToken(null)} />
-    //         </View>
-
-    //         {/* <View style={{height: moderateScale(50, 0.1)}}></View> */}
-    //       </View>
-    //     </ScrollView>
-    //   </TouchableWithoutFeedback>
-
-    //   <View style={s.vector}>
-    //     <Image
-    //       style={{transform: [{rotate: '180deg'}]}}
-    //       resizeMode="contain"
-    //       source={require('../../../assets/images/PNG/Vector.png')}
-    //     />
-    //   </View>
-    // </ImageBackground>
+  
     <View
       style={{
         backgroundColor: backgroundColor,
@@ -127,7 +65,10 @@ const Setting = ({navigation}) => {
         }}>
         <Header navigation={navigation} />
       </View>
-      <ScrollView style={{marginBottom: moderateScale(50, 0.1)}}>
+      <ScrollView
+      showsVerticalScrollIndicator={false}
+      
+      >
         <View style={s.center}>
           <Text style={s.txt1}>Settings</Text>
           <View style={{marginTop: moderateScale(30, 0.1)}}>

@@ -125,103 +125,7 @@ const Notification = ({navigation}) => {
     );
   };
   return (
-    // <ImageBackground
-    //   style={s.backImg}
-    //   source={require('../../../assets/images/not.jpg')}
-    //   resizeMode="contain">
-    //   <View>
-    //     <Image
-    //       resizeMode="contain"
-    //       source={require('../../../assets/images/PNG/Vector.png')}
-    //     />
-    //   </View>
-    //   <ScrollView
-    //     contentContainerStyle={{
-    //       marginBottom: moderateScale(50, 0.1),
-    //       paddingBottom: moderateScale(20, 0.1),
-    //     }}>
-    //     <View style={s.center}>
-    //       <Text style={s.txt1}>Notifications & Reminders</Text>
-    //       <View style={{justifyContent: 'flex-end', alignItems: 'flex-end'}}>
-    //         {reminder ? (
-    //           <View
-    //             style={{
-    //               flexDirection: 'row',
-    //               justifyContent: 'space-between',
-    //               marginVertical: moderateScale(14, 0.1),
-    //               marginBottom: moderateScale(-30, 0.1),
-    //               alignItems: 'center',
-    //               paddingHorizontal: moderateScale(20, 0.1),
-    //             }}>
-    //             <TouchableOpacity
-    //               onPress={() => navigation.navigate('reminder')}>
-    //               <Icon name="md-add" color="black" size={25} />
-    //             </TouchableOpacity>
-    //             <Text
-    //               style={{
-    //                 color: black,
-    //                 fontSize: moderateScale(14, 0.1),
-    //                 lineHeight: moderateScale(15, 0.1),
-    //                 textAlign: 'center',
-    //                 fontWeight: '900',
-    //                 fontFamily: 'Rubik-Regular',
-    //               }}>
-    //               Add Reminder
-    //             </Text>
-    //           </View>
-    //         ) : null}
-    //       </View>
-
-    //       <View style={s.container}>
-    //         <TouchableOpacity
-    //           style={notification ? s.viewT : null}
-    //           onPress={() => {
-    //             setNotification(true);
-    //             setReminder(false);
-    //           }}>
-    //           <Text
-    //             style={[
-    //               s.txt,
-    //               notification ? {fontWeight: '800'} : {fontWeight: '400'},
-    //             ]}>
-    //             Notifications
-    //           </Text>
-    //         </TouchableOpacity>
-
-    //         <TouchableOpacity
-    //           style={reminder ? s.viewT : null}
-    //           onPress={() => {
-    //             setReminder(true);
-    //             setNotification(false);
-    //           }}>
-    //           <Text
-    //             style={[
-    //               s.txt,
-    //               reminder ? {fontWeight: '800'} : {fontWeight: '300'},
-    //             ]}>
-    //             Reminder
-    //           </Text>
-    //         </TouchableOpacity>
-    //       </View>
-
-    //       <View>
-    //         <FlatList
-    //           data={reminder == true ? ReminderList : NotificationList}
-    //           renderItem={renderItem}
-    //         />
-    //       </View>
-    //       <View style={{height: moderateScale(30, 0.1)}}></View>
-    //     </View>
-    //   </ScrollView>
-
-    //   <View style={s.vector}>
-    //     <Image
-    //       style={{transform: [{rotate: '180deg'}]}}
-    //       resizeMode="contain"
-    //       source={require('../../../assets/images/PNG/Vector.png')}
-    //     />
-    //   </View>
-    // </ImageBackground>
+    
     <View
       style={{
         backgroundColor: backgroundColor,
@@ -274,7 +178,7 @@ const Notification = ({navigation}) => {
         }}>
         <Header navigation={navigation} />
       </View>
-      <ScrollView style={{marginBottom: moderateScale(50, 0.1)}}>
+      <ScrollView >
         <View style={s.center}>
           <View
             style={{
@@ -322,7 +226,7 @@ const Notification = ({navigation}) => {
               <Text
                 style={[
                   s.txt,
-                  notification ? {fontWeight: '800'} : {fontWeight: '400'},
+                  notification ? {fontWeight: '400'} : {fontWeight: '800'},
                 ]}>
                 Notifications
               </Text>
@@ -337,7 +241,7 @@ const Notification = ({navigation}) => {
               <Text
                 style={[
                   s.txt,
-                  reminder ? {fontWeight: '800'} : {fontWeight: '300'},
+                  reminder ? {fontWeight: '400'} : {fontWeight: '800'},
                 ]}>
                 Reminder
               </Text>
