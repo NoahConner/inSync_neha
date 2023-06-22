@@ -17,9 +17,8 @@ const styles = StyleSheet.create({
     width: screenWidth,
   },
   center: {
-    alignSelf: 'center',
-    top: moderateScale(50, 0.1),
-    height: screenHeight - 150,
+    paddingTop: moderateScale(10, 0.1),
+    paddingHorizontal: moderateScale(12, 0.1),
 
     // marginBottom: moderateScale(80, 0.1),
   },
@@ -47,7 +46,8 @@ const styles = StyleSheet.create({
   },
 
   input: {
-    marginVertical: moderateScale(10, 0.1),
+    marginTop: moderateScale(30, 0.1),
+    // paddingHorizontal: moderateScale(20, 0.1),
   },
   fTxt: {
     justifyContent: 'flex-end',
@@ -80,10 +80,9 @@ const styles = StyleSheet.create({
   },
   vector: {
     // flex: 1,
-    alignItems: 'flex-end',
-    justifyContent: 'flex-end',
     bottom: 0,
-    zIndex: 1000,
+    right: 0,
+    position: 'absolute',
   },
 });
 

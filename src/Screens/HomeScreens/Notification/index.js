@@ -13,8 +13,11 @@ import {moderateScale} from 'react-native-size-matters';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Icon1 from 'react-native-vector-icons/Feather';
 import Icon2 from 'react-native-vector-icons/AntDesign';
-
-import {black, textColor} from '../../../Constants';
+import SVGImg from '../../../assets/images/svg/icon4.svg';
+import SVGImg2 from '../../../assets/images/svg/icon5.svg';
+import SVGImg3 from '../../../assets/images/svg/leaf2.svg';
+import Header from '../../../Components/Header';
+import {black, textColor, backgroundColor} from '../../../Constants';
 
 const NotificationList = [
   {
@@ -80,11 +83,13 @@ const Notification = ({navigation}) => {
                 justifyContent: 'space-evenly',
                 alignItems: 'center',
                 backgroundColor: '#EDEDED',
+                paddingHorizontal: moderateScale(5, 0.1),
                 marginVertical: moderateScale(5, 0.1),
               }
             : {
                 backgroundColor: item.index < 2 ? '#343434' : '#EDEDED',
-                flex: 1,
+
+                // flex: 1,
                 marginVertical: moderateScale(5, 0.1),
               }
         }>
@@ -120,30 +125,170 @@ const Notification = ({navigation}) => {
     );
   };
   return (
-    <ImageBackground
-      style={s.backImg}
-      source={require('../../../assets/images/not.jpg')}
-      resizeMode="contain">
-      <View>
+    // <ImageBackground
+    //   style={s.backImg}
+    //   source={require('../../../assets/images/not.jpg')}
+    //   resizeMode="contain">
+    //   <View>
+    //     <Image
+    //       resizeMode="contain"
+    //       source={require('../../../assets/images/PNG/Vector.png')}
+    //     />
+    //   </View>
+    //   <ScrollView
+    //     contentContainerStyle={{
+    //       marginBottom: moderateScale(50, 0.1),
+    //       paddingBottom: moderateScale(20, 0.1),
+    //     }}>
+    //     <View style={s.center}>
+    //       <Text style={s.txt1}>Notifications & Reminders</Text>
+    //       <View style={{justifyContent: 'flex-end', alignItems: 'flex-end'}}>
+    //         {reminder ? (
+    //           <View
+    //             style={{
+    //               flexDirection: 'row',
+    //               justifyContent: 'space-between',
+    //               marginVertical: moderateScale(14, 0.1),
+    //               marginBottom: moderateScale(-30, 0.1),
+    //               alignItems: 'center',
+    //               paddingHorizontal: moderateScale(20, 0.1),
+    //             }}>
+    //             <TouchableOpacity
+    //               onPress={() => navigation.navigate('reminder')}>
+    //               <Icon name="md-add" color="black" size={25} />
+    //             </TouchableOpacity>
+    //             <Text
+    //               style={{
+    //                 color: black,
+    //                 fontSize: moderateScale(14, 0.1),
+    //                 lineHeight: moderateScale(15, 0.1),
+    //                 textAlign: 'center',
+    //                 fontWeight: '900',
+    //                 fontFamily: 'Rubik-Regular',
+    //               }}>
+    //               Add Reminder
+    //             </Text>
+    //           </View>
+    //         ) : null}
+    //       </View>
+
+    //       <View style={s.container}>
+    //         <TouchableOpacity
+    //           style={notification ? s.viewT : null}
+    //           onPress={() => {
+    //             setNotification(true);
+    //             setReminder(false);
+    //           }}>
+    //           <Text
+    //             style={[
+    //               s.txt,
+    //               notification ? {fontWeight: '800'} : {fontWeight: '400'},
+    //             ]}>
+    //             Notifications
+    //           </Text>
+    //         </TouchableOpacity>
+
+    //         <TouchableOpacity
+    //           style={reminder ? s.viewT : null}
+    //           onPress={() => {
+    //             setReminder(true);
+    //             setNotification(false);
+    //           }}>
+    //           <Text
+    //             style={[
+    //               s.txt,
+    //               reminder ? {fontWeight: '800'} : {fontWeight: '300'},
+    //             ]}>
+    //             Reminder
+    //           </Text>
+    //         </TouchableOpacity>
+    //       </View>
+
+    //       <View>
+    //         <FlatList
+    //           data={reminder == true ? ReminderList : NotificationList}
+    //           renderItem={renderItem}
+    //         />
+    //       </View>
+    //       <View style={{height: moderateScale(30, 0.1)}}></View>
+    //     </View>
+    //   </ScrollView>
+
+    //   <View style={s.vector}>
+    //     <Image
+    //       style={{transform: [{rotate: '180deg'}]}}
+    //       resizeMode="contain"
+    //       source={require('../../../assets/images/PNG/Vector.png')}
+    //     />
+    //   </View>
+    // </ImageBackground>
+    <View
+      style={{
+        backgroundColor: backgroundColor,
+        flex: 1,
+        position: 'relative',
+        // paddingHorizontal: moderateScale(30, 0.1),
+      }}>
+      {/* corner blob */}
+      <View style={{position: 'absolute', top: 0, left: 0}}>
         <Image
           resizeMode="contain"
           source={require('../../../assets/images/PNG/Vector.png')}
         />
       </View>
-      <ScrollView
-        contentContainerStyle={{
-          marginBottom: moderateScale(50, 0.1),
-          paddingBottom: moderateScale(20, 0.1),
+
+      {/* butterfly */}
+      <View
+        style={{
+          position: 'absolute',
+          right: moderateScale(20, 0.1),
+          top: moderateScale(40, 0.1),
         }}>
+        <SVGImg width={80} height={80} />
+      </View>
+
+      {/* left leaf */}
+      <View
+        style={{
+          position: 'absolute',
+          top: moderateScale(90, 0.1),
+          left: -30,
+        }}>
+        <SVGImg2 />
+      </View>
+
+      {/* left leaf */}
+      <View
+        style={{
+          position: 'absolute',
+          top: moderateScale(180, 0.1),
+          right: 0,
+        }}>
+        <SVGImg3 />
+      </View>
+
+      <View
+        style={{
+          paddingTop: moderateScale(60, 0.1),
+          paddingHorizontal: moderateScale(30, 0.1),
+        }}>
+        <Header navigation={navigation} />
+      </View>
+      <ScrollView style={{marginBottom: moderateScale(50, 0.1)}}>
         <View style={s.center}>
-          <Text style={s.txt1}>Notifications & Reminders</Text>
+          <View
+            style={{
+              paddingHorizontal: moderateScale(30, 0.1),
+            }}>
+            <Text style={s.txt1}>Notifications & Reminders</Text>
+          </View>
           <View style={{justifyContent: 'flex-end', alignItems: 'flex-end'}}>
             {reminder ? (
               <View
                 style={{
                   flexDirection: 'row',
                   justifyContent: 'space-between',
-                  marginVertical: moderateScale(14, 0.1),
+                  marginVertical: moderateScale(25, 0.1),
                   marginBottom: moderateScale(-30, 0.1),
                   alignItems: 'center',
                   paddingHorizontal: moderateScale(20, 0.1),
@@ -205,7 +350,6 @@ const Notification = ({navigation}) => {
               renderItem={renderItem}
             />
           </View>
-          <View style={{height: moderateScale(30, 0.1)}}></View>
         </View>
       </ScrollView>
 
@@ -216,7 +360,7 @@ const Notification = ({navigation}) => {
           source={require('../../../assets/images/PNG/Vector.png')}
         />
       </View>
-    </ImageBackground>
+    </View>
   );
 };
 

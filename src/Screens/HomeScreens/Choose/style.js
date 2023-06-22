@@ -18,15 +18,15 @@ const styles = StyleSheet.create({
   },
   center: {
     alignSelf: 'center',
-    top: moderateScale(70, 0.1),
-    height: '87%',
+    paddingHorizontal: moderateScale(20, 0.1),
   },
   txt1: {
     fontSize: moderateScale(24, 0.1),
     lineHeight: moderateScale(26, 0.1),
     color: black,
     fontWeight: '700',
-    alignSelf: 'center',
+    textAlign: 'center',
+    // alignSelf: 'center',
     fontFamily: 'Rubik-Regular',
   },
   imgIcon: {
@@ -74,9 +74,8 @@ const styles = StyleSheet.create({
     // paddingVertical: moderateScale(5, 0.1),
   },
   vector: {
-    flex: 1,
-    alignItems: 'flex-end',
-    justifyContent: 'flex-end',
+    right: 0,
+    position: 'absolute',
     bottom: 0,
   },
 });

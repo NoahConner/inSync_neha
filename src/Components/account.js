@@ -6,6 +6,7 @@ import {
   StyleSheet,
   Text,
   Switch,
+  Image,
 } from 'react-native';
 import {black, purple, emailReg, screenWidth, white} from '../Constants/index';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -152,11 +153,15 @@ const Account = ({
                 alignSelf: 'center',
                 flex: 0.1,
               }}>
-              <Icon2
-                name="add-to-list"
-                size={22}
-                color={black}
-                style={styles.icon}
+              <Image
+                source={require('../assets/images/PNG/more.png')}
+                style={{
+                  width: moderateScale(16, 0.1),
+                  height: moderateScale(16, 0.1),
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: 'black',
+                }}
               />
             </View>
             <View style={{flex: 0.9}}>
@@ -230,7 +235,7 @@ const styles = StyleSheet.create({
   inputContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginVertical: moderateScale(7, 0.1),
+    marginVertical: moderateScale(8, 0.1),
   },
   activeContainer: {
     borderBottomColor: purple,
@@ -249,7 +254,7 @@ const styles = StyleSheet.create({
   },
   input: {
     flexDirection: 'row',
-    width: moderateScale(300, 0.1),
+    width: moderateScale(280, 0.1),
     height: moderateScale(37, 0.1),
     borderColor: black,
     borderBottomColor: '#9A9A9A',

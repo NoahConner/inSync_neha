@@ -23,6 +23,9 @@ import {
 } from '../../../Constants';
 import {moderateScale} from 'react-native-size-matters';
 import styles from './style';
+import SVGImg from '../../../assets/images/svg/icon4.svg';
+import SVGImg2 from '../../../assets/images/svg/small-lf.svg';
+import SVGImg3 from '../../../assets/images/svg/lob.svg';
 
 const Form = ({navigation}) => {
   const [name, setName] = useState(null);
@@ -33,107 +36,152 @@ const Form = ({navigation}) => {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
-    <ImageBackground
-      style={s.backImg}
-      source={require('../../../assets/images/form.jpg')}
-      resizeMode="contain">
-      <View>
+    <View
+      style={{
+        backgroundColor: backgroundColor,
+        flex: 1,
+        position: 'relative',
+        paddingHorizontal: moderateScale(30, 0.1),
+      }}>
+      {/* corner blob */}
+      <View style={{position: 'absolute', top: 0, left: 0}}>
         <Image
           resizeMode="contain"
           source={require('../../../assets/images/PNG/Vector.png')}
         />
       </View>
-      <Header navigation={navigation} />
-      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-        <ScrollView>
-          <View style={s.center}>
-            <Text style={s.txt1}>Detailed Form</Text>
-            <View style={s.input}>
-              <Input
-                placeholder={'First Name'}
-                type={'text'}
-                value={name}
-                setValue={v => setName(v)}
-              />
-              <Input
-                placeholder={'Last Name'}
-                type={'text'}
-                value={last}
-                setValue={v => setLast(v)}
-              />
-              <Input placeholder={'DOB'} type={'DOB'} />
-              <Input
-                placeholder={'Cycle Duration'}
-                type={'number'}
-                maxLength={2}
-              />
-              <Input placeholder={'Expected Date'} type={'expected date'} />
-              <Input
-                placeholder={'Period Duration'}
-                type={'number'}
-                maxLength={2}
-              />
-              <Input
-                placeholder={'Relation'}
-                type={'relation'}
-                style={
-                  {
-                    // justifyContent: 'flex-start',
-                    // paddingHorizontal: moderateScale(18, 0.1),
-                    // backgroundColor: '#D9D9D9',
-                  }
-                }
-              />
 
-              <View style={s.btn}>
-                <Button
-                  text={'Submit'}
-                  onPress={() => {
-                    setToken('sdsk');
-                    // navigation.navigate('home');
-                  }}
-                />
-              </View>
-              <View>
-                <Text
-                  style={[
-                    styles.txt1,
-                    {
-                      fontSize: moderateScale(15, 0.1),
-                    },
-                  ]}>
-                  ---------OR--------
-                </Text>
-              </View>
-              <View style={s.btn}>
-                <Button
-                  text={'Sync with Partner'}
-                  onPress={() => {
-                    setModalVisible(true);
-                  }}
-                />
-              </View>
+      {/* butterfly */}
+      <View
+        style={{
+          position: 'absolute',
+          right: moderateScale(15, 0.1),
+          top: moderateScale(30, 0.1),
+        }}>
+        <SVGImg width={80} height={80} />
+      </View>
+
+      {/* left leaf */}
+      <View
+        style={{
+          position: 'absolute',
+          top: moderateScale(50, 0.1),
+          right: moderateScale(140, 0.1),
+        }}>
+        <SVGImg2 />
+      </View>
+
+      {/* left leaf */}
+      <View
+        style={{
+          position: 'absolute',
+          top: moderateScale(110, 0.1),
+          right: 25,
+        }}>
+        <SVGImg3 />
+      </View>
+
+      <View
+        style={{
+          paddingTop: moderateScale(60, 0.1),
+        }}>
+        <View style={{height: moderateScale(40, 0.1)}}></View>
+        {/* <Header navigation={navigation} /> */}
+      </View>
+      <ScrollView style={{marginBottom: moderateScale(50, 0.1)}}>
+        <View style={s.center}>
+          <Text style={s.txt1}>Edit Profile</Text>
+          <View style={s.input}>
+            <Input
+              placeholder={'First Name'}
+              type={'text'}
+              value={name}
+              setValue={v => setName(v)}
+            />
+            <Input
+              placeholder={'Last Name'}
+              type={'text'}
+              value={last}
+              setValue={v => setLast(v)}
+            />
+            <Input placeholder={'DOB'} type={'DOB'} />
+            <Input
+              placeholder={'Cycle Duration'}
+              type={'number'}
+              maxLength={2}
+            />
+            <Input placeholder={'Expected Date'} type={'expected date'} />
+            <Input
+              placeholder={'Period Duration'}
+              type={'number'}
+              maxLength={2}
+            />
+            <Input
+              placeholder={'Relation'}
+              type={'relation'}
+              style={
+                {
+                  // justifyContent: 'flex-start',
+                  // paddingHorizontal: moderateScale(18, 0.1),
+                  // backgroundColor: '#D9D9D9',
+                }
+              }
+            />
+
+            <View style={s.btn}>
+              <Button
+                text={'Submit'}
+                onPress={() => {
+                  setToken('sdsk');
+                  // navigation.navigate('home');
+                }}
+              />
+            </View>
+            <View>
+              <Text
+                style={[
+                  styles.txt1,
+                  {
+                    fontSize: moderateScale(15, 0.1),
+                  },
+                ]}>
+                ---------OR--------
+              </Text>
+            </View>
+            <View style={s.btn}>
+              <Button
+                text={'Sync with Partner'}
+                onPress={() => {
+                  setModalVisible(true);
+                }}
+              />
             </View>
           </View>
-          <View style={s.vector}>
-            <Image
-              style={{transform: [{rotate: '180deg'}]}}
-              resizeMode="contain"
-              source={require('../../../assets/images/PNG/Vector.png')}
-            />
+          <View style={{}}>
+            <View
+              style={{
+                height: moderateScale(200, 0.1),
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <Image
+                resizeMode="contain"
+                style={{width: moderateScale(280, 0.1)}}
+                source={require('../../../assets/images/form-btm.jpg')}
+              />
+            </View>
           </View>
-        </ScrollView>
-      </TouchableWithoutFeedback>
+        </View>
+      </ScrollView>
 
-      <ModalView
-        visible={modalVisible}
-        type={'sync'}
-        text={`Get Sync With`}
-        text2={'Your Partner'}
-        close={() => setModalVisible(!modalVisible)}
-        cancel={() => setModalVisible(!modalVisible)}
-      />
-    </ImageBackground>
+      <View style={s.vector}>
+        <Image
+          style={{transform: [{rotate: '180deg'}]}}
+          resizeMode="contain"
+          source={require('../../../assets/images/PNG/Vector.png')}
+        />
+      </View>
+    </View>
   );
 };
 export default Form;

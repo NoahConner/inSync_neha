@@ -12,14 +12,12 @@ const styles = StyleSheet.create({
     width: screenWidth,
   },
   vector: {
-    // flex: 1,
-    alignItems: 'flex-end',
-    justifyContent: 'flex-end',
-    bottom: moderateScale(55, 0.1),
-    // position: 'absolute',
+    bottom: 0,
+    right: 0,
+    position: 'absolute',
   },
   txt1: {
-    fontSize: moderateScale(24, 0.1),
+    fontSize: moderateScale(20, 0.1),
     lineHeight: moderateScale(26, 0.1),
     color: black,
     fontWeight: '700',
@@ -47,8 +45,6 @@ const styles = StyleSheet.create({
   },
   center: {
     paddingHorizontal: moderateScale(20, 0.1),
-    top: moderateScale(45, 0.1),
-    height: screenHeight - moderateScale(160, 0.1),
   },
 });
 

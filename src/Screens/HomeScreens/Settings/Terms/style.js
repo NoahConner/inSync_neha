@@ -11,10 +11,9 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   vector: {
-    flex: 1,
-    alignItems: 'flex-end',
-    justifyContent: 'flex-end',
     bottom: 0,
+    right: 0,
+    position: 'absolute',
   },
   txt1: {
     fontSize: moderateScale(24, 0.1),
@@ -26,7 +25,6 @@ const styles = StyleSheet.create({
   },
   center: {
     paddingHorizontal: moderateScale(20, 0.1),
-    top: moderateScale(45, 0.1),
   },
   btn: {
     justifyContent: 'center',

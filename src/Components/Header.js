@@ -6,14 +6,16 @@ import Inicon from 'react-native-vector-icons/Ionicons';
 
 const Header = ({navigation}) => {
   return (
-    <TouchableOpacity
-      style={styles.container}
-      onPress={() => {
-        console.log('jskf');
-        navigation.goBack();
-      }}>
-      <Inicon name="arrow-back" size={moderateScale(20)} color={white} />
-    </TouchableOpacity>
+    <View style={{width: '100%', height: 40}}>
+      <TouchableOpacity
+        style={styles.container}
+        onPress={() => {
+          console.log('jskf');
+          navigation.goBack();
+        }}>
+        <Inicon name="arrow-back" size={moderateScale(20)} color={white} />
+      </TouchableOpacity>
+    </View>
   );
 };
 const styles = StyleSheet.create({

@@ -16,10 +16,7 @@ const styles = StyleSheet.create({
     width: screenWidth,
   },
   center: {
-    alignSelf: 'center',
-    top: moderateScale(30, 0.1),
-    height: '85%',
-    marginBottom: moderateScale(40, 0.1),
+    paddingHorizontal: moderateScale(20, 0.1),
   },
   imgView: {
     marginVertical: moderateScale(17, 0.1),
@@ -39,7 +36,7 @@ const styles = StyleSheet.create({
   },
   txt1: {
     fontSize: moderateScale(24, 0.1),
-    lineHeight: moderateScale(26, 0.1),
+    lineHeight: moderateScale(24, 0.1),
     color: black,
     fontWeight: '700',
     alignSelf: 'center',
@@ -61,7 +58,7 @@ const styles = StyleSheet.create({
   },
 
   input: {
-    marginVertical: moderateScale(10, 0.1),
+    // marginVertical: moderateScale(10, 0.1),
   },
   fTxt: {
     justifyContent: 'flex-end',
@@ -88,13 +85,9 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   vector: {
-    // flex: 1,
-    // height: moderateScale(50, 0.1),
-    // backgroundColor: 'yellow',
-    //  position: 'absolute',
-    alignItems: 'flex-end',
-    justifyContent: 'flex-end',
     bottom: 0,
+    right: 0,
+    position: 'absolute',
   },
 });
 
