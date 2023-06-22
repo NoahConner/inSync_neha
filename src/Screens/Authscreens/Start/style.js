@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     position: 'relative',
   },
   backImg: {
-    position: 'absolute',
+    position: 'relative',
     flex: 1,
     backgroundColor: backgroundColor,
     height: screenHeight,
@@ -90,7 +90,8 @@ const styles = StyleSheet.create({
     top: moderateScale(12, 0.1),
   },
   vector: {
-    right: 0, position: 'absolute',
+    right: 0,
+     position: 'absolute',
     bottom: 0,
   },
 });

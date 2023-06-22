@@ -10,7 +10,7 @@ import {
 const styles = StyleSheet.create({
   backImg: {
     flex: 1,
-    backgroundColor: backgroundColor,
+    backgroundColor: '#ffff',
     height: screenHeight,
     width: screenWidth,
   },

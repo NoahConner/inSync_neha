@@ -5,14 +5,14 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import s from './style';
 import Input from '../../../Components/input';
 import Button from '../../../Components/Button';
-import {moderateScale} from 'react-native-size-matters';
+import { moderateScale } from 'react-native-size-matters';
 import Header from '../../../Components/Header';
 
-const Reset = ({navigation}) => {
+const Reset = ({ navigation }) => {
   const [password, setPassword] = useState(null);
   const [confPassword, setConfPass] = useState(null);
 
@@ -56,25 +56,18 @@ const Reset = ({navigation}) => {
 
       <View
         style={{
-          flex: 1,
+
           position: 'absolute',
           bottom: 0,
-          flexDirection: 'row',
-          justifyContent: 'space-between',
+          right: 0
         }}>
-        <View
-          style={{
-            flex: 1,
-            alignItems: 'flex-end',
-            justifyContent: 'flex-end',
-            bottom: 0,
-          }}>
-          <Image
-            style={{transform: [{rotate: '180deg'}]}}
-            resizeMode="contain"
-            source={require('../../../assets/images/PNG/Vector.png')}
-          />
-        </View>
+
+        <Image
+          style={{ transform: [{ rotate: '180deg' }] }}
+          resizeMode="contain"
+          source={require('../../../assets/images/PNG/Vector.png')}
+        />
+
       </View>
     </ImageBackground>
   );

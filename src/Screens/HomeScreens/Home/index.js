@@ -2,12 +2,16 @@ import {View, Text, ImageBackground, Image, ScrollView} from 'react-native';
 import React, {useState, useEffect, useContext} from 'react';
 import s from './style';
 import {moderateScale} from 'react-native-size-matters';
-import {linearGradient, screenWidth} from '../../../Constants';
+import {backgroundColor, linearGradient, screenWidth} from '../../../Constants';
 import LinearGradient from 'react-native-linear-gradient';
 import {Linear, Calender, RadioButton} from '../../../Components/gradient';
 import {AppContext, useAppContext} from '../../../Context/AppContext';
 import Button from '../../../Components/Button';
 import ModalView from '../../../Components/Modal';
+import SVGImg from '../../../assets/images/svg/icon4.svg';
+import SVGImg2 from '../../../assets/images/svg/small-lf.svg';
+import SVGImg3 from '../../../assets/images/svg/lob.svg';
+import SVGImg1 from '../../../assets/images/svg/round.svg';
 
 const Home = ({navigation}) => {
   const {setExpected, setPeriod, period, expected} = useContext(AppContext);
@@ -60,10 +64,61 @@ const Home = ({navigation}) => {
   }, [expected]);
 
   return (
-    <ImageBackground
-      style={s.backImg}
-      source={require('../../../assets/images/home.jpg')}
-      resizeMode="contain">
+    // <ImageBackground
+    //   style={s.backImg}
+    //   source={require('../../../assets/images/home.jpg')}
+    //   resizeMode="contain">
+    <View style={{
+      flex:1, backgroundColor: backgroundColor
+    }}>
+
+<View
+        style={{
+          position: 'absolute',
+          left: moderateScale(10, 0.1),
+          bottom: moderateScale(15, 0.1),
+        }}>
+        <SVGImg1 width={130} height={130} />
+      </View>
+      {/* butterfly */}
+      <View
+        style={{
+          position: 'absolute',
+          right: moderateScale(15, 0.1),
+          top: moderateScale(30, 0.1),
+        }}>
+        <SVGImg width={80} height={80} />
+      </View>
+
+      {/* left leaf */}
+      <View
+        style={{
+          position: 'absolute',
+          top: moderateScale(70, 0.1),
+          left: moderateScale(50, 0.1),
+        }}>
+        <SVGImg2 width={110} height={110} />
+      </View>
+
+      {/* left leaf */}
+      <View
+        style={{
+          position: 'absolute',
+          top: moderateScale(90, 0.1),
+          right: moderateScale(20,0.1),
+        }}>
+        <SVGImg3 />
+        
+      </View>
+      <View
+        style={{
+          position: 'absolute',
+          bottom: moderateScale(110, 0.1),
+          right: moderateScale(60,0.1),
+        }}>
+        <SVGImg3 width={90} height={90} />
+        
+      </View>
       <View>
         <Image
           resizeMode="contain"
@@ -136,7 +191,8 @@ const Home = ({navigation}) => {
         title2={'In 2 Days '}
         cancel={() => setModalVisible(!modalVisible)}
       />
-    </ImageBackground>
+      </View>
+    // </ImageBackground>
   );
 };
 export default Home;

@@ -89,7 +89,7 @@ const Form = ({ navigation }) => {
         <View style={{ height: moderateScale(40, 0.1) }}></View>
         {/* <Header navigation={navigation} /> */}
       </View>
-      <ScrollView style={{ marginBottom: moderateScale(0, 0.1) }}
+      <ScrollView  
         showsVerticalScrollIndicator={false}
       >
         <View style={s.center}>
@@ -127,7 +127,7 @@ const Form = ({ navigation }) => {
               style={{
                 justifyContent: 'flex-start',
                 paddingHorizontal: moderateScale(18, 0.1),
-                backgroundColor: '#D9D9D9',
+
               }}
             />
 
@@ -163,10 +163,10 @@ const Form = ({ navigation }) => {
         </View>
         <View
             style={{
-              height: moderateScale(200, 0.1),
+              height: moderateScale(250, 0.1),
               justifyContent: 'center',
               alignItems: 'center',
-              marginTop:50,
+               marginTop: moderateScale(20,0.1),
               overflow:'hidden'
             }}>
             <Image

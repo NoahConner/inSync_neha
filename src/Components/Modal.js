@@ -71,6 +71,7 @@ const ModalView = ({
                           paddingLeft: moderateScale(25, 0.1),
                           fontSize: moderateScale(15, 0.1),
                           lineHeight: moderateScale(17, 0.1),
+                          top: moderateScale(15,0.1)
                         },
                       ]}>
                       {' '}
@@ -139,7 +140,7 @@ const ModalView = ({
               <View
                 style={{
                   width: moderateScale(324, 0.1),
-                  height: moderateScale(348, 0.1),
+                  height: moderateScale(360, 0.1),
                   backgroundColor: backgroundColor,
                 }}>
                 <View

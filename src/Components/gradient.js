@@ -102,7 +102,7 @@ export function Linear({ type, text1, text2, text3 }) {
           <View
             style={{
               flexDirection: 'row',
-              justifyContent: 'space-between',
+              justifyContent: 'space-evenly',
               paddingHorizontal: moderateScale(20, 0.1),
             }}>
             <View>
@@ -117,7 +117,7 @@ export function Linear({ type, text1, text2, text3 }) {
                 Getting Pregnant
               </Text>
             </View>
-            <View style={{flexDirection: 'column', alignItems: 'flex-end' }}>
+            <View style={{flexDirection: 'column', alignItems: 'flex-end'}}>
               <View>
                 <Text
                   style={{

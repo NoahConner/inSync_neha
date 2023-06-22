@@ -112,7 +112,7 @@ const Choose = ({navigation}) => {
             </TouchableOpacity>
           </View>
           <View style={{}}>
-            {/* <View
+            <View
               style={{
                 height: moderateScale(300, 0.1),
                 justifyContent: 'center',
@@ -121,11 +121,11 @@ const Choose = ({navigation}) => {
               }}>
               <Image
                 resizeMode="contain"
-                style={{width: moderateScale(320, 0.1)}}
+                style={{width: moderateScale(300, 0.1)}}
                 
                 source={require('../../../assets/images/choose-btm.jpg')}
               />
-            </View> */}
+            </View>
           </View>
         </View>
       </ScrollView>

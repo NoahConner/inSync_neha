@@ -77,6 +77,7 @@ const StartScreen = ({navigation}) => {
             source={require('../../../assets/images/PNG/i14.png')}
           />
         </View>
+      </View>
         <View style={s.vector}>
           <Image
             style={{transform: [{rotate: '180deg'}]}}
@@ -84,7 +85,6 @@ const StartScreen = ({navigation}) => {
             source={require('../../../assets/images/PNG/Vector.png')}
           />
         </View>
-      </View>
     </ImageBackground>
   );
 };
