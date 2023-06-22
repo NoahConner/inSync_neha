@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from 'react';
-import {View, Text, StyleSheet, TouchableOpacity, Alert} from 'react-native';
-import {Checkbox} from 'react-native-paper';
-import {Calendar, CalendarList, Agenda} from 'react-native-calendars';
-import {moderateScale} from 'react-native-size-matters';
+import React, { useState, useEffect } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
+import { Checkbox } from 'react-native-paper';
+import { Calendar, CalendarList, Agenda } from 'react-native-calendars';
+import { moderateScale } from 'react-native-size-matters';
 import {
   backgroundColor,
   black,
@@ -11,10 +11,10 @@ import {
   screenWidth,
 } from '../Constants/index';
 import LinearGradient from 'react-native-linear-gradient';
-import {BarChart} from 'react-native-chart-kit';
+import { BarChart } from 'react-native-chart-kit';
 import ModalView from './Modal';
-import {AppContext, useAppContext} from '../Context/AppContext';
-export function Linear({type, text1, text2, text3}) {
+import { AppContext, useAppContext } from '../Context/AppContext';
+export function Linear({ type, text1, text2, text3 }) {
   const data = {
     labels: [
       'jan',
@@ -25,30 +25,25 @@ export function Linear({type, text1, text2, text3}) {
       'Jun',
       'Jul',
       'Aug',
-      'Sep',
-      'Oct',
-      'Nov',
-      'Dec',
+      'Sep'
     ],
     datasets: [
       {
-        data: [40, 84, 56, 40, 80, 55, 60, 40, 50, 30, 55, 80],
+        data: [40, 84, 56, 40, 80, 55, 60, 40, 50],
       },
     ],
+    legend: ["Rainy Days"] // optional
   };
   const [checked, setChecked] = React.useState(false);
-  const {setExpected, setPeriod, period, expected} = useAppContext(AppContext);
+  const { setExpected, setPeriod, period, expected } = useAppContext(AppContext);
   const [modalVisible, setModalVisible] = useState(false);
   return (
     <LinearGradient
       colors={linearGradient}
-      end={{x: 1, y: 1}}
-      start={{x: 1, y: 0}}
+      end={{ x: 1, y: 1 }}
+      start={{ x: 1, y: 0 }}
       style={{
-        // height: moderateScale(140, 0.1),
         marginVertical: moderateScale(18, 0.1),
-        // alignItems: 'center',
-        // justifyContent: 'center',
       }}>
       {type === 'text' ? (
         <View
@@ -81,8 +76,7 @@ export function Linear({type, text1, text2, text3}) {
                 fontFamily: 'Rubik-Regular',
               },
             ]}>
-            {' '}
-            {text2}{' '}
+            {text2}
           </Text>
           <Text
             style={[
@@ -94,8 +88,7 @@ export function Linear({type, text1, text2, text3}) {
                 fontFamily: 'Rubik-Regular',
               },
             ]}>
-            {' '}
-            {text3}{' '}
+            {text3}
           </Text>
         </View>
       ) : null}
@@ -103,82 +96,81 @@ export function Linear({type, text1, text2, text3}) {
       {type === 'graph' ? (
         <View
           style={{
-            marginVertical: moderateScale(15, 0.1),
-            paddingHorizontal: moderateScale(5, 0.1),
+            paddingTop: moderateScale(20, 0.1),
+            paddingTop: moderateScale(20, 0.1),
           }}>
           <View
             style={{
               flexDirection: 'row',
               justifyContent: 'space-between',
-              paddingHorizontal: moderateScale(10, 0.1),
+              paddingHorizontal: moderateScale(20, 0.1),
             }}>
-            <View style={{flex: 0.7}}>
+            <View>
               <Text
                 style={{
                   width: '60%',
                   color: white,
-                  fontSize: moderateScale(14, 0.1),
+                  fontSize: moderateScale(16, 0.1),
+                  fontFamily: 'Rubik-Regular'
                 }}>
-                Chances Of Getting Pregnant{' '}
+                Chances Of
+                Getting Pregnant
               </Text>
             </View>
-            <View style={{flex: 0.3}}>
-              <Text
-                style={{
-                  color: white,
-                  fontSize: moderateScale(14, 0.1),
-                  fontFamily: 'Rubik-Regular',
-                }}>
-                Are You Expecting?
-              </Text>
-              <View
-                style={{
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  justifyContent: 'flex-start',
-                  // backgroundColor: 'red',
-                  fontFamily: 'Rubik-Regular',
-                  right: moderateScale(8, 0.1),
-                  // paddingLeft: moderateScale(-13, 0.1),
-                }}>
-                <Checkbox
-                  color="white"
-                  status={checked ? 'checked' : 'unchecked'}
-                  onPress={() => {
-                    setChecked(!checked);
-                    setModalVisible(true);
-                  }}
-                />
-                <Text style={{color: white}}>Yes</Text>
+            <View style={{flexDirection: 'column', alignItems: 'flex-end' }}>
+              <View>
+                <Text
+                  style={{
+                    color: white,
+                    fontSize: moderateScale(11, 0.1),
+                    fontFamily: 'Rubik-Regular',
+                  }}>
+                  Are You {'\n'}
+                  Expecting?
+                </Text>
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    justifyContent: 'flex-start',
+                    right: moderateScale(8, 0.1)
+                  }}>
+                  <Checkbox
+                    color="white"
+                    status={checked ? 'checked' : 'unchecked'}
+                    uncheckedColor="#fff"
+                    onPress={() => {
+                      setChecked(!checked);
+                      setModalVisible(true);
+                    }}
+                  />
+                  <Text style={{ color: white, fontFamily: 'Rubik-Regular', fontSize: 11 }}>Yes</Text>
+                </View>
               </View>
             </View>
           </View>
-          <View>
+          <View style={{alignItems:'center', justifyContent:'flex-start', marginTop:-20}}>
             <BarChart
               data={data}
-              width={screenWidth} // from react-native
-              height={180}
-              yAxisLabel={['low', 'medium', 'high']}
-              segments={1}
-              yAxisInterval={3}
+              width={moderateScale(screenWidth, 0.1)}
+              height={moderateScale(180, 0.1)}
+              yAxisSuffix='%'
               withInnerLines={false}
               chartConfig={{
                 fillShadowGradient: white,
                 fillShadowGradientOpacity: 1,
-                // backgroundGradientTo: 'white',
                 backgroundGradientFromOpacity: 0,
                 backgroundGradientFrom: 'white',
                 backgroundGradientToOpacity: 0,
                 color: (opacity = 1) => 'white',
-                barPercentage: 0.2,
+                barPercentage: 0.4,
                 decimalPlaces: 0,
               }}
-              withHorizontalLabels={false}
               fromZero={true}
-              //   flatColor={true}
               showBarTops={true}
               style={{
-                left: moderateScale(-60, 0.1),
+                left: moderateScale(-10, 0.1),
+                transform:[{scale:0.8}]
               }}
             />
           </View>
@@ -196,7 +188,7 @@ export function Linear({type, text1, text2, text3}) {
     </LinearGradient>
   );
 }
-export function Calender({type}) {
+export function Calender({ type }) {
   return (
     <Calendar
       style={{
@@ -215,63 +207,63 @@ export function Calender({type}) {
       markedDates={
         type === 'period'
           ? {
-              '2023-06-11': {
-                selected: true,
-                marked: true,
-                selectedColor: white,
-                selectedTextColor: black,
-                dotColor: black,
-              },
-              '2023-06-12': {
-                selected: true,
-                marked: true,
-                selectedColor: white,
-                selectedTextColor: black,
-                dotColor: black,
-              },
-              '2023-06-13': {
-                selected: true,
-                marked: true,
-                selectedColor: white,
-                selectedTextColor: black,
-                dotColor: black,
-              },
-              '2023-06-14': {
-                selected: true,
-                marked: true,
-                selectedColor: white,
-                selectedTextColor: black,
-                dotColor: black,
-              },
-              '2023-06-15': {
-                selected: true,
-                marked: true,
-                selectedColor: white,
-                selectedTextColor: black,
-                dotColor: black,
-              },
-              '2023-06-16': {
-                selected: true,
-                marked: true,
-                selectedColor: white,
-                selectedTextColor: black,
-                dotColor: black,
-              },
-            }
+            '2023-06-11': {
+              selected: true,
+              marked: true,
+              selectedColor: white,
+              selectedTextColor: black,
+              dotColor: black,
+            },
+            '2023-06-12': {
+              selected: true,
+              marked: true,
+              selectedColor: white,
+              selectedTextColor: black,
+              dotColor: black,
+            },
+            '2023-06-13': {
+              selected: true,
+              marked: true,
+              selectedColor: white,
+              selectedTextColor: black,
+              dotColor: black,
+            },
+            '2023-06-14': {
+              selected: true,
+              marked: true,
+              selectedColor: white,
+              selectedTextColor: black,
+              dotColor: black,
+            },
+            '2023-06-15': {
+              selected: true,
+              marked: true,
+              selectedColor: white,
+              selectedTextColor: black,
+              dotColor: black,
+            },
+            '2023-06-16': {
+              selected: true,
+              marked: true,
+              selectedColor: white,
+              selectedTextColor: black,
+              dotColor: black,
+            },
+          }
           : {
-              '2023-09-25': {
-                selected: true,
-                marked: true,
-                selectedColor: white,
-                selectedTextColor: black,
-                dotColor: black,
-              },
-            }
+            '2023-09-25': {
+              selected: true,
+              marked: true,
+              selectedColor: white,
+              selectedTextColor: black,
+              dotColor: black,
+            },
+          }
       }
     />
   );
 }
-export function RadioButton({data, onPress, selected, text, style, type}) {
+export function RadioButton({ data, onPress, selected, text, style, type }) {
   return (
     <View style={[type == 'gender' ? style : styles.radioButtonContainer]}>
       <TouchableOpacity onPress={onPress} style={[styles.radioButton]}>
