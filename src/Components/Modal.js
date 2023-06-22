@@ -103,7 +103,7 @@ const ModalView = ({
                       fontSize: moderateScale(28, 0.1),
                       lineHeight: moderateScale(33, 0.1),
                       fontWeight: '700',
-                      fontFamily: 'Rubik-Black',
+                      fontFamily: 'Rubik-Regular',
                       color: black,
 
                       paddingHorizontal: moderateScale(30, 0.1),
@@ -116,7 +116,7 @@ const ModalView = ({
                       fontSize: moderateScale(25, 0.1),
                       lineHeight: moderateScale(30, 0.1),
                       fontWeight: '700',
-                      fontFamily: 'Rubik-Black',
+                      fontFamily: 'Rubik-Regular',
                       color: '#6C6C6C',
                       paddingVertical: moderateScale(10, 0.1),
 
@@ -257,7 +257,7 @@ const styles = StyleSheet.create({
     color: black,
     fontWeight: '700',
     alignSelf: 'center',
-    fontFamily: 'Rubik-Black',
+    fontFamily: 'Rubik-Regular',
   },
   center: {
     paddingHorizontal: moderateScale(20, 0.1),

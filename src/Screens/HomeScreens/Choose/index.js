@@ -23,15 +23,24 @@ const Choose = ({navigation}) => {
         <Text style={s.txt1}>Relation</Text>
         <View style={s.view1}>
           <TouchableOpacity style={s.box}>
-            <Icon3 name="face-woman-outline" color="black" size={50} />
+            <Image
+              source={require('../../../assets/images/PNG/user-f.png')}
+              style={s.imgIcon}
+            />
             <Text style={s.Ttxt}>Mother</Text>
           </TouchableOpacity>
           <TouchableOpacity style={s.box}>
-            <Icon3 name="face-woman-outline" color="black" size={50} />
+            <Image
+              source={require('../../../assets/images/PNG/user-f.png')}
+              style={s.imgIcon}
+            />
             <Text style={s.Ttxt}>Sister</Text>
           </TouchableOpacity>
           <TouchableOpacity style={s.box}>
-            <Icon3 name="face-woman-outline" color="black" size={50} />
+            <Image
+              source={require('../../../assets/images/PNG/user-f.png')}
+              style={s.imgIcon}
+            />
             <Text style={s.Ttxt}>Wife</Text>
           </TouchableOpacity>
           <TouchableOpacity

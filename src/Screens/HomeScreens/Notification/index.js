@@ -97,7 +97,7 @@ const Notification = ({navigation}) => {
               fontSize: moderateScale(9, 0.1),
               lineHeight: moderateScale(11, 0.1),
               color: reminder ? textColor : item.index < 2 ? '#FFFFFF' : black,
-              fontFamily: 'Rubik-Black',
+              fontFamily: 'Rubik-Regular',
             }}>
             {item.item.text}{' '}
           </Text>
@@ -143,7 +143,7 @@ const Notification = ({navigation}) => {
                 style={{
                   flexDirection: 'row',
                   justifyContent: 'space-between',
-                  marginVertical: moderateScale(10, 0.1),
+                  marginVertical: moderateScale(14, 0.1),
                   marginBottom: moderateScale(-30, 0.1),
                   alignItems: 'center',
                   paddingHorizontal: moderateScale(20, 0.1),
@@ -155,11 +155,11 @@ const Notification = ({navigation}) => {
                 <Text
                   style={{
                     color: black,
-                    fontSize: moderateScale(13, 0.1),
-                    lineHeight: moderateScale(13, 0.1),
+                    fontSize: moderateScale(14, 0.1),
+                    lineHeight: moderateScale(15, 0.1),
                     textAlign: 'center',
                     fontWeight: '900',
-                    fontFamily: 'Rubik-Black',
+                    fontFamily: 'Rubik-Regular',
                   }}>
                   Add Reminder
                 </Text>

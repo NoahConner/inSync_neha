@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     color: black,
     fontWeight: '700',
     alignSelf: 'center',
-    fontFamily: 'Rubik-Black',
+    fontFamily: 'Rubik-Regular',
   },
   center: {
     paddingHorizontal: moderateScale(30, 0.1),

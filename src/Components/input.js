@@ -66,7 +66,8 @@ const Input = ({
         type === 'expected date' ||
         type === 'conception date') && (
         <>
-          <View
+          <TouchableOpacity
+            onPress={showDatePicker}
             style={[
               styles.input,
               {
@@ -127,7 +128,7 @@ const Input = ({
               }
               onCancel={hideDatePicker}
             />
-          </View>
+          </TouchableOpacity>
         </>
       )}
       {type === 'text' && (
@@ -148,12 +149,16 @@ const Input = ({
       )}
       {type === 'reminder' && (
         <TextInput
-        textAlignVertical='top'
+          textAlignVertical="top"
           placeholderTextColor={'#929292'}
-          style={[styles.input, style,{
-            paddingVertical: moderateScale(7, 0.1),
-            color: black,
-          }]}
+          style={[
+            styles.input,
+            style,
+            {
+              paddingVertical: moderateScale(7, 0.1),
+              color: black,
+            },
+          ]}
           placeholder={placeholder}
           value={value}
           onChangeText={setValue}

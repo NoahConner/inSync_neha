@@ -12,17 +12,15 @@ const PoppinsBold = '';
 
 const styles = StyleSheet.create({
   backImg: {
-    
     backgroundColor: backgroundColor,
-    height: screenHeight -50 ,
+    height: screenHeight - 50,
     width: screenWidth,
   },
   center: {
     alignSelf: 'center',
     top: moderateScale(50, 0.1),
-    height: screenHeight -150 ,
-   
-    
+    height: screenHeight - 150,
+
     // marginBottom: moderateScale(80, 0.1),
   },
   txt1: {
@@ -31,7 +29,7 @@ const styles = StyleSheet.create({
     color: black,
     fontWeight: '700',
     alignSelf: 'center',
-    fontFamily: 'Rubik-Black',
+    fontFamily: 'Rubik-Regular',
   },
   txt2: {
     fontSize: moderateScale(15, 0.1),
@@ -86,8 +84,6 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     bottom: 0,
     zIndex: 1000,
-  
-    
   },
 });
 

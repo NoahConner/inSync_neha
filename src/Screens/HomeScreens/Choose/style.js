@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   },
   center: {
     alignSelf: 'center',
-    top: moderateScale(65, 0.1),
+    top: moderateScale(70, 0.1),
     height: '87%',
   },
   txt1: {
@@ -27,7 +27,13 @@ const styles = StyleSheet.create({
     color: black,
     fontWeight: '700',
     alignSelf: 'center',
-    fontFamily: 'Rubik-Black',
+    fontFamily: 'Rubik-Regular',
+  },
+  imgIcon: {
+    width: moderateScale(85, 0.1),
+    height: moderateScale(85, 0.1),
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   txt2: {
     fontSize: moderateScale(15, 0.1),
@@ -65,7 +71,7 @@ const styles = StyleSheet.create({
     lineHeight: moderateScale(14, 0.1),
     fontWeight: '800',
     textAlign: 'center',
-    paddingVertical: moderateScale(5, 0.1),
+    // paddingVertical: moderateScale(5, 0.1),
   },
   vector: {
     flex: 1,

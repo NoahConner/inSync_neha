@@ -44,7 +44,7 @@ const Account = ({
             <View
               style={{
                 alignSelf: 'center',
-                flex: 0.15,
+                flex: 0.1,
               }}>
               <AntDesign
                 name="user"
@@ -53,7 +53,7 @@ const Account = ({
                 style={styles.icon}
               />
             </View>
-            <View style={{flex: 0.85}}>
+            <View style={{flex: 0.9}}>
               <Text style={styles.heading}> {text} </Text>
             </View>
           </View>
@@ -103,7 +103,7 @@ const Account = ({
             <View
               style={{
                 alignSelf: 'center',
-                flex: 0.15,
+                flex: 0.1,
               }}>
               <Icon1
                 name="notifications-outline"
@@ -112,7 +112,7 @@ const Account = ({
                 style={styles.icon}
               />
             </View>
-            <View style={{flex: 0.85}}>
+            <View style={{flex: 0.9}}>
               <Text style={styles.heading}> {text} </Text>
             </View>
           </View>
@@ -150,7 +150,7 @@ const Account = ({
             <View
               style={{
                 alignSelf: 'center',
-                flex: 0.15,
+                flex: 0.1,
               }}>
               <Icon2
                 name="add-to-list"
@@ -159,7 +159,7 @@ const Account = ({
                 style={styles.icon}
               />
             </View>
-            <View style={{flex: 0.85}}>
+            <View style={{flex: 0.9}}>
               <Text style={styles.heading}> {text} </Text>
             </View>
           </View>
@@ -261,7 +261,7 @@ const styles = StyleSheet.create({
   },
   icon: {
     // padding: 8,
-    paddingLeft: moderateScale(6.5, 0.1),
+    // paddingLeft: moderateScale(6.5, 0.1),
   },
 });
 

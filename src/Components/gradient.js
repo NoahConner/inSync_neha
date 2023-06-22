@@ -64,6 +64,7 @@ export function Linear({type, text1, text2, text3}) {
                 fontWeight: '800',
                 lineHeight: moderateScale(53, 0.1),
                 fontSize: moderateScale(45, 0.1),
+                fontFamily: 'Rubik-Bold',
               },
             ]}>
             {' '}
@@ -75,6 +76,9 @@ export function Linear({type, text1, text2, text3}) {
               {
                 fontSize: moderateScale(15, 0.1),
                 lineHeight: moderateScale(18, 0.1),
+                marginVertical: moderateScale(2, 0.1),
+                color: '#B5B5B5',
+                fontFamily: 'Rubik-Regular',
               },
             ]}>
             {' '}
@@ -86,6 +90,8 @@ export function Linear({type, text1, text2, text3}) {
               {
                 fontSize: moderateScale(15, 0.1),
                 lineHeight: moderateScale(18, 0.1),
+                color: '#B5B5B5',
+                fontFamily: 'Rubik-Regular',
               },
             ]}>
             {' '}
@@ -117,10 +123,24 @@ export function Linear({type, text1, text2, text3}) {
               </Text>
             </View>
             <View style={{flex: 0.3}}>
-              <Text style={{color: white, fontSize: moderateScale(14, 0.1)}}>
+              <Text
+                style={{
+                  color: white,
+                  fontSize: moderateScale(14, 0.1),
+                  fontFamily: 'Rubik-Regular',
+                }}>
                 Are You Expecting?
               </Text>
-              <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  justifyContent: 'flex-start',
+                  // backgroundColor: 'red',
+                  fontFamily: 'Rubik-Regular',
+                  right: moderateScale(8, 0.1),
+                  // paddingLeft: moderateScale(-13, 0.1),
+                }}>
                 <Checkbox
                   color="white"
                   status={checked ? 'checked' : 'unchecked'}
@@ -129,7 +149,7 @@ export function Linear({type, text1, text2, text3}) {
                     setModalVisible(true);
                   }}
                 />
-                <Text>Yes</Text>
+                <Text style={{color: white}}>Yes</Text>
               </View>
             </View>
           </View>
@@ -253,7 +273,7 @@ export function Calender({type}) {
 }
 export function RadioButton({data, onPress, selected, text, style, type}) {
   return (
-    <View style={[ type == 'gender' ? style: styles.radioButtonContainer,]}>
+    <View style={[type == 'gender' ? style : styles.radioButtonContainer]}>
       <TouchableOpacity onPress={onPress} style={[styles.radioButton]}>
         {selected ? <View style={styles.radioButtonIcon} /> : null}
       </TouchableOpacity>
@@ -295,7 +315,8 @@ const styles = StyleSheet.create({
   radioButtonContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
+    // justifyContent: 'center',
     height: moderateScale(22, 0.1),
     marginRight: moderateScale(10, 0.1),
   },

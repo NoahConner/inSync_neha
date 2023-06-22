@@ -30,7 +30,7 @@ const Terms = ({navigation}) => {
                 fontSize: moderateScale(15, 0.1),
                 fontWeight: '300',
                 lineHeight: moderateScale(18, 0.1),
-                fontFamily: 'Rubik-Black',
+                fontFamily: 'Rubik-Regular',
                 color: '#7E7E7E',
               }}>
               Lorem Ipsum is simply dummy text of the printing and typesetting

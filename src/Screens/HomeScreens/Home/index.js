@@ -50,6 +50,12 @@ const Home = ({navigation}) => {
         name: 'Expected Period',
         selected: false,
       });
+    } else {
+      onRadioBtnClick({
+        id: 1,
+        name: 'Period',
+        selected: true,
+      });
     }
   }, [expected]);
 
@@ -80,17 +86,18 @@ const Home = ({navigation}) => {
 
           <View
             style={{
-              justifyContent: 'flex-end',
-              alignItems: 'flex-end',
+              // width: 120,
+              alignItems: 'flex-start',
+              alignSelf: 'flex-end',
               marginTop: moderateScale(-25, 0.1),
             }}>
             {isSelected.map((item, i) => (
-              <View style={s.radio} key={i}>
+              <View style={[s.radio]} key={i}>
                 <RadioButton
-                  onPress={() => {
-                    onRadioBtnClick(item);
-                    console.log('item', item);
-                  }}
+                  // onPress={() => {
+                  //   onRadioBtnClick(item);
+                  //   console.log('item', item);
+                  // }}
                   selected={item.selected}
                   key={item.id}
                   text={item.name}></RadioButton>

@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     marginBottom: moderateScale(40, 0.1),
   },
   imgView: {
-    marginVertical: moderateScale(12, 0.1),
+    marginVertical: moderateScale(17, 0.1),
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginVertical: moderateScale(20, 0.1),
-    marginBottom: moderateScale(50, 0.1),
+    marginBottom: moderateScale(40, 0.1),
   },
   Ftxt: {
     color: 'black',
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     //  position: 'absolute',
     alignItems: 'flex-end',
     justifyContent: 'flex-end',
-     bottom: 0,
+    bottom: 0,
   },
 });
 

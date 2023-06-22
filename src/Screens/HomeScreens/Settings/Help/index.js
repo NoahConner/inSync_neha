@@ -26,7 +26,7 @@ const Help = ({navigation}) => {
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <ImageBackground
         style={s.backImg}
-        source={require('../../../../assets/images/help.jpg')}
+        source={require('../../../../assets/images/privacy.jpg')}
         resizeMode="contain">
         <KeyboardAvoidingView>
           <View>

@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     color: black,
     fontWeight: '700',
     alignSelf: 'center',
-    fontFamily: 'Rubik-Black',
+    fontFamily: 'Rubik-Regular',
   },
   input: {
     marginVertical: moderateScale(20, 0.1),
