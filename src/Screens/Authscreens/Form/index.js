@@ -67,7 +67,7 @@ const Form = ({ navigation }) => {
         style={{
           position: 'absolute',
           top: moderateScale(50, 0.1),
-          right: moderateScale(140, 0.1),
+          right: moderateScale(160, 0.1),
         }}>
         <SVGImg2 />
       </View>
@@ -84,11 +84,12 @@ const Form = ({ navigation }) => {
 
       <View
         style={{
-          paddingTop: moderateScale(60, 0.1),
+          paddingTop: moderateScale(20, 0.1),
         }}>
         <View style={{ height: moderateScale(40, 0.1) }}></View>
-        {/* <Header navigation={navigation} /> */}
+        <Header navigation={navigation} />
       </View>
+      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <ScrollView  
         showsVerticalScrollIndicator={false}
       >
@@ -176,6 +177,7 @@ const Form = ({ navigation }) => {
             />
           </View>
       </ScrollView>
+      </TouchableWithoutFeedback>
 
       <View style={s.vector}>
         <Image

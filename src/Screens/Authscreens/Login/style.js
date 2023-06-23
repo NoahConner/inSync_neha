@@ -1,5 +1,5 @@
-import {Dimensions, StyleSheet} from 'react-native';
-import {moderateScale} from 'react-native-size-matters';
+import { Dimensions, StyleSheet } from 'react-native';
+import { moderateScale } from 'react-native-size-matters';
 import {
   backgroundColor,
   screenHeight,
@@ -10,7 +10,7 @@ import {
 const robik = 'Rubik-Regular';
 
 const styles = StyleSheet.create({
-  
+
   backImg: {
     position: 'absolute',
     backgroundColor: backgroundColor,
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     paddingVertical: moderateScale(5, 0.1),
   },
   vector: {
-  right:0, position:'absolute',
+    right: 0, position: 'absolute',
     bottom: 0,
     // position: 'absolute',
   },

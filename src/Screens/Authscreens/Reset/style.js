@@ -1,5 +1,5 @@
-import {Dimensions, StyleSheet} from 'react-native';
-import {moderateScale} from 'react-native-size-matters';
+import { Dimensions, StyleSheet } from 'react-native';
+import { moderateScale } from 'react-native-size-matters';
 import {
   backgroundColor,
   screenHeight,
@@ -16,13 +16,14 @@ const styles = StyleSheet.create({
     backgroundColor: backgroundColor,
     height: screenHeight,
     width: screenWidth,
-    flex:1
+    flex: 1
   },
   center: {
     alignSelf: 'center',
     marginTop: moderateScale(45, 0.1),
+    paddingHorizontal: moderateScale(20,0.1)
     // backgroundColor: 'red',
-    height: '81%',
+    // height: '81%',
   },
   txt1: {
     fontSize: moderateScale(24, 0.1),
