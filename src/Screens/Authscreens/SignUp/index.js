@@ -64,8 +64,7 @@ const SignUp = ({navigation}) => {
       </View>
       <Header navigation={navigation} />
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-        <ScrollView
-        >
+        <ScrollView>
           <View style={s.center}>
             <Text style={s.txt1}>Create Account!</Text>
             <Text style={s.txt2}>To get started now</Text>
@@ -100,36 +99,35 @@ const SignUp = ({navigation}) => {
                 value={confPassword}
                 setValue={setConfPass}
               />
-                <View
-            style={{
-              
-               flexDirection:'row',
-               paddingHorizontal: moderateScale(15,0.1),
-               paddingVertical: moderateScale(7,0.1)
-               
-              // justifyContent: 'flex-end',
-              // alignItems: 'flex-end',
-              // marginTop: moderateScale(-25, 0.1),
-            }}>
-            {isSelected.map((item, i) => (
-              <View style={s.radio} key={i}>
-                <RadioButton
-                  onPress={() => {
-                    onRadioBtnClick(item);
-                    console.log('item', item);
-                  }}
-                  type={'gender'}
-                  style={{
-                    flexDirection: 'row',
-                   height: moderateScale(22, 0.1),
-                   marginRight: moderateScale(20, 0.1),
-                }}
-                  selected={item.selected}
-                  key={item.id}
-                  text={item.name}></RadioButton>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  paddingHorizontal: moderateScale(15, 0.1),
+                  paddingVertical: moderateScale(7, 0.1),
+
+                  // justifyContent: 'flex-end',
+                  // alignItems: 'flex-end',
+                  // marginTop: moderateScale(-25, 0.1),
+                }}>
+                {isSelected.map((item, i) => (
+                  <View style={s.radio} key={i}>
+                    <RadioButton
+                      onPress={() => {
+                        onRadioBtnClick(item);
+                        console.log('item', item);
+                      }}
+                      type={'gender'}
+                      style={{
+                        flexDirection: 'row',
+                        height: moderateScale(22, 0.1),
+                        marginRight: moderateScale(20, 0.1),
+                      }}
+                      selected={item.selected}
+                      key={item.id}
+                      text={item.name}></RadioButton>
+                  </View>
+                ))}
               </View>
-            ))}
-          </View>
 
               <View style={s.btn}>
                 <Button text={'Create Now'} onPress={signUp} />
@@ -158,7 +156,10 @@ const SignUp = ({navigation}) => {
             onPress={() => navigation.navigate('Login')}
             style={s.link}>
             <Text style={s.Ftxt}>Already have an account?</Text>
-            <Text style={[s.Ftxt, {fontWeight: 'bold'}]}> Login</Text>
+            <Text style={[s.Ftxt, {fontFamily: 'Rubik-ExtraBold'}]}>
+              {' '}
+              Login
+            </Text>
           </TouchableOpacity>
           <View style={s.vector}>
             <Image

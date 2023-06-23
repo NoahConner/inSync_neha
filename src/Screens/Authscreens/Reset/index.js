@@ -4,89 +4,37 @@ import {
   ImageBackground,
   Image,
   TouchableOpacity,
-  ScrollView
+  ScrollView,
 } from 'react-native';
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import s from './style';
 import Input from '../../../Components/input';
 import Button from '../../../Components/Button';
-import { moderateScale } from 'react-native-size-matters';
+import {moderateScale} from 'react-native-size-matters';
 import Header from '../../../Components/Header';
 import SVGImg from '../../../assets/images/svg/icon4.svg';
 import SVGImg2 from '../../../assets/images/svg/small-lf.svg';
 import SVGImg3 from '../../../assets/images/svg/lob.svg';
 import SVGImg1 from '../../../assets/images/svg/round.svg';
-import { backgroundColor } from '../../../Constants';
+import {backgroundColor} from '../../../Constants';
 
-const Reset = ({ navigation }) => {
+const Reset = ({navigation}) => {
   const [password, setPassword] = useState(null);
   const [confPassword, setConfPass] = useState(null);
 
   return (
-    // <ImageBackground
-    //   style={s.backImg}
-    //   source={require('../../../assets/images/change.jpg')}
-    //   resizeMode="contain">
-    //   <View>
-    //     <Image
-    //       resizeMode="contain"
-    //       source={require('../../../assets/images/PNG/Vector.png')}
-    //     />
-    //   </View>
-    //   <Header navigation={navigation} />
-    //   <View style={s.center}>
-    //     <Text style={s.txt1}>Change Password</Text>
-
-    //     <View style={s.input}>
-    //       <Input
-    //         placeholder={'Old Password'}
-    //         type={'password'}
-    //         setValue={setPassword}
-    //       />
-    //       <Input
-    //         placeholder={'New Password'}
-    //         type={'password'}
-    //         setValue={setPassword}
-    //       />
-    //       <Input
-    //         placeholder={'Confirm New Password'}
-    //         type={'Confirm password'}
-    //         setValue={setConfPass}
-    //       />
-
-    //       <View style={s.btn}>
-    //         <Button text={'Update'} />
-    //       </View>
-    //     </View>
-    //   </View>
-
-    //   <View
-    //     style={{
-
-    //       position: 'absolute',
-    //       bottom: 0,
-    //       right: 0
-    //     }}>
-
-    //     <Image
-    //       style={{ transform: [{ rotate: '180deg' }] }}
-    //       resizeMode="contain"
-    //       source={require('../../../assets/images/PNG/Vector.png')}
-    //     />
-
-    //   </View>
-    // </ImageBackground>
-     <View style={{
-      flex:1, backgroundColor: backgroundColor
-    }}>
-
-<View
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: backgroundColor,
+      }}>
+      <View
         style={{
           position: 'absolute',
           left: moderateScale(10, 0.1),
-          bottom: moderateScale(15, 0.1),
+          top: moderateScale(90, 0.1),
         }}>
-        <SVGImg1 width={130} height={130} />
+        <SVGImg1 width={80} height={80} />
       </View>
       {/* butterfly */}
       <View
@@ -102,30 +50,28 @@ const Reset = ({ navigation }) => {
       <View
         style={{
           position: 'absolute',
-          top: moderateScale(70, 0.1),
-          left: moderateScale(50, 0.1),
+          top: moderateScale(60, 0.1),
+          left: moderateScale(140, 0.1),
         }}>
-        <SVGImg2 width={110} height={110} />
+        <SVGImg2 width={70} height={70} />
       </View>
 
       {/* left leaf */}
       <View
         style={{
           position: 'absolute',
-          top: moderateScale(90, 0.1),
-          right: moderateScale(20,0.1),
+          top: moderateScale(120, 0.1),
+          right: moderateScale(20, 0.1),
         }}>
-        <SVGImg3 />
-        
+        <SVGImg3 width={40} height={40} />
       </View>
       <View
         style={{
           position: 'absolute',
           bottom: moderateScale(110, 0.1),
-          right: moderateScale(60,0.1),
+          right: moderateScale(60, 0.1),
         }}>
-        <SVGImg3 width={90} height={90} />
-        
+        {/* <SVGImg3 width={90} height={90} /> */}
       </View>
       <View>
         <Image
@@ -134,53 +80,62 @@ const Reset = ({ navigation }) => {
         />
       </View>
       <View
-          style={{
-            paddingTop: moderateScale(60, 0.1),
-          }}>
-          <Header navigation={navigation} />
-        </View>
+        style={{
+          paddingTop: moderateScale(10, 0.1),
+          paddingHorizontal: moderateScale(20, 0.1),
+        }}>
+        <Header navigation={navigation} />
+      </View>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={s.center}>
-          <Text style={s.txt1}>
-          Change Password
-          </Text>
-         
+          <Text style={s.txt1}>Change Password</Text>
 
           <View style={s.input}>
-          <Input
-            placeholder={'Old Password'}
-            type={'password'}
-            setValue={setPassword}
-          />
-          <Input
-            placeholder={'New Password'}
-            type={'password'}
-            setValue={setPassword}
-          />
-          <Input
-            placeholder={'Confirm New Password'}
-            type={'Confirm password'}
-            setValue={setConfPass}
-          />
+            <Input
+              placeholder={'Old Password'}
+              type={'password'}
+              setValue={setPassword}
+            />
+            <Input
+              placeholder={'New Password'}
+              type={'password'}
+              setValue={setPassword}
+            />
+            <Input
+              placeholder={'Confirm New Password'}
+              type={'Confirm password'}
+              setValue={setConfPass}
+            />
 
-          <View style={s.btn}>
-            <Button text={'Update'} />
+            <View style={s.btn}>
+              <Button text={'Update'} />
+            </View>
           </View>
         </View>
-        
-          {/* <View style={{height: moderateScale(50, 0.1)}}></View> */}
+        <View style={{}}>
+          <View
+            style={{
+              height: moderateScale(320, 0.1),
+              // marginTop: moderateScale(30, 0.1),
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
+            <Image
+              resizeMode="contain"
+              style={{width: moderateScale(280, 0.1)}}
+              source={require('../../../assets/images/reset-btm.jpg')}
+            />
+          </View>
         </View>
-      
       </ScrollView>
       <View style={s.vector}>
-          <Image
-            style={{transform: [{rotate: '180deg'}]}}
-            resizeMode="contain"
-            source={require('../../../assets/images/PNG/Vector.png')}
-          />
-        </View>
-     
+        <Image
+          style={{transform: [{rotate: '180deg'}]}}
+          resizeMode="contain"
+          source={require('../../../assets/images/PNG/Vector.png')}
+        />
       </View>
+    </View>
   );
 };
 export default Reset;

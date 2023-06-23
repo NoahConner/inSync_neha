@@ -1,5 +1,5 @@
-import { Dimensions, StyleSheet } from 'react-native';
-import { moderateScale } from 'react-native-size-matters';
+import {Dimensions, StyleSheet} from 'react-native';
+import {moderateScale} from 'react-native-size-matters';
 import {
   backgroundColor,
   screenHeight,
@@ -16,22 +16,20 @@ const styles = StyleSheet.create({
     backgroundColor: backgroundColor,
     height: screenHeight,
     width: screenWidth,
-    flex: 1
+    flex: 1,
   },
   center: {
     alignSelf: 'center',
-    marginTop: moderateScale(45, 0.1),
-    paddingHorizontal: moderateScale(20,0.1)
-    // backgroundColor: 'red',
-    // height: '81%',
+    marginTop: moderateScale(40, 0.1),
+    paddingHorizontal: moderateScale(20, 0.1),
   },
   txt1: {
     fontSize: moderateScale(24, 0.1),
     lineHeight: moderateScale(26, 0.1),
     color: black,
-    fontWeight: '700',
+    // fontWeight: '700',
     alignSelf: 'center',
-    fontFamily: robik,
+    fontFamily: 'Rubik-Regular',
   },
   input: {
     marginVertical: moderateScale(20, 0.1),
@@ -47,7 +45,8 @@ const styles = StyleSheet.create({
     // backgroundColor: 'red',
   },
   vector: {
-    right: 0, position: 'absolute',
+    right: 0,
+    position: 'absolute',
     bottom: 0,
   },
 });

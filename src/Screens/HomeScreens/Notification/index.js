@@ -125,7 +125,6 @@ const Notification = ({navigation}) => {
     );
   };
   return (
-    
     <View
       style={{
         backgroundColor: backgroundColor,
@@ -178,11 +177,11 @@ const Notification = ({navigation}) => {
         }}>
         <Header navigation={navigation} />
       </View>
-      <ScrollView >
+      <ScrollView>
         <View style={s.center}>
           <View
             style={{
-              paddingHorizontal: moderateScale(30, 0.1),
+              paddingHorizontal: moderateScale(20, 0.1),
             }}>
             <Text style={s.txt1}>Notifications & Reminders</Text>
           </View>
@@ -207,7 +206,7 @@ const Notification = ({navigation}) => {
                     fontSize: moderateScale(14, 0.1),
                     lineHeight: moderateScale(15, 0.1),
                     textAlign: 'center',
-                    fontWeight: '900',
+                    // fontWeight: '900',
                     fontFamily: 'Rubik-Regular',
                   }}>
                   Add Reminder
@@ -226,7 +225,10 @@ const Notification = ({navigation}) => {
               <Text
                 style={[
                   s.txt,
-                  notification ? {fontWeight: '400'} : {fontWeight: '800'},
+                  notification
+                    ? {fontFamily: 'Rubik-Bold'}
+                    : {fontFamily: 'Rubik-Light'},
+                  // notification ? {fontWeight: '400'} : {fontWeight: '800'},
                 ]}>
                 Notifications
               </Text>
@@ -241,7 +243,9 @@ const Notification = ({navigation}) => {
               <Text
                 style={[
                   s.txt,
-                  reminder ? {fontWeight: '400'} : {fontWeight: '800'},
+                  reminder
+                    ? {fontFamily: 'Rubik-Bold'}
+                    : {fontFamily: 'Rubik-Light'},
                 ]}>
                 Reminder
               </Text>

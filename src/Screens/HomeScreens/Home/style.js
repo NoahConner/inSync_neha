@@ -15,17 +15,17 @@ const styles = StyleSheet.create({
     width: screenWidth,
   },
   vector: {
-   right:0,
-   position:'absolute',
+    right: 0,
+    position: 'absolute',
     bottom: 0,
   },
   txt1: {
     fontSize: moderateScale(24, 0.1),
     lineHeight: moderateScale(26, 0.1),
     color: black,
-    fontWeight: '700',
+    // fontWeight: '700',
     alignSelf: 'center',
-    fontFamily: 'Rubik-Regular',
+    fontFamily: 'Rubik-Bold',
   },
   center: {
     paddingHorizontal: moderateScale(30, 0.1),

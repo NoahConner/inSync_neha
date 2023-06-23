@@ -24,11 +24,11 @@ const styles = StyleSheet.create({
     fontSize: moderateScale(24, 0.1),
     lineHeight: moderateScale(26, 0.1),
     color: black,
-    fontWeight: '700',
+    // fontWeight: '700',
     textAlign: 'center',
     // alignSelf: 'center',
     fontFamily: 'Rubik-Regular',
-    paddingTop: moderateScale(20,0.1)
+    paddingTop: moderateScale(20, 0.1),
   },
   imgIcon: {
     width: moderateScale(85, 0.1),

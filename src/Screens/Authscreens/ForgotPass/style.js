@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   },
   center: {
     alignSelf: 'center',
-    top: moderateScale(45, 0.1),
+    top: moderateScale(52, 0.1),
     // backgroundColor: 'red',
     height: '83%',
   },
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     fontSize: moderateScale(24, 0.1),
     lineHeight: moderateScale(26, 0.1),
     color: black,
-    fontWeight: '700',
+    // fontWeight: '700',
     alignSelf: 'center',
     fontFamily: 'Rubik-Regular',
   },
@@ -46,8 +46,10 @@ const styles = StyleSheet.create({
     // backgroundColor: 'red',
   },
   vector: {
-    bottom: 0,
-    right: 0 , position:'absolute'
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingVertical: moderateScale(7, 0.1),
   },
 });
 

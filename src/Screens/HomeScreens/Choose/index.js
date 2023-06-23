@@ -13,7 +13,6 @@ import {backgroundColor} from '../../../Constants';
 import Header from '../../../Components/Header';
 const Choose = ({navigation}) => {
   return (
-    
     <View
       style={{
         backgroundColor: backgroundColor,
@@ -32,7 +31,7 @@ const Choose = ({navigation}) => {
       <View
         style={{
           position: 'absolute',
-          left: moderateScale(25, 0.1),
+          left: moderateScale(18, 0.1),
           top: moderateScale(80, 0.1),
         }}>
         <SVGImg1 width={110} height={110} />
@@ -117,12 +116,11 @@ const Choose = ({navigation}) => {
                 height: moderateScale(300, 0.1),
                 justifyContent: 'center',
                 alignItems: 'center',
-                overflow:'hidden'
+                overflow: 'hidden',
               }}>
               <Image
                 resizeMode="contain"
                 style={{width: moderateScale(300, 0.1)}}
-                
                 source={require('../../../assets/images/choose-btm.jpg')}
               />
             </View>

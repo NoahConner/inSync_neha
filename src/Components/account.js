@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   View,
   TextInput,
@@ -8,10 +8,10 @@ import {
   Switch,
   Image,
 } from 'react-native';
-import { black, purple, emailReg, screenWidth, white } from '../Constants/index';
+import {black, purple, emailReg, screenWidth, white} from '../Constants/index';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Button from './Button';
-import { moderateScale } from 'react-native-size-matters';
+import {moderateScale} from 'react-native-size-matters';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Icon1 from 'react-native-vector-icons/Ionicons';
 import Icon2 from 'react-native-vector-icons/Entypo';
@@ -41,8 +41,16 @@ const Account = ({
     <View style={styles.inputContainer}>
       {type === 'account' && (
         <>
-          <View style={[styles.input, { borderBottomWidth: 1, 
-            marginBottom: moderateScale(7, 0.1), justifyContent: 'flex-start' }, style,]}>
+          <View
+            style={[
+              styles.input,
+              {
+                borderBottomWidth: 1,
+                marginBottom: moderateScale(7, 0.1),
+                justifyContent: 'flex-start',
+              },
+              style,
+            ]}>
             <View
               style={{
                 alignSelf: 'center',
@@ -55,12 +63,12 @@ const Account = ({
                 style={styles.icon}
               />
             </View>
-            <View style={{ flex: 0.9 }}>
+            <View style={{flex: 0.9}}>
               <Text style={styles.heading}> {text} </Text>
             </View>
           </View>
           <View style={[styles.input, style]}>
-            <View style={{ flex: 0.9 }}>
+            <View style={{flex: 0.9}}>
               <Text style={styles.txt}> {text1} </Text>
             </View>
 
@@ -79,7 +87,7 @@ const Account = ({
             </TouchableOpacity>
           </View>
           <View style={[styles.input, style]}>
-            <View style={{ flex: 0.9 }}>
+            <View style={{flex: 0.9}}>
               <Text style={styles.txt}> {text2} </Text>
             </View>
 
@@ -101,7 +109,12 @@ const Account = ({
       )}
       {type === 'notification' && (
         <>
-          <View style={[styles.input, { borderBottomWidth: 1, marginBottom: moderateScale(7, 0.1) }, style]}>
+          <View
+            style={[
+              styles.input,
+              {borderBottomWidth: 1, marginBottom: moderateScale(7, 0.1)},
+              style,
+            ]}>
             <View
               style={{
                 alignSelf: 'center',
@@ -114,17 +127,17 @@ const Account = ({
                 style={styles.icon}
               />
             </View>
-            <View style={{ flex: 0.9 }}>
+            <View style={{flex: 0.9}}>
               <Text style={styles.heading}> {text} </Text>
             </View>
           </View>
           <View style={[styles.input, style]}>
-            <View style={{ flex: 0.6 }}>
+            <View style={{flex: 0.6}}>
               <Text style={styles.txt}> {text1} </Text>
             </View>
-            <View style={{ flex: 0.4 }}>
+            <View style={{flex: 0.4}}>
               <Switch
-                trackColor={{ false: '#D9D9D9', true: '#D9D9D9' }}
+                trackColor={{false: '#D9D9D9', true: '#D9D9D9'}}
                 thumbColor={isEnabled1 ? '#006B58' : '#FC0F0F'}
                 onValueChange={toggleSwitch1}
                 value={isEnabled1}
@@ -132,12 +145,12 @@ const Account = ({
             </View>
           </View>
           <View style={[styles.input, style]}>
-            <View style={{ flex: 0.6 }}>
+            <View style={{flex: 0.6}}>
               <Text style={styles.txt}> {text2} </Text>
             </View>
-            <View style={{ flex: 0.4 }}>
+            <View style={{flex: 0.4}}>
               <Switch
-                trackColor={{ false: '#D9D9D9', true: '#D9D9D9' }}
+                trackColor={{false: '#D9D9D9', true: '#D9D9D9'}}
                 thumbColor={isEnabled2 ? '#006B58' : '#FC0F0F'}
                 onValueChange={toggleSwitch2}
                 value={isEnabled2}
@@ -148,7 +161,12 @@ const Account = ({
       )}
       {type === 'More' && (
         <>
-          <View style={[styles.input, { borderBottomWidth: 1, marginBottom: moderateScale(7, 0.1) }, style]}>
+          <View
+            style={[
+              styles.input,
+              {borderBottomWidth: 1, marginBottom: moderateScale(7, 0.1)},
+              style,
+            ]}>
             <View
               style={{
                 alignSelf: 'center',
@@ -165,12 +183,12 @@ const Account = ({
                 }}
               />
             </View>
-            <View style={{ flex: 0.9 }}>
+            <View style={{flex: 0.9}}>
               <Text style={styles.heading}> {text} </Text>
             </View>
           </View>
           <View style={[styles.input, style]}>
-            <View style={{ flex: 0.9 }}>
+            <View style={{flex: 0.9}}>
               <Text style={styles.txt}> {text1} </Text>
             </View>
 
@@ -189,7 +207,7 @@ const Account = ({
             </TouchableOpacity>
           </View>
           <View style={[styles.input, style]}>
-            <View style={{ flex: 0.9 }}>
+            <View style={{flex: 0.9}}>
               <Text style={styles.txt}> {text2} </Text>
             </View>
 
@@ -208,7 +226,7 @@ const Account = ({
             </TouchableOpacity>
           </View>
           <View style={[styles.input, style]}>
-            <View style={{ flex: 0.9 }}>
+            <View style={{flex: 0.9}}>
               <Text style={styles.txt}> {text3} </Text>
             </View>
 
@@ -245,13 +263,15 @@ const styles = StyleSheet.create({
     color: '#878787',
     fontSize: moderateScale(12, 0.1),
     lineHeight: moderateScale(14, 0.1),
-    fontWeight: '300',
+    fontFamily: 'Rubik-Regular',
+    // fontWeight: '300',
   },
   heading: {
     color: black,
     fontSize: moderateScale(15, 0.1),
     lineHeight: moderateScale(18, 0.1),
-    fontWeight: '500',
+    // fontWeight: '500',
+    fontFamily: 'Rubik-Medium',
   },
   input: {
     flexDirection: 'row',
@@ -261,7 +281,6 @@ const styles = StyleSheet.create({
     borderBottomColor: '#9A9A9A',
     alignItems: 'center',
     paddingHorizontal: moderateScale(12, 0.1),
-
   },
   eyeButton: {
     padding: 8,

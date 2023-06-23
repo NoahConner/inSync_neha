@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     fontSize: moderateScale(22, 0.1),
     lineHeight: moderateScale(26, 0.1),
     color: black,
-    fontWeight: '700',
+    // fontWeight: '700',
     alignSelf: 'center',
     fontFamily: 'Rubik-Bold',
   },
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     color: black,
     fontSize: moderateScale(13, 0.1),
     lineHeight: moderateScale(14, 0.1),
-    fontFamily: robik,
+    fontFamily: 'Rubik-Light',
   },
   viewT: {
     borderBottomWidth: 2,

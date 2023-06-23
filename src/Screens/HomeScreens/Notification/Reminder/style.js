@@ -19,18 +19,20 @@ const styles = StyleSheet.create({
   txt1: {
     fontSize: moderateScale(20, 0.1),
     lineHeight: moderateScale(26, 0.1),
+
     color: black,
-    fontWeight: '700',
+    // fontWeight: '700',
     alignSelf: 'center',
-    fontFamily: robik,
+    fontFamily: 'Rubik-Bold',
   },
   txt2: {
     // paddingVertical: moderateScale(30, 0.1),
     fontSize: moderateScale(17, 0.1),
     lineHeight: moderateScale(20, 0.1),
     color: black,
-    fontWeight: '800',
+    // fontWeight: '800',
     textAlign: 'center',
+    fontFamily: 'Rubik-ExtraBold',
   },
   input: {
     // marginVertical: moderateScale(10, 0.1),
@@ -44,7 +46,7 @@ const styles = StyleSheet.create({
     // backgroundColor: 'red',
   },
   center: {
-    paddingHorizontal: moderateScale(20, 0.1),
+    paddingHorizontal: moderateScale(10, 0.1),
   },
 });
 

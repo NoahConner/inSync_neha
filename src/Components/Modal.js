@@ -71,7 +71,7 @@ const ModalView = ({
                           paddingLeft: moderateScale(25, 0.1),
                           fontSize: moderateScale(15, 0.1),
                           lineHeight: moderateScale(17, 0.1),
-                          top: moderateScale(15,0.1)
+                          top: moderateScale(15, 0.1),
                         },
                       ]}>
                       {' '}
@@ -105,10 +105,10 @@ const ModalView = ({
                   }}>
                   <Text
                     style={{
-                      fontSize: moderateScale(28, 0.1),
-                      lineHeight: moderateScale(33, 0.1),
-                      fontWeight: '700',
-                      fontFamily: 'Rubik-Regular',
+                      fontSize: moderateScale(26, 0.1),
+                      lineHeight: moderateScale(32, 0.1),
+                      // fontWeight: '700',
+                      fontFamily: 'Rubik-Bold',
                       color: black,
 
                       paddingHorizontal: moderateScale(30, 0.1),
@@ -120,8 +120,8 @@ const ModalView = ({
                     style={{
                       fontSize: moderateScale(25, 0.1),
                       lineHeight: moderateScale(30, 0.1),
-                      fontWeight: '700',
-                      fontFamily: 'Rubik-Regular',
+                      // fontWeight: '700',
+                      fontFamily: 'Rubik-Bold',
                       color: '#6C6C6C',
                       paddingVertical: moderateScale(10, 0.1),
 
@@ -284,7 +284,7 @@ const styles = StyleSheet.create({
     fontSize: moderateScale(15, 0.1),
     lineHeight: moderateScale(20, 0.1),
     color: black,
-    fontWeight: '800',
+    // fontWeight: '800',
     alignSelf: 'center',
   },
 
@@ -307,9 +307,9 @@ const styles = StyleSheet.create({
     fontSize: moderateScale(24, 0.1),
     lineHeight: moderateScale(26, 0.1),
     color: black,
-    fontWeight: '700',
+    // fontWeight: '700',
     alignSelf: 'center',
-    fontFamily: 'Rubik-Regular',
+    fontFamily: 'Rubik-Bold',
   },
   center: {
     paddingHorizontal: moderateScale(20, 0.1),

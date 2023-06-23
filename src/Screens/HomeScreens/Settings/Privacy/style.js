@@ -19,9 +19,9 @@ const styles = StyleSheet.create({
     fontSize: moderateScale(20, 0.1),
     lineHeight: moderateScale(26, 0.1),
     color: black,
-    fontWeight: '700',
+    // fontWeight: '700',
     alignSelf: 'center',
-    fontFamily: robik,
+    fontFamily: 'Rubik-Bold',
   },
   center: {
     paddingHorizontal: moderateScale(20, 0.1),

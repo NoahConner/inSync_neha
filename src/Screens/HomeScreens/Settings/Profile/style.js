@@ -33,24 +33,24 @@ const styles = StyleSheet.create({
     color: black,
     fontWeight: '700',
     paddingVertical: moderateScale(5, 0.1),
-    textAlign:'center'
+    textAlign: 'center',
   },
-  name1:{
+  name1: {
     fontSize: moderateScale(20, 0.1),
     lineHeight: moderateScale(22, 0.1),
     color: black,
-   fontFamily : 'Rubik-Bold',
+    fontFamily: 'Rubik-Bold',
     // paddingVertical: moderateScale(5, 0.1),
-    paddingBottom: moderateScale(10,0.1),
-    textAlign:'center'
+    paddingBottom: moderateScale(10, 0.1),
+    textAlign: 'center',
   },
   txt1: {
     fontSize: moderateScale(24, 0.1),
-    lineHeight: moderateScale(24, 0.1),
+    lineHeight: moderateScale(26, 0.1),
     color: black,
-    fontWeight: '700',
+    // fontWeight: '700',
     alignSelf: 'center',
-    fontFamily: robik,
+    fontFamily: 'Rubik-Bold',
   },
   txt2: {
     fontSize: moderateScale(15, 0.1),

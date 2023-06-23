@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     fontSize: moderateScale(24, 0.1),
     lineHeight: moderateScale(26, 0.1),
     color: black,
-    fontWeight: '700',
+    // fontWeight: '700',
     alignSelf: 'center',
     fontFamily: robik,
   },
@@ -38,17 +38,17 @@ const styles = StyleSheet.create({
     fontSize: moderateScale(15, 0.1),
     lineHeight: moderateScale(20, 0.1),
     color: black,
-    fontWeight: '300',
+    // fontWeight: '300',
     alignSelf: 'center',
-    fontFamily: robik,
+    fontFamily: 'Rubik-Light',
   },
   txt3: {
     fontSize: moderateScale(14, 0.1),
     lineHeight: moderateScale(17, 0.1),
     color: black,
-    fontWeight: '300',
+    // fontWeight: '300',
     alignSelf: 'center',
-    fontFamily: robik,
+    fontFamily: 'Rubik-Medium',
   },
 
   input: {
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
   Ftxt: {
     color: 'black',
     fontSize: moderateScale(13, 0.1),
-    fontFamily: robik,
+    fontFamily: 'Rubik-Light',
   },
   SLogin: {
     flexDirection: 'row',
