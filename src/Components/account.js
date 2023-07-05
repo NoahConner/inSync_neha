@@ -135,7 +135,7 @@ const Account = ({
             <View style={{flex: 0.6}}>
               <Text style={styles.txt}> {text1} </Text>
             </View>
-            <View style={{flex: 0.4}}>
+            <View style={{flex: 0.4, justifyContent: 'flex-end', alignItems:'flex-end'}}>
               <Switch
                 trackColor={{false: '#D9D9D9', true: '#D9D9D9'}}
                 thumbColor={isEnabled1 ? '#006B58' : '#FC0F0F'}
@@ -148,7 +148,7 @@ const Account = ({
             <View style={{flex: 0.6}}>
               <Text style={styles.txt}> {text2} </Text>
             </View>
-            <View style={{flex: 0.4}}>
+            <View style={{flex: 0.4, justifyContent: 'flex-end', alignItems:'flex-end'}}>
               <Switch
                 trackColor={{false: '#D9D9D9', true: '#D9D9D9'}}
                 thumbColor={isEnabled2 ? '#006B58' : '#FC0F0F'}

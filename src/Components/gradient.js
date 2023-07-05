@@ -1,8 +1,9 @@
-import React, {useState, useEffect} from 'react';
-import {View, Text, StyleSheet, TouchableOpacity, Alert} from 'react-native';
-import {Checkbox} from 'react-native-paper';
-import {Calendar, CalendarList, Agenda} from 'react-native-calendars';
-import {moderateScale} from 'react-native-size-matters';
+import React, { useState, useEffect } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
+import { Checkbox } from 'react-native-paper';
+import { Calendar, CalendarList, Agenda } from 'react-native-calendars';
+import { moderateScale } from 'react-native-size-matters';
+import Entypo from 'react-native-vector-icons/Entypo';
 import {
   backgroundColor,
   black,
@@ -11,10 +12,10 @@ import {
   screenWidth,
 } from '../Constants/index';
 import LinearGradient from 'react-native-linear-gradient';
-import {BarChart} from 'react-native-chart-kit';
+import { BarChart } from 'react-native-chart-kit';
 import ModalView from './Modal';
-import {AppContext, useAppContext} from '../Context/AppContext';
-export function Linear({type, text1, text2, text3}) {
+import { AppContext, useAppContext } from '../Context/AppContext';
+export function Linear({ type, text1, text2, text3 }) {
   const data = {
     labels: ['jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
     datasets: [
@@ -25,13 +26,21 @@ export function Linear({type, text1, text2, text3}) {
     legend: ['Rainy Days'], // optional
   };
   const [checked, setChecked] = React.useState(false);
-  const {setExpected, setPeriod, period, expected} = useAppContext(AppContext);
+  const { setExpected, setPeriod, period, expected } = useAppContext(AppContext);
   const [modalVisible, setModalVisible] = useState(false);
+
+  useEffect(() => {
+    if (checked) {
+      setModalVisible(true);
+    }
+  }, [checked])
+
+
   return (
     <LinearGradient
       colors={linearGradient}
-      end={{x: 1, y: 1}}
-      start={{x: 1, y: 0}}
+      end={{ x: 1, y: 1 }}
+      start={{ x: 1, y: 0 }}
       style={{
         marginVertical: moderateScale(18, 0.1),
       }}>
@@ -46,7 +55,6 @@ export function Linear({type, text1, text2, text3}) {
             style={[
               styles.buttonText,
               {
-                // fontWeight: '800',
                 lineHeight: moderateScale(53, 0.1),
                 fontSize: moderateScale(45, 0.1),
                 fontFamily: 'Rubik-Bold',
@@ -106,43 +114,48 @@ export function Linear({type, text1, text2, text3}) {
                 Chances Of Getting Pregnant
               </Text>
             </View>
-            <View style={{flexDirection: 'column', alignItems: 'flex-end'}}>
-              <View>
+            <View>
+              <Text
+                style={{
+                  color: white,
+                  fontSize: moderateScale(11, 0.1),
+                  fontFamily: 'Rubik-Regular',
+                }}>
+                Are You {'\n'}
+                Expecting?
+              </Text>
+              <TouchableOpacity
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  justifyContent: 'flex-start',
+                  paddingVertical: 10
+                }}
+                onPress={() => {
+                  setChecked(!checked);
+                }}
+              >
+                <View style={{
+                  padding: 3,
+                  backgroundColor: '#D9D9D9',
+                  borderRadius: 2,
+                  marginRight: 5
+                }}>
+                  <Entypo
+                    name="check"
+                    size={14}
+                    color={checked ? black : '#D9D9D9'}
+                  />
+                </View>
                 <Text
                   style={{
                     color: white,
-                    fontSize: moderateScale(11, 0.1),
                     fontFamily: 'Rubik-Regular',
+                    fontSize: 11,
                   }}>
-                  Are You {'\n'}
-                  Expecting?
+                  Yes
                 </Text>
-                <View
-                  style={{
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                    justifyContent: 'flex-start',
-                    right: moderateScale(8, 0.1),
-                  }}>
-                  <Checkbox
-                    color="white"
-                    status={checked ? 'checked' : 'unchecked'}
-                    uncheckedColor="#fff"
-                    onPress={() => {
-                      setChecked(!checked);
-                      setModalVisible(true);
-                    }}
-                  />
-                  <Text
-                    style={{
-                      color: white,
-                      fontFamily: 'Rubik-Regular',
-                      fontSize: 11,
-                    }}>
-                    Yes
-                  </Text>
-                </View>
-              </View>
+              </TouchableOpacity>
             </View>
           </View>
           <View
@@ -171,7 +184,7 @@ export function Linear({type, text1, text2, text3}) {
               showBarTops={true}
               style={{
                 left: moderateScale(-10, 0.1),
-                transform: [{scale: 0.8}],
+                transform: [{ scale: 0.8 }],
               }}
             />
           </View>
@@ -189,7 +202,7 @@ export function Linear({type, text1, text2, text3}) {
     </LinearGradient>
   );
 }
-export function Calender({type}) {
+export function Calender({ type }) {
   return (
     <Calendar
       style={{
@@ -201,70 +214,77 @@ export function Calender({type}) {
         arrowColor: black,
         dayTextColor: 'gray',
       }}
-      //   current={'2012-03-01'}
       onDayPress={day => {
         console.log('selected day', day);
       }}
-      markedDates={
-        type === 'period'
-          ? {
-              '2023-06-11': {
-                selected: true,
-                marked: true,
-                selectedColor: white,
-                selectedTextColor: black,
-                dotColor: black,
-              },
-              '2023-06-12': {
-                selected: true,
-                marked: true,
-                selectedColor: white,
-                selectedTextColor: black,
-                dotColor: black,
-              },
-              '2023-06-13': {
-                selected: true,
-                marked: true,
-                selectedColor: white,
-                selectedTextColor: black,
-                dotColor: black,
-              },
-              '2023-06-14': {
-                selected: true,
-                marked: true,
-                selectedColor: white,
-                selectedTextColor: black,
-                dotColor: black,
-              },
-              '2023-06-15': {
-                selected: true,
-                marked: true,
-                selectedColor: white,
-                selectedTextColor: black,
-                dotColor: black,
-              },
-              '2023-06-16': {
-                selected: true,
-                marked: true,
-                selectedColor: white,
-                selectedTextColor: black,
-                dotColor: black,
-              },
-            }
-          : {
-              '2023-09-25': {
-                selected: true,
-                marked: true,
-                selectedColor: white,
-                selectedTextColor: black,
-                dotColor: black,
-              },
-            }
-      }
+      // markingType={'period'}
+      // markedDates={{
+      //   '2023-06-18': {startingDay: true, color: '#F2F2F2', textColor: 'gray'},
+      //   '2023-06-19': {selected: true, color: '#F2F2F2', textColor: 'gray'},
+      //   '2023-06-20': {selected: true, color: '#F2F2F2', textColor: 'gray'},
+      //   '2023-06-21': {selected: true, color: '#F2F2F2', textColor: 'gray'},
+      //   '2023-06-22': {selected: true, color: '#F2F2F2', endingDay: true, textColor: 'gray'}
+      // }}
+    markedDates={
+      type === 'period'
+        ? {
+          '2023-06-11': {
+            selected: true,
+            marked: true,
+            selectedColor: white,
+            selectedTextColor: black,
+            dotColor: black,
+          },
+          '2023-06-12': {
+            selected: true,
+            marked: true,
+            selectedColor: white,
+            selectedTextColor: black,
+            dotColor: black,
+          },
+          '2023-06-13': {
+            selected: true,
+            marked: true,
+            selectedColor: white,
+            selectedTextColor: black,
+            dotColor: black,
+          },
+          '2023-06-14': {
+            selected: true,
+            marked: true,
+            selectedColor: white,
+            selectedTextColor: black,
+            dotColor: black,
+          },
+          '2023-06-15': {
+            selected: true,
+            marked: true,
+            selectedColor: white,
+            selectedTextColor: black,
+            dotColor: black,
+          },
+          '2023-06-16': {
+            selected: true,
+            marked: true,
+            selectedColor: white,
+            selectedTextColor: black,
+            dotColor: black,
+          },
+        }
+        : {
+          '2023-09-25': {
+            selected: true,
+            marked: true,
+            selectedColor: white,
+            selectedTextColor: black,
+            dotColor: black,
+          },
+        }
+    }
     />
   );
 }
-export function RadioButton({data, onPress, selected, text, style, type}) {
+export function RadioButton({ data, onPress, selected, text, style, type }) {
   return (
     <View style={[type == 'gender' ? style : styles.radioButtonContainer]}>
       <TouchableOpacity onPress={onPress} style={[styles.radioButton]}>

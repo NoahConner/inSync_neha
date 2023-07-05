@@ -8,12 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* InSyncTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* InSyncTests.m */; };
+		046AFDF74DAB46EF46FC7C51 /* libPods-InSync.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E74CE439EBF86D2A4B76E7CD /* libPods-InSync.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2A246F4F2A4962DB007E9405 /* Rubik-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A246F412A4962DA007E9405 /* Rubik-LightItalic.ttf */; };
+		2A246F502A4962DB007E9405 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A246F422A4962DA007E9405 /* Rubik-Black.ttf */; };
+		2A246F512A4962DB007E9405 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A246F432A4962DA007E9405 /* Rubik-Bold.ttf */; };
+		2A246F522A4962DB007E9405 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A246F442A4962DA007E9405 /* Rubik-Medium.ttf */; };
+		2A246F532A4962DB007E9405 /* Rubik-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A246F452A4962DA007E9405 /* Rubik-ExtraBold.ttf */; };
+		2A246F542A4962DB007E9405 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A246F462A4962DA007E9405 /* Rubik-Regular.ttf */; };
+		2A246F552A4962DB007E9405 /* Rubik-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A246F472A4962DA007E9405 /* Rubik-SemiBoldItalic.ttf */; };
+		2A246F562A4962DB007E9405 /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A246F482A4962DA007E9405 /* Rubik-Light.ttf */; };
+		2A246F572A4962DB007E9405 /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A246F492A4962DA007E9405 /* Rubik-SemiBold.ttf */; };
+		2A246F582A4962DB007E9405 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A246F4A2A4962DA007E9405 /* Rubik-MediumItalic.ttf */; };
+		2A246F592A4962DB007E9405 /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A246F4B2A4962DA007E9405 /* Rubik-BoldItalic.ttf */; };
+		2A246F5A2A4962DB007E9405 /* Rubik-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A246F4C2A4962DA007E9405 /* Rubik-ExtraBoldItalic.ttf */; };
+		2A246F5B2A4962DB007E9405 /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A246F4D2A4962DA007E9405 /* Rubik-BlackItalic.ttf */; };
+		2A246F5C2A4962DB007E9405 /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A246F4E2A4962DB007E9405 /* Rubik-Italic.ttf */; };
+		2A7D2A0A2A45DF0E0034FACA /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A7D2A092A45DF0E0034FACA /* BootSplash.storyboard */; };
+		5A0E33EA45AFC0AF101A1B22 /* libPods-InSync-InSyncTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 856EB68D21DC40D0D282DC5C /* libPods-InSync-InSyncTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		AB3C30503C08A9F9ED734DEB /* libPods-InSync.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A09113F1654E0371587ECC83 /* libPods-InSync.a */; };
-		D2FB43942ED7948BE363D45A /* libPods-InSync-InSyncTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52224F252AC83F85A60A3430 /* libPods-InSync-InSyncTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,39 +53,40 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = InSync/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = InSync/main.m; sourceTree = "<group>"; };
 		18BF5466037141C8B1C608F9 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-BoldItalic.ttf"; path = "../src/assets/fonts/Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
-		2A5A74102A4452670045CB72 /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
-		2A5A74112A4452670045CB72 /* Rubik-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
-		2A5A74122A4452670045CB72 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
-		2A5A74132A4452670045CB72 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
-		2A5A74142A4452670045CB72 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
-		2A5A74152A4452670045CB72 /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic.ttf"; sourceTree = "<group>"; };
-		2A5A74162A4452670045CB72 /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-LightItalic.ttf"; sourceTree = "<group>"; };
-		2A5A74172A4452670045CB72 /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBold.ttf"; sourceTree = "<group>"; };
-		2A5A74182A4452670045CB72 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
-		2A5A74192A4452670045CB72 /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
-		2A5A741A2A4452670045CB72 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
-		2A5A741B2A4452670045CB72 /* Rubik-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
-		2A5A741C2A4452670045CB72 /* Rubik-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-ExtraBold.ttf"; sourceTree = "<group>"; };
-		2A5A741D2A4452680045CB72 /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
+		2A246F412A4962DA007E9405 /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Rubik-LightItalic.ttf"; path = "../../../../fonts/rubik/Rubik-LightItalic.ttf"; sourceTree = "<group>"; };
+		2A246F422A4962DA007E9405 /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Rubik-Black.ttf"; path = "../../../../fonts/rubik/Rubik-Black.ttf"; sourceTree = "<group>"; };
+		2A246F432A4962DA007E9405 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Rubik-Bold.ttf"; path = "../../../../fonts/rubik/Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		2A246F442A4962DA007E9405 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Rubik-Medium.ttf"; path = "../../../../fonts/rubik/Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		2A246F452A4962DA007E9405 /* Rubik-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Rubik-ExtraBold.ttf"; path = "../../../../fonts/rubik/Rubik-ExtraBold.ttf"; sourceTree = "<group>"; };
+		2A246F462A4962DA007E9405 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Rubik-Regular.ttf"; path = "../../../../fonts/rubik/Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		2A246F472A4962DA007E9405 /* Rubik-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Rubik-SemiBoldItalic.ttf"; path = "../../../../fonts/rubik/Rubik-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		2A246F482A4962DA007E9405 /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Rubik-Light.ttf"; path = "../../../../fonts/rubik/Rubik-Light.ttf"; sourceTree = "<group>"; };
+		2A246F492A4962DA007E9405 /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Rubik-SemiBold.ttf"; path = "../../../../fonts/rubik/Rubik-SemiBold.ttf"; sourceTree = "<group>"; };
+		2A246F4A2A4962DA007E9405 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Rubik-MediumItalic.ttf"; path = "../../../../fonts/rubik/Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
+		2A246F4B2A4962DA007E9405 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Rubik-BoldItalic.ttf"; path = "../../../../fonts/rubik/Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
+		2A246F4C2A4962DA007E9405 /* Rubik-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Rubik-ExtraBoldItalic.ttf"; path = "../../../../fonts/rubik/Rubik-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		2A246F4D2A4962DA007E9405 /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Rubik-BlackItalic.ttf"; path = "../../../../fonts/rubik/Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
+		2A246F4E2A4962DB007E9405 /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Rubik-Italic.ttf"; path = "../../../../fonts/rubik/Rubik-Italic.ttf"; sourceTree = "<group>"; };
+		2A7D2A092A45DF0E0034FACA /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = InSync/BootSplash.storyboard; sourceTree = "<group>"; };
 		39F613E09A3447309A032BE9 /* Rubik-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-ExtraBoldItalic.ttf"; path = "../src/assets/fonts/Rubik-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		4057A0BFCCA7438F96DB4CDC /* Rubik-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Regular.ttf"; path = "../src/assets/fonts/Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		45CBB8F1690D4CEDB57D7F5E /* Rubik-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Light.ttf"; path = "../src/assets/fonts/Rubik-Light.ttf"; sourceTree = "<group>"; };
-		52224F252AC83F85A60A3430 /* libPods-InSync-InSyncTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InSync-InSyncTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53E46FC4276A42E39FA44B9E /* Rubik-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Medium.ttf"; path = "../src/assets/fonts/Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		55265F6E65F49192B132B547 /* Pods-InSync-InSyncTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InSync-InSyncTests.release.xcconfig"; path = "Target Support Files/Pods-InSync-InSyncTests/Pods-InSync-InSyncTests.release.xcconfig"; sourceTree = "<group>"; };
 		58F2DD01E5FB4ED9AB06B1A3 /* Rubik-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Black.ttf"; path = "../src/assets/fonts/Rubik-Black.ttf"; sourceTree = "<group>"; };
 		599B3B7E6BE741EEB915D7CB /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-MediumItalic.ttf"; path = "../src/assets/fonts/Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
-		5DE561931FA19730AE632656 /* Pods-InSync.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InSync.release.xcconfig"; path = "Target Support Files/Pods-InSync/Pods-InSync.release.xcconfig"; sourceTree = "<group>"; };
 		6ACCEC5106A2422FBAEC9983 /* Rubik-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-SemiBoldItalic.ttf"; path = "../src/assets/fonts/Rubik-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		75D5A7E602CC40019CC9D8CD /* Rubik-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Bold.ttf"; path = "../src/assets/fonts/Rubik-Bold.ttf"; sourceTree = "<group>"; };
 		7BCB1F2BEC4A4B4F9A755C3B /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-LightItalic.ttf"; path = "../src/assets/fonts/Rubik-LightItalic.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = InSync/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		856EB68D21DC40D0D282DC5C /* libPods-InSync-InSyncTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InSync-InSyncTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		87AA17BCFC5C10D64CE6A1CC /* Pods-InSync-InSyncTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InSync-InSyncTests.debug.xcconfig"; path = "Target Support Files/Pods-InSync-InSyncTests/Pods-InSync-InSyncTests.debug.xcconfig"; sourceTree = "<group>"; };
+		907625EB7BB7A841E4E577BB /* Pods-InSync.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InSync.release.xcconfig"; path = "Target Support Files/Pods-InSync/Pods-InSync.release.xcconfig"; sourceTree = "<group>"; };
+		90D3FEED06492E3854BEDE76 /* Pods-InSync.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InSync.debug.xcconfig"; path = "Target Support Files/Pods-InSync/Pods-InSync.debug.xcconfig"; sourceTree = "<group>"; };
 		90EDCCEE2DF7478189F7AF63 /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-SemiBold.ttf"; path = "../src/assets/fonts/Rubik-SemiBold.ttf"; sourceTree = "<group>"; };
 		93CE5DD971114D12BD735EE5 /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-BlackItalic.ttf"; path = "../src/assets/fonts/Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
-		941D250B8189190F2F3EBE73 /* Pods-InSync.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InSync.debug.xcconfig"; path = "Target Support Files/Pods-InSync/Pods-InSync.debug.xcconfig"; sourceTree = "<group>"; };
-		A09113F1654E0371587ECC83 /* libPods-InSync.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InSync.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9C8297899470BF88D5F4030 /* Pods-InSync-InSyncTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InSync-InSyncTests.debug.xcconfig"; path = "Target Support Files/Pods-InSync-InSyncTests/Pods-InSync-InSyncTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7C43260E72544A190494C7A /* Rubik-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Italic.ttf"; path = "../src/assets/fonts/Rubik-Italic.ttf"; sourceTree = "<group>"; };
-		E99976D14E1345D9C880427A /* Pods-InSync-InSyncTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InSync-InSyncTests.release.xcconfig"; path = "Target Support Files/Pods-InSync-InSyncTests/Pods-InSync-InSyncTests.release.xcconfig"; sourceTree = "<group>"; };
+		E74CE439EBF86D2A4B76E7CD /* libPods-InSync.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InSync.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -79,7 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2FB43942ED7948BE363D45A /* libPods-InSync-InSyncTests.a in Frameworks */,
+				5A0E33EA45AFC0AF101A1B22 /* libPods-InSync-InSyncTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,7 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB3C30503C08A9F9ED734DEB /* libPods-InSync.a in Frameworks */,
+				046AFDF74DAB46EF46FC7C51 /* libPods-InSync.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,20 +130,21 @@
 		13B07FAE1A68108700A75B9A /* InSync */ = {
 			isa = PBXGroup;
 			children = (
-				2A5A741D2A4452680045CB72 /* Rubik-Black.ttf */,
-				2A5A74102A4452670045CB72 /* Rubik-BlackItalic.ttf */,
-				2A5A74122A4452670045CB72 /* Rubik-Bold.ttf */,
-				2A5A74182A4452670045CB72 /* Rubik-BoldItalic.ttf */,
-				2A5A741C2A4452670045CB72 /* Rubik-ExtraBold.ttf */,
-				2A5A74112A4452670045CB72 /* Rubik-ExtraBoldItalic.ttf */,
-				2A5A74152A4452670045CB72 /* Rubik-Italic.ttf */,
-				2A5A74192A4452670045CB72 /* Rubik-Light.ttf */,
-				2A5A74162A4452670045CB72 /* Rubik-LightItalic.ttf */,
-				2A5A74132A4452670045CB72 /* Rubik-Medium.ttf */,
-				2A5A741A2A4452670045CB72 /* Rubik-MediumItalic.ttf */,
-				2A5A74142A4452670045CB72 /* Rubik-Regular.ttf */,
-				2A5A74172A4452670045CB72 /* Rubik-SemiBold.ttf */,
-				2A5A741B2A4452670045CB72 /* Rubik-SemiBoldItalic.ttf */,
+				2A246F422A4962DA007E9405 /* Rubik-Black.ttf */,
+				2A246F4D2A4962DA007E9405 /* Rubik-BlackItalic.ttf */,
+				2A246F432A4962DA007E9405 /* Rubik-Bold.ttf */,
+				2A246F4B2A4962DA007E9405 /* Rubik-BoldItalic.ttf */,
+				2A246F452A4962DA007E9405 /* Rubik-ExtraBold.ttf */,
+				2A246F4C2A4962DA007E9405 /* Rubik-ExtraBoldItalic.ttf */,
+				2A246F4E2A4962DB007E9405 /* Rubik-Italic.ttf */,
+				2A246F482A4962DA007E9405 /* Rubik-Light.ttf */,
+				2A246F412A4962DA007E9405 /* Rubik-LightItalic.ttf */,
+				2A246F442A4962DA007E9405 /* Rubik-Medium.ttf */,
+				2A246F4A2A4962DA007E9405 /* Rubik-MediumItalic.ttf */,
+				2A246F462A4962DA007E9405 /* Rubik-Regular.ttf */,
+				2A246F492A4962DA007E9405 /* Rubik-SemiBold.ttf */,
+				2A246F472A4962DA007E9405 /* Rubik-SemiBoldItalic.ttf */,
+				2A7D2A092A45DF0E0034FACA /* BootSplash.storyboard */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -142,8 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				A09113F1654E0371587ECC83 /* libPods-InSync.a */,
-				52224F252AC83F85A60A3430 /* libPods-InSync-InSyncTests.a */,
+				E74CE439EBF86D2A4B76E7CD /* libPods-InSync.a */,
+				856EB68D21DC40D0D282DC5C /* libPods-InSync-InSyncTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -183,10 +200,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				941D250B8189190F2F3EBE73 /* Pods-InSync.debug.xcconfig */,
-				5DE561931FA19730AE632656 /* Pods-InSync.release.xcconfig */,
-				B9C8297899470BF88D5F4030 /* Pods-InSync-InSyncTests.debug.xcconfig */,
-				E99976D14E1345D9C880427A /* Pods-InSync-InSyncTests.release.xcconfig */,
+				90D3FEED06492E3854BEDE76 /* Pods-InSync.debug.xcconfig */,
+				907625EB7BB7A841E4E577BB /* Pods-InSync.release.xcconfig */,
+				87AA17BCFC5C10D64CE6A1CC /* Pods-InSync-InSyncTests.debug.xcconfig */,
+				55265F6E65F49192B132B547 /* Pods-InSync-InSyncTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -219,12 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "InSyncTests" */;
 			buildPhases = (
-				D01E5E584A8134EEFE5B0F01 /* [CP] Check Pods Manifest.lock */,
+				0A44962112B994EBBE8B5FF2 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				BA562CFF4E87B8EDB2BA0CCC /* [CP] Embed Pods Frameworks */,
-				22B918B8DC8C81BBC3805896 /* [CP] Copy Pods Resources */,
+				FCEFB3E2A007198381222A15 /* [CP] Embed Pods Frameworks */,
+				29F856A38BFE1EE12B364C1D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -240,14 +257,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "InSync" */;
 			buildPhases = (
-				6173547C7D95E52C3A879CF6 /* [CP] Check Pods Manifest.lock */,
+				69A465E7D18C85D2979CAAF3 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				C3CA21B2A548AA36FEEDB434 /* [CP] Embed Pods Frameworks */,
-				AC031F7D552CF0547538F7B4 /* [CP] Copy Pods Resources */,
+				A360C18DA35C515C60F0CB86 /* [CP] Embed Pods Frameworks */,
+				D5C671ABC68E4182F07F0901 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -307,8 +324,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A7D2A0A2A45DF0E0034FACA /* BootSplash.storyboard in Resources */,
+				2A246F512A4962DB007E9405 /* Rubik-Bold.ttf in Resources */,
+				2A246F4F2A4962DB007E9405 /* Rubik-LightItalic.ttf in Resources */,
+				2A246F5A2A4962DB007E9405 /* Rubik-ExtraBoldItalic.ttf in Resources */,
+				2A246F572A4962DB007E9405 /* Rubik-SemiBold.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				2A246F592A4962DB007E9405 /* Rubik-BoldItalic.ttf in Resources */,
+				2A246F542A4962DB007E9405 /* Rubik-Regular.ttf in Resources */,
+				2A246F502A4962DB007E9405 /* Rubik-Black.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				2A246F552A4962DB007E9405 /* Rubik-SemiBoldItalic.ttf in Resources */,
+				2A246F582A4962DB007E9405 /* Rubik-MediumItalic.ttf in Resources */,
+				2A246F532A4962DB007E9405 /* Rubik-ExtraBold.ttf in Resources */,
+				2A246F522A4962DB007E9405 /* Rubik-Medium.ttf in Resources */,
+				2A246F5B2A4962DB007E9405 /* Rubik-BlackItalic.ttf in Resources */,
+				2A246F562A4962DB007E9405 /* Rubik-Light.ttf in Resources */,
+				2A246F5C2A4962DB007E9405 /* Rubik-Italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,7 +363,29 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		22B918B8DC8C81BBC3805896 /* [CP] Copy Pods Resources */ = {
+		0A44962112B994EBBE8B5FF2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InSync-InSyncTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29F856A38BFE1EE12B364C1D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -348,7 +402,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InSync-InSyncTests/Pods-InSync-InSyncTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6173547C7D95E52C3A879CF6 /* [CP] Check Pods Manifest.lock */ = {
+		69A465E7D18C85D2979CAAF3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -370,41 +424,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AC031F7D552CF0547538F7B4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-InSync/Pods-InSync-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-InSync/Pods-InSync-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InSync/Pods-InSync-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BA562CFF4E87B8EDB2BA0CCC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-InSync-InSyncTests/Pods-InSync-InSyncTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-InSync-InSyncTests/Pods-InSync-InSyncTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InSync-InSyncTests/Pods-InSync-InSyncTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C3CA21B2A548AA36FEEDB434 /* [CP] Embed Pods Frameworks */ = {
+		A360C18DA35C515C60F0CB86 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -421,26 +441,38 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InSync/Pods-InSync-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D01E5E584A8134EEFE5B0F01 /* [CP] Check Pods Manifest.lock */ = {
+		D5C671ABC68E4182F07F0901 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InSync/Pods-InSync-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-InSync-InSyncTests-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-InSync/Pods-InSync-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InSync/Pods-InSync-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCEFB3E2A007198381222A15 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InSync-InSyncTests/Pods-InSync-InSyncTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InSync-InSyncTests/Pods-InSync-InSyncTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InSync-InSyncTests/Pods-InSync-InSyncTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -495,7 +527,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9C8297899470BF88D5F4030 /* Pods-InSync-InSyncTests.debug.xcconfig */;
+			baseConfigurationReference = 87AA17BCFC5C10D64CE6A1CC /* Pods-InSync-InSyncTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -523,7 +555,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E99976D14E1345D9C880427A /* Pods-InSync-InSyncTests.release.xcconfig */;
+			baseConfigurationReference = 55265F6E65F49192B132B547 /* Pods-InSync-InSyncTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -548,11 +580,12 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 941D250B8189190F2F3EBE73 /* Pods-InSync.debug.xcconfig */;
+			baseConfigurationReference = 90D3FEED06492E3854BEDE76 /* Pods-InSync.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4BAA94W5H2;
 				ENABLE_BITCODE = NO;
 				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = InSync/Info.plist;
@@ -576,11 +609,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5DE561931FA19730AE632656 /* Pods-InSync.release.xcconfig */;
+			baseConfigurationReference = 907625EB7BB7A841E4E577BB /* Pods-InSync.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4BAA94W5H2;
 				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = InSync/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
