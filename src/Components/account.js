@@ -43,7 +43,7 @@ const Account = ({
         <>
           <View
             style={[
-              styles.input,
+              styles.input1,
               {
                 borderBottomWidth: 1,
                 marginBottom: moderateScale(7, 0.1),
@@ -111,7 +111,7 @@ const Account = ({
         <>
           <View
             style={[
-              styles.input,
+              styles.input1,
               {borderBottomWidth: 1, marginBottom: moderateScale(7, 0.1)},
               style,
             ]}>
@@ -163,7 +163,7 @@ const Account = ({
         <>
           <View
             style={[
-              styles.input,
+              styles.input1,
               {borderBottomWidth: 1, marginBottom: moderateScale(7, 0.1)},
               style,
             ]}>
@@ -281,6 +281,15 @@ const styles = StyleSheet.create({
     borderBottomColor: '#9A9A9A',
     alignItems: 'center',
     paddingHorizontal: moderateScale(12, 0.1),
+  },
+  input1: {
+    flexDirection: 'row',
+    width: moderateScale(280, 0.1),
+    height: moderateScale(37, 0.1),
+    borderColor: black,
+    borderBottomColor: '#9A9A9A',
+    alignItems: 'center',
+    // paddingHorizontal: moderateScale(12, 0.1),
   },
   eyeButton: {
     padding: 8,

@@ -18,10 +18,10 @@ import {backgroundColor} from '../../../Constants';
 import SVGImg from '../../../assets/images/svg/icon4.svg';
 import SVGImg2 from '../../../assets/images/svg/icon5.svg';
 import SVGImg3 from '../../../assets/images/svg/leaf2.svg';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 const Setting = ({navigation}) => {
   const {setToken} = useAppContext(AppContext);
   return (
-  
     <View
       style={{
         backgroundColor: backgroundColor,
@@ -65,10 +65,7 @@ const Setting = ({navigation}) => {
         }}>
         <Header navigation={navigation} />
       </View>
-      <ScrollView
-      showsVerticalScrollIndicator={false}
-      
-      >
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View style={s.center}>
           <Text style={s.txt1}>Settings</Text>
           <View style={{marginTop: moderateScale(30, 0.1)}}>

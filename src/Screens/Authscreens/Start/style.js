@@ -37,11 +37,13 @@ const styles = StyleSheet.create({
     // position: 'relative',
   },
   logo: {
-    marginBottom: moderateScale(18, 0.1),
-    marginTop: moderateScale(-25, 0.1),
+    marginTop: moderateScale(-10, 0.1),
+    marginBottom: moderateScale(10, 0.1),
     // backgroundColor: 'red',
-    height: moderateScale(63, 0.1),
-    width: moderateScale(110, 0.1),
+    // marginTop: moderateScale(-25, 0.1),
+    // backgroundColor: 'red',
+    height: moderateScale(130, 0.1),
+    width: moderateScale(120, 0.1),
     // marginLeft: moderateScale(18, 0.1),
   },
   text: {
@@ -80,6 +82,7 @@ const styles = StyleSheet.create({
   },
   btn: {
     marginVertical: moderateScale(12, 0.1),
+    marginTop: moderateScale(-10, 0.1),
     flexDirection: 'column',
   },
   i13: {
@@ -91,7 +94,7 @@ const styles = StyleSheet.create({
   },
   vector: {
     right: 0,
-     position: 'absolute',
+    position: 'absolute',
     bottom: 0,
   },
 });

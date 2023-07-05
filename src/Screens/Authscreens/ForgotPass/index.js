@@ -26,7 +26,13 @@ const Forgot = ({navigation}) => {
           source={require('../../../assets/images/PNG/Vector.png')}
         />
       </View>
-      <Header navigation={navigation} />
+      <View
+        style={{
+          paddingTop: moderateScale(10, 0.1),
+          paddingHorizontal: moderateScale(20, 0.1),
+        }}>
+        <Header navigation={navigation} />
+      </View>
       <View style={s.center}>
         <Text style={s.txt1}>Forget Password</Text>
 

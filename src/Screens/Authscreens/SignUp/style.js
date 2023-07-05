@@ -23,8 +23,10 @@ const styles = StyleSheet.create({
   center: {
     alignSelf: 'center',
     top: moderateScale(45, 0.1),
-    marginBottom: moderateScale(30, 0.1),
-    height: screenHeight - 140,
+    // backgroundColor: 'red',
+    marginBottom: moderateScale(40, 0.1),
+    // marginBottom: moderateScale(30, 0.1),
+    // height: screenHeight,
   },
   txt1: {
     fontSize: moderateScale(24, 0.1),
@@ -81,12 +83,16 @@ const styles = StyleSheet.create({
   link: {
     flexDirection: 'row',
     alignSelf: 'center',
+    bottom: moderateScale(38, 0.1),
+    position: 'absolute',
   },
   vector: {
     // flex: 1,
     alignItems: 'flex-end',
     justifyContent: 'flex-end',
     bottom: 0,
+    position: 'absolute',
+    right: 0,
   },
 });
 

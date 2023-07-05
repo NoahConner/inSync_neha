@@ -68,11 +68,12 @@ const Home = ({navigation}) => {
     //   style={s.backImg}
     //   source={require('../../../assets/images/home.jpg')}
     //   resizeMode="contain">
-    <View style={{
-      flex:1, backgroundColor: backgroundColor
-    }}>
-
-<View
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: backgroundColor,
+      }}>
+      <View
         style={{
           position: 'absolute',
           left: moderateScale(10, 0.1),
@@ -95,7 +96,7 @@ const Home = ({navigation}) => {
         style={{
           position: 'absolute',
           top: moderateScale(70, 0.1),
-          left: moderateScale(50, 0.1),
+          left: moderateScale(30, 0.1),
         }}>
         <SVGImg2 width={110} height={110} />
       </View>
@@ -105,20 +106,21 @@ const Home = ({navigation}) => {
         style={{
           position: 'absolute',
           top: moderateScale(90, 0.1),
-          right: moderateScale(20,0.1),
+          right: moderateScale(20, 0.1),
         }}>
         <SVGImg3 />
-        
       </View>
-      <View
-        style={{
-          position: 'absolute',
-          bottom: moderateScale(110, 0.1),
-          right: moderateScale(60,0.1),
-        }}>
-        <SVGImg3 width={90} height={90} />
-        
-      </View>
+      {expected ? (
+        <View
+          style={{
+            position: 'absolute',
+            bottom: moderateScale(90, 0.1),
+            right: moderateScale(60, 0.1),
+          }}>
+          <SVGImg3 width={80} height={80} />
+        </View>
+      ) : null}
+
       <View>
         <Image
           resizeMode="contain"
@@ -159,30 +161,40 @@ const Home = ({navigation}) => {
               </View>
             ))}
           </View>
-          <View style={{height: moderateScale(380,0.1)}}>
-          {!expected ? (
-            <Linear type={'graph'} />
-          ) : (
-            <View style={s.btn}>
-              <Button
-                text={'Resume Your Cycle'}
-                onPress={() => setExpected(false)}
-              />
-            </View>
-          )}
+          <View
+            style={
+              expected
+                ? {height: moderateScale(300, 0.1)}
+                : {height: moderateScale(380, 0.1)}
+            }>
+            {!expected ? (
+              <Linear type={'graph'} />
+            ) : (
+              <View
+                style={[
+                  s.btn,
+                  {
+                    // bottom: moderateScale(-30, 0.1),
+                  },
+                ]}>
+                <Button
+                  text={'Resume Your Cycle'}
+                  onPress={() => setExpected(false)}
+                />
+              </View>
+            )}
           </View>
-        
+
           {/* <View style={{height: moderateScale(50, 0.1)}}></View> */}
         </View>
-      
       </ScrollView>
       <View style={s.vector}>
-          <Image
-            style={{transform: [{rotate: '180deg'}]}}
-            resizeMode="contain"
-            source={require('../../../assets/images/PNG/Vector.png')}
-          />
-        </View>
+        <Image
+          style={{transform: [{rotate: '180deg'}]}}
+          resizeMode="contain"
+          source={require('../../../assets/images/PNG/Vector.png')}
+        />
+      </View>
       <ModalView
         type={'period'}
         visible={modalVisible}
@@ -191,7 +203,7 @@ const Home = ({navigation}) => {
         title2={'In 2 Days '}
         cancel={() => setModalVisible(!modalVisible)}
       />
-      </View>
+    </View>
     // </ImageBackground>
   );
 };
