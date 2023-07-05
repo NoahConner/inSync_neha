@@ -217,6 +217,7 @@ const ModalView = ({
                         height: moderateScale(37, 0.1),
                       }}
                       placeholder={'Relation'}
+                      placeholderTextColor={'red'}
                       type={'relation'}
                       // setValue={v => setEmail(v)}
                       // value={email}
@@ -253,6 +254,14 @@ const ModalView = ({
                     left: moderateScale(10, 0.1),
                   }}>
                   <SVGImg2 width={70} height={70} />
+                </View>
+                <View
+                  style={{
+                    position: 'absolute',
+                    top: moderateScale(140, 0.1),
+                    right: moderateScale(10, 0.1),
+                  }}>
+                  <SVGImg2 width={50} height={50} />
                 </View>
                 <View
                   style={{

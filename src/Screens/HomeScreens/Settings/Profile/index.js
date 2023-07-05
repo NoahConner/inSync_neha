@@ -7,26 +7,26 @@ import {
   Keyboard,
   TouchableWithoutFeedback,
 } from 'react-native';
-import React, { useState, useContext } from 'react';
+import React, {useState, useContext} from 'react';
 import s from './style';
 import Input from '../../../../Components/input';
 import Button from '../../../../Components/Button';
 import Header from '../../../../Components/Header';
-import { AppContext } from '../../../../Context/AppContext';
+import {AppContext} from '../../../../Context/AppContext';
 
-import { moderateScale } from 'react-native-size-matters';
+import {moderateScale} from 'react-native-size-matters';
 import styles from './style';
-import { backgroundColor, black } from '../../../../Constants';
+import {backgroundColor, black} from '../../../../Constants';
 import SVGImg from '../../../../assets/images/svg/icon4.svg';
 import SVGImg2 from '../../../../assets/images/svg/icon5.svg';
 import SVGImg3 from '../../../../assets/images/svg/leaf2.svg';
 
-const Profile = ({ navigation }) => {
+const Profile = ({navigation}) => {
   const [name, setName] = useState(null);
   const [last, setLast] = useState(null);
   const [password, setPassword] = useState(null);
   const [confPassword, setConfPass] = useState(null);
-  const { setToken } = useContext(AppContext);
+  const {setToken} = useContext(AppContext);
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
@@ -39,7 +39,7 @@ const Profile = ({ navigation }) => {
           paddingHorizontal: moderateScale(30, 0.1),
         }}>
         {/* corner blob */}
-        <View style={{ position: 'absolute', top: 0, left: 0 }}>
+        <View style={{position: 'absolute', top: 0, left: 0}}>
           <Image
             resizeMode="contain"
             source={require('../../../../assets/images/PNG/Vector.png')}
@@ -63,7 +63,7 @@ const Profile = ({ navigation }) => {
             top: moderateScale(90, 0.1),
             left: -30,
           }}>
-          <SVGImg2 />
+          <SVGImg2 width={120} height={120} />
         </View>
 
         {/* left leaf */}
@@ -82,8 +82,7 @@ const Profile = ({ navigation }) => {
           }}>
           <Header navigation={navigation} />
         </View>
-        <ScrollView showsVerticalScrollIndicator={false}
-        >
+        <ScrollView showsVerticalScrollIndicator={false}>
           <View style={s.center}>
             <Text style={s.txt1}>Edit Profile</Text>
             <View style={styles.imgView}>
@@ -135,13 +134,13 @@ const Profile = ({ navigation }) => {
             <View style={{}}>
               <View
                 style={{
-                   marginTop: moderateScale(-20, 0.1),
+                  marginTop: moderateScale(-20, 0.1),
                   justifyContent: 'center',
                   alignItems: 'center',
                 }}>
                 <Image
                   resizeMode="contain"
-                  style={{ width: moderateScale(280, 0.1) }}
+                  style={{width: moderateScale(280, 0.1)}}
                   source={require('../../../../assets/images/profile-btm.jpg')}
                 />
               </View>
@@ -153,7 +152,7 @@ const Profile = ({ navigation }) => {
 
         <View style={s.vector}>
           <Image
-            style={{ transform: [{ rotate: '180deg' }] }}
+            style={{transform: [{rotate: '180deg'}]}}
             resizeMode="contain"
             source={require('../../../../assets/images/PNG/Vector.png')}
           />

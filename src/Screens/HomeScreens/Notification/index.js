@@ -12,7 +12,7 @@ import s from './style';
 import {moderateScale} from 'react-native-size-matters';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Icon1 from 'react-native-vector-icons/Feather';
-import Icon2 from 'react-native-vector-icons/AntDesign';
+import Icon2 from 'react-native-vector-icons/MaterialCommunityIcons';
 import SVGImg from '../../../assets/images/svg/icon4.svg';
 import SVGImg2 from '../../../assets/images/svg/icon5.svg';
 import SVGImg3 from '../../../assets/images/svg/leaf2.svg';
@@ -181,7 +181,7 @@ const Notification = ({navigation}) => {
         <View style={s.center}>
           <View
             style={{
-              paddingHorizontal: moderateScale(20, 0.1),
+              paddingHorizontal: moderateScale(30, 0.1),
             }}>
             <Text style={s.txt1}>Notifications & Reminders</Text>
           </View>
@@ -207,7 +207,7 @@ const Notification = ({navigation}) => {
                     lineHeight: moderateScale(15, 0.1),
                     textAlign: 'center',
                     // fontWeight: '900',
-                    fontFamily: 'Rubik-Regular',
+                    fontFamily: 'Rubik-Bold',
                   }}>
                   Add Reminder
                 </Text>
