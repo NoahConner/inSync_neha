@@ -145,7 +145,7 @@ const Home = ({navigation}) => {
               // width: 120,
               alignItems: 'flex-start',
               alignSelf: 'flex-end',
-              marginTop: moderateScale(-25, 0.1),
+              marginTop: moderateScale(0, 0.1),
             }}>
             {isSelected.map((item, i) => (
               <View style={[s.radio]} key={i}>
