@@ -73,12 +73,13 @@ const Reset = ({navigation}) => {
         }}>
         {/* <SVGImg3 width={90} height={90} /> */}
       </View>
-      <View>
-        <Image
-          resizeMode="contain"
-          source={require('../../../assets/images/PNG/Vector.png')}
-        />
-      </View>
+      <View style={{position: 'absolute', top: -38, left: 0 , opacity:0.7}}>
+            <Image
+            style={{width:99}}
+              resizeMode="contain"
+              source={require('../../../assets/images/PNG/upborder.png')}
+            />
+          </View>
       <View
         style={{
           paddingTop: moderateScale(10, 0.1),
@@ -129,11 +130,11 @@ const Reset = ({navigation}) => {
         </View>
       </ScrollView>
       <View style={s.vector}>
-        <Image
-          style={{transform: [{rotate: '180deg'}]}}
-          resizeMode="contain"
-          source={require('../../../assets/images/PNG/Vector.png')}
-        />
+      <Image
+             style={{width:99 , top:45 , opacity:0.7}}
+            resizeMode="contain"
+            source={require('../../../assets/images/PNG/downborder.png')}
+          />
       </View>
     </View>
   );

@@ -70,19 +70,13 @@ const Home = ({ navigation }) => {
     //   style={s.backImg}
     //   source={require('../../../assets/images/home.jpg')}
     //   resizeMode="contain">
-    <SafeAreaView style={{
+    <View style={{
       flex: 1, backgroundColor: backgroundColor,
-      position: 'relative'
+      position: 'relative',
+      paddingTop:moderateScale(40)
+      // paddingBottom:0
     }}>
 
-      {/* <View
-        style={{
-          position: 'absolute',
-          left: moderateScale(10, 0.1),
-          bottom: moderateScale(15, 0.1),
-        }}>
-        <SVGImg1 width={130} height={130} />
-      </View> */}
       {/* butterfly */}
       <View
         style={{
@@ -101,40 +95,59 @@ const Home = ({ navigation }) => {
       </View>
 
       {/* left leaf */}
-      {/* <View
-        style={{
-          position: 'absolute',
-          top: moderateScale(70, 0.1),
-          left: moderateScale(50, 0.1),
-        }}>
-        <SVGImg2 width={110} height={110} />
-      </View> */}
-
-      {/* left leaf */}
-      {/* <View
+      <View
         style={{
           position: 'absolute',
           top: moderateScale(90, 0.1),
-          right: moderateScale(20, 0.1),
+          left: moderateScale(45, 0.1),
         }}>
-        <SVGImg3 />
+        <Image
+          style={{
+            height: 120,
+            width: 90
+          }}
+          source={require('../../../assets/images/PNG/backflower.png')}
+        />
+      </View>
 
-      </View> */}
-      {/* <View
+      {/* left leaf */}
+      <View
         style={{
           position: 'absolute',
-          bottom: moderateScale(110, 0.1),
-          right: moderateScale(60, 0.1),
+          top: moderateScale(130, 0.1),
+          right: moderateScale(5, 0.1),
         }}>
-        <SVGImg3 width={90} height={90} />
-
-      </View> */}
-      {/* <View>
         <Image
-          resizeMode="contain"
-          source={require('../../../assets/images/PNG/Vector.png')}
+          style={{
+            height: 40,
+            width: 40
+          }}
+          source={require('../../../assets/images/PNG/circleDot.png')}
         />
-      </View> */}
+
+      </View>
+      <View
+        style={{
+          position: 'absolute',
+          top: moderateScale(210, 0),
+          right: moderateScale(0, 0.1),
+        }}>
+        <Image
+          style={{
+            height: 99,
+            width: 92
+          }}
+          source={require('../../../assets/images/PNG/downflower.png')}
+        />
+
+      </View>
+      <View style={{ position: 'absolute', top: -38, left: 0, opacity: 0.7 }}>
+        <Image
+          style={{ width: 99 }}
+          resizeMode="contain"
+          source={require('../../../assets/images/PNG/upborder.png')}
+        />
+      </View>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={{ ...s.center, marginTop: moderateScale(10, 0.1) }}>
           <Text style={s.txt1}>
@@ -186,7 +199,7 @@ const Home = ({ navigation }) => {
               ))
             }
           </View>
-          <View style={{ marginBottom: moderateScale(50, 0.1) }}>
+          <View style={{ marginBottom: moderateScale(50, 0.1), }}>
             {!expected ? (
               <Linear type={'graph'} />
             ) : (
@@ -199,15 +212,40 @@ const Home = ({ navigation }) => {
             )}
           </View>
         </View>
+        <View
+          style={{
+            zIndex: -1,
+            left: moderateScale(10, 0.1),
+            top: moderateScale(-85, 0)
+          }}>
+          <SVGImg1 width={130} height={130} />
+        </View>
 
+        <View style={{ position: 'absolute', right: 0, height: 35, width: 100, bottom: 0 }}>
+          <Image
+            style={{ width: '100%', zIndex: -10, opacity: 0.7, height: '100%', }}
+            resizeMode="contain"
+            source={require('../../../assets/images/PNG/downborder.png')}
+          />
+        </View>
       </ScrollView>
-      {/* <View style={s.vector}>
-        <Image
-          style={{ transform: [{ rotate: '180deg' }] }}
-          resizeMode="contain"
-          source={require('../../../assets/images/PNG/Vector.png')}
-        />
+
+      {/* <View style={{   flex: 1, zIndex: 11, position: 'absolute', bottom: 0, right: 0 }}>
+        <View style={{ width: 99, height: 0, backgroundColor:'green',justifyContent: 'flex-end', alignItems: 'flex-end' }}>
+          <Image
+            style={{
+              width: 99,
+              tintColor: '#595959', opacity: 9.5,
+              top: moderateScale(43)
+            }}
+            resizeMode="contain"
+            source={require('../../../assets/images/PNG/downborder.png')}
+          />
+        </View>
       </View> */}
+
+
+
       {/* <ModalView
         type={'period'}
         visible={modalVisible}
@@ -216,7 +254,7 @@ const Home = ({ navigation }) => {
         title2={'In 2 Days '}
         cancel={() => setModalVisible(!modalVisible)}
       /> */}
-    </SafeAreaView>
+    </View>
     // </ImageBackground>
   );
 };

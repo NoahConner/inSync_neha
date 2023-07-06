@@ -1,5 +1,5 @@
-import {Dimensions, StyleSheet} from 'react-native';
-import {moderateScale} from 'react-native-size-matters';
+import { Dimensions, StyleSheet } from 'react-native';
+import { moderateScale } from 'react-native-size-matters';
 import {
   backgroundColor,
   black,
@@ -15,9 +15,8 @@ const styles = StyleSheet.create({
     width: screenWidth,
   },
   vector: {
-    right: 0,
-    position: 'absolute',
-    bottom: 0,
+   
+
   },
   txt1: {
     fontSize: moderateScale(20, 0.1),
@@ -25,7 +24,7 @@ const styles = StyleSheet.create({
     color: black,
     // fontWeight: '700',
     alignSelf: 'center',
-    fontFamily: 'Rubik-Regular',
+    fontFamily: 'Rubik-Bold',
   },
   center: {
     paddingHorizontal: moderateScale(30, 0.1),

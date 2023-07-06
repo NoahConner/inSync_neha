@@ -36,12 +36,13 @@ const Help = ({navigation}) => {
           paddingHorizontal: moderateScale(30, 0.1),
         }}>
         {/* corner blob */}
-        <View style={{position: 'absolute', top: 0, left: 0}}>
-          <Image
-            resizeMode="contain"
-            source={require('../../../../assets/images/PNG/Vector.png')}
-          />
-        </View>
+          <View style={{position: 'absolute', top: -38, left: 0 , opacity:0.7}}>
+            <Image
+            style={{width:99}}
+              resizeMode="contain"
+              source={require('../../../../assets/images/PNG/upborder.png')}
+            />
+          </View>
 
         {/* butterfly */}
         <View
@@ -141,9 +142,9 @@ const Help = ({navigation}) => {
 
         <View style={s.vector}>
           <Image
-            style={{transform: [{rotate: '180deg'}]}}
+             style={{width:99 , top:45 , opacity:0.7}}
             resizeMode="contain"
-            source={require('../../../../assets/images/PNG/Vector.png')}
+            source={require('../../../../assets/images/PNG/downborder.png')}
           />
         </View>
       </View>

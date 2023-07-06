@@ -22,10 +22,11 @@ const Choose = ({navigation}) => {
       }}>
       {/* corner blob */}
 
-      <View style={{position: 'absolute', top: 0, left: 0}}>
+      <View style={{position: 'absolute', top: -38, left: 0 , opacity:0.7}}>
         <Image
+        style={{width:99}}
           resizeMode="contain"
-          source={require('../../../assets/images/PNG/Vector.png')}
+          source={require('../../../assets/images/PNG/upborder.png')}
         />
       </View>
       <View
@@ -130,9 +131,9 @@ const Choose = ({navigation}) => {
 
       <View style={s.vector}>
         <Image
-          style={{transform: [{rotate: '180deg'}]}}
+          style={{width:99 , top:45 , opacity:0.7}}
           resizeMode="contain"
-          source={require('../../../assets/images/PNG/Vector.png')}
+          source={require('../../../assets/images/PNG/downborder.png')}
         />
       </View>
     </View>
