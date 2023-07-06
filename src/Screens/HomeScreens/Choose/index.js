@@ -33,9 +33,9 @@ const Choose = ({navigation}) => {
         style={{
           position: 'absolute',
           left: moderateScale(18, 0.1),
-          top: moderateScale(80, 0.1),
+          top: moderateScale(50, 0.1),
         }}>
-        <SVGImg1 width={110} height={110} />
+        <SVGImg1 width={120} height={120} />
       </View>
       {/* butterfly */}
       <View

@@ -152,24 +152,21 @@ const SignUp = ({navigation}) => {
               </View>
             </View>
           </View>
-          <TouchableOpacity
-            onPress={() => navigation.navigate('Login')}
-            style={s.link}>
-            <Text style={s.Ftxt}>Already have an account?</Text>
-            <Text style={[s.Ftxt, {fontFamily: 'Rubik-ExtraBold'}]}>
-              {' '}
-              Login
-            </Text>
-          </TouchableOpacity>
-          <View style={s.vector}>
-            <Image
-              style={{transform: [{rotate: '180deg'}]}}
-              resizeMode="contain"
-              source={require('../../../assets/images/PNG/Vector.png')}
-            />
-          </View>
         </ScrollView>
       </TouchableWithoutFeedback>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('Login')}
+        style={s.link}>
+        <Text style={s.Ftxt}>Already have an account?</Text>
+        <Text style={[s.Ftxt, {fontFamily: 'Rubik-ExtraBold'}]}> Login</Text>
+      </TouchableOpacity>
+      <View style={s.vector}>
+        <Image
+          style={{transform: [{rotate: '180deg'}]}}
+          resizeMode="contain"
+          source={require('../../../assets/images/PNG/Vector.png')}
+        />
+      </View>
     </ImageBackground>
   );
 };

@@ -33,16 +33,16 @@ const StartScreen = ({navigation}) => {
           <Image
             style={s.logo}
             // resizeMode="contain"
-            source={require('../../../assets/images/PNG/i10.png')}
+            source={require('../../../assets/images/PNG/logo-icon.png')}
           />
         </View>
-        <View style={{marginVertical: moderateScale(12, 0.1)}}>
+        {/* <View style={{marginVertical: moderateScale(12, 0.1)}}>
           <Image
             style={s.text}
             // resizeMode="contain"
             source={require('../../../assets/images/PNG/logo.png')}
           />
-        </View>
+        </View> */}
         <View style={s.btn}>
           <View style={{paddingVertical: 15}}>
             <CutomButton
@@ -78,13 +78,13 @@ const StartScreen = ({navigation}) => {
           />
         </View>
       </View>
-        <View style={s.vector}>
-          <Image
-            style={{transform: [{rotate: '180deg'}]}}
-            resizeMode="contain"
-            source={require('../../../assets/images/PNG/Vector.png')}
-          />
-        </View>
+      <View style={s.vector}>
+        <Image
+          style={{transform: [{rotate: '180deg'}]}}
+          resizeMode="contain"
+          source={require('../../../assets/images/PNG/Vector.png')}
+        />
+      </View>
     </ImageBackground>
   );
 };

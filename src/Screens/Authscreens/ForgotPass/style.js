@@ -20,9 +20,8 @@ const styles = StyleSheet.create({
   },
   center: {
     alignSelf: 'center',
-    top: moderateScale(52, 0.1),
+    top: moderateScale(32, 0.1),
     // backgroundColor: 'red',
-    height: '83%',
   },
   txt1: {
     fontSize: moderateScale(24, 0.1),

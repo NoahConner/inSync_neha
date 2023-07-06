@@ -12,7 +12,7 @@ export const AppContext = createContext();
 export const AppProvider = ({children}) => {
   const [state, setState] = useState('');
   const [loader, setLoader] = useState('');
-  const [token, setToken] = useState(null);
+  const [token, setToken] = useState(false);
   const [expected, setExpected] = useState(false);
   const [period, setPeriod] = useState(false);
 

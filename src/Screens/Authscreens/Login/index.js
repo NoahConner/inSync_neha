@@ -59,7 +59,7 @@ const Login = ({navigation}) => {
                 <Text style={s.Ftxt}>Forgot Password ?</Text>
               </TouchableOpacity>
               <View style={s.btn}>
-                <Button text={'Login'} onPress={() => setToken('dfjkf')} />
+                <Button text={'Login'} onPress={() => setToken(true)} />
               </View>
               <View style={s.vector1}>
                 <Image

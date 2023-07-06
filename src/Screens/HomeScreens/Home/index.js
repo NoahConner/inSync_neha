@@ -1,22 +1,20 @@
-import { View, Text, ImageBackground, Image, ScrollView } from 'react-native';
-import React, { useState, useEffect, useContext } from 'react';
+import {View, Text, ImageBackground, Image, ScrollView} from 'react-native';
+import React, {useState, useEffect, useContext} from 'react';
 import s from './style';
-import { moderateScale } from 'react-native-size-matters';
-import { backgroundColor, linearGradient, screenWidth } from '../../../Constants';
+import {moderateScale} from 'react-native-size-matters';
+import {backgroundColor, linearGradient, screenWidth} from '../../../Constants';
 import LinearGradient from 'react-native-linear-gradient';
-import { Linear, Calender, RadioButton } from '../../../Components/gradient';
-import { AppContext, useAppContext } from '../../../Context/AppContext';
+import {Linear, Calender, RadioButton} from '../../../Components/gradient';
+import {AppContext, useAppContext} from '../../../Context/AppContext';
 import Button from '../../../Components/Button';
 import ModalView from '../../../Components/Modal';
-import SVGImg from '../../../assets/images/svg/icon3.svg';
+import SVGImg from '../../../assets/images/svg/icon4.svg';
 import SVGImg2 from '../../../assets/images/svg/small-lf.svg';
 import SVGImg3 from '../../../assets/images/svg/lob.svg';
 import SVGImg1 from '../../../assets/images/svg/round.svg';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import Entypo from 'react-native-vector-icons/Entypo';
 
-const Home = ({ navigation }) => {
-  const { setExpected, setPeriod, period, expected } = useContext(AppContext);
+const Home = ({navigation}) => {
+  const {setExpected, setPeriod, period, expected} = useContext(AppContext);
   const [modalVisible, setModalVisible] = useState(false);
 
   const [isSelected, setIsSelected] = useState([
@@ -35,8 +33,8 @@ const Home = ({ navigation }) => {
   const onRadioBtnClick = item => {
     let updatedState = isSelected.map(isSelectedItem =>
       isSelectedItem.name === item.name
-        ? { ...isSelectedItem, selected: true }
-        : { ...isSelectedItem, selected: false },
+        ? {...isSelectedItem, selected: true}
+        : {...isSelectedItem, selected: false},
     );
 
     setIsSelected(updatedState);
@@ -81,17 +79,10 @@ const Home = ({ navigation }) => {
       <View
         style={{
           position: 'absolute',
-          right: moderateScale(20, 0.1),
-          top: moderateScale(50, 0.1),
+          right: moderateScale(15, 0.1),
+          top: moderateScale(20, 0.1),
         }}>
-        <Image
-          style={{
-            height: 50,
-            width: 50
-          }}
-          source={require('../../../assets/images/PNG/butterfly.png')}
-        />
-
+        <SVGImg width={80} height={80} />
       </View>
 
       {/* left leaf */}
@@ -149,8 +140,9 @@ const Home = ({ navigation }) => {
         />
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <View style={{ ...s.center, marginTop: moderateScale(10, 0.1) }}>
+        <View style={s.center}>
           <Text style={s.txt1}>
+            {' '}
             {expected ? 'Expected Days' : 'Period Cycle'}{' '}
           </Text>
           <Linear
@@ -163,41 +155,23 @@ const Home = ({ navigation }) => {
 
           <View
             style={{
+              // width: 120,
               alignItems: 'flex-start',
               alignSelf: 'flex-end',
-              marginTop: moderateScale(-25, 0.1),
+              marginTop: moderateScale(0, 0.1),
             }}>
-            {
-              isSelected.map((item, i) => (
-                <View
-                  style={{
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                    justifyContent: 'flex-start',
-                    marginBottom: 5
-                  }}
-                >
-                  <View style={{
-                    padding: 3,
-                    backgroundColor: item.selected ? '#000' : '#D9D9D9',
-                    borderRadius: 2,
-                    marginRight: 5,
-                    height: 10,
-                    width: 10,
-                    borderRadius: 100
-                  }}>
-                  </View>
-                  <Text
-                    style={{
-                      color: '#000',
-                      fontFamily: 'Rubik-Regular',
-                      fontSize: 9,
-                    }}>
-                    {item.name}
-                  </Text>
-                </View>
-              ))
-            }
+            {isSelected.map((item, i) => (
+              <View style={[s.radio]} key={i}>
+                <RadioButton
+                  // onPress={() => {
+                  //   onRadioBtnClick(item);
+                  //   console.log('item', item);
+                  // }}
+                  selected={item.selected}
+                  key={item.id}
+                  text={item.name}></RadioButton>
+              </View>
+            ))}
           </View>
           <View style={{ marginBottom: moderateScale(50, 0.1), }}>
             {!expected ? (

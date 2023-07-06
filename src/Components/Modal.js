@@ -105,12 +105,11 @@ const ModalView = ({
                   }}>
                   <Text
                     style={{
-                      fontSize: moderateScale(26, 0.1),
-                      lineHeight: moderateScale(32, 0.1),
+                      fontSize: moderateScale(24, 0.1),
+                      lineHeight: moderateScale(26, 0.1),
                       // fontWeight: '700',
                       fontFamily: 'Rubik-Bold',
                       color: black,
-
                       paddingHorizontal: moderateScale(30, 0.1),
                     }}>
                     {' '}
@@ -132,11 +131,116 @@ const ModalView = ({
                   </Text>
                 </View>
               </ImageBackground>
+            ) : type === 'sync' ? (
+              <View
+                style={{
+                  width: moderateScale(324, 0.1),
+                  height: moderateScale(360, 0.1),
+                  backgroundColor: backgroundColor,
+                }}>
+                <View
+                  style={{
+                    position: 'absolute',
+                    top: moderateScale(50, 0.1),
+                    right: moderateScale(10, 0.1),
+                  }}>
+                  <SVGImg2 width={60} height={60} />
+                </View>
+                <View
+                  style={{
+                    position: 'absolute',
+                    bottom: moderateScale(20, 0.1),
+                    left: moderateScale(100, 0.1),
+                  }}>
+                  <SVGImg2 width={60} height={60} />
+                </View>
+                <View
+                  style={{
+                    position: 'absolute',
+                    left: moderateScale(12, 0.1),
+                    bottom: moderateScale(40, 0.1),
+                  }}>
+                  <SVGImg width={70} height={70} />
+                </View>
+
+                {/* left leaf */}
+
+                {/* left leaf */}
+                <View
+                  style={{
+                    position: 'absolute',
+                    top: moderateScale(30, 0.1),
+                    left: moderateScale(25, 0.1),
+                  }}>
+                  <SVGImg3 width={50} height={50} />
+                </View>
+                <View
+                  style={{
+                    position: 'absolute',
+                    bottom: moderateScale(10, 0.1),
+                    right: moderateScale(15, 0.1),
+                  }}>
+                  <SVGImg1 />
+                </View>
+
+                <View style={styles.center}>
+                  <TouchableOpacity
+                    onPress={cancel}
+                    style={{
+                      justifyContent: 'flex-end',
+                      alignItems: 'flex-end',
+                      top: moderateScale(-10, 0.1),
+                      right: moderateScale(-10, 0.1),
+                    }}>
+                    <Inicon
+                      name="cross"
+                      size={moderateScale(32)}
+                      color="black"
+                    />
+                  </TouchableOpacity>
+                  <View>
+                    <Text style={styles.txt1}> {text} </Text>
+                    <Text style={styles.txt1}>{text2} </Text>
+                  </View>
+
+                  <View
+                    style={[
+                      styles.input,
+                      {
+                        marginVertical: moderateScale(20, 0.1),
+                      },
+                    ]}>
+                    <Input
+                      style={{
+                        backgroundColor: '#D9D9D9',
+                        width: moderateScale(210, 0.1),
+                        height: moderateScale(37, 0.1),
+                      }}
+                      placeholder={'Relation'}
+                      placeholderTextColor={'red'}
+                      type={'relation'}
+                      // setValue={v => setEmail(v)}
+                      // value={email}
+                    />
+                    <Input
+                      style={{
+                        backgroundColor: '#D9D9D9',
+                        width: moderateScale(210, 0.1),
+                        height: moderateScale(37, 0.1),
+                      }}
+                      placeholder={'Email'}
+                      type={'email'}
+                      // setValue={v => setPassword(v)}
+                      // value={password}
+                    />
+
+                    <View style={styles.btn}>
+                      <Button text={'Submit'} onPress={close} />
+                    </View>
+                  </View>
+                </View>
+              </View>
             ) : (
-              // <ImageBackground
-              //   style={styles.backImg}
-              //   source={require('../assets/images/chances.png')}
-              //   resizeMode="contain">
               <View
                 style={{
                   width: moderateScale(324, 0.1),
@@ -150,6 +254,14 @@ const ModalView = ({
                     left: moderateScale(10, 0.1),
                   }}>
                   <SVGImg2 width={70} height={70} />
+                </View>
+                <View
+                  style={{
+                    position: 'absolute',
+                    top: moderateScale(140, 0.1),
+                    right: moderateScale(10, 0.1),
+                  }}>
+                  <SVGImg2 width={50} height={50} />
                 </View>
                 <View
                   style={{
@@ -200,55 +312,34 @@ const ModalView = ({
                     <Text style={styles.txt1}>{text2} </Text>
                   </View>
 
-                  {type === 'sync' ? (
-                    <View
-                      style={[
-                        styles.input,
-                        {
-                          marginVertical: moderateScale(20, 0.1),
-                        },
-                      ]}>
-                      <Input
-                        style={{backgroundColor: '#D9D9D9'}}
-                        placeholder={'Relation'}
-                        type={'relation'}
-                        // setValue={v => setEmail(v)}
-                        // value={email}
-                      />
-                      <Input
-                        style={{backgroundColor: '#D9D9D9'}}
-                        placeholder={'Email'}
-                        type={'email'}
-                        // setValue={v => setPassword(v)}
-                        // value={password}
-                      />
+                  <View style={styles.input}>
+                    <Input
+                      style={{
+                        backgroundColor: '#D9D9D9',
+                        width: moderateScale(215, 0.1),
+                        height: moderateScale(37, 0.1),
+                      }}
+                      placeholder={'Conception Date'}
+                      type={'conception date'}
+                      // setValue={v => setEmail(v)}
+                      // value={email}
+                    />
+                    <Input
+                      style={{
+                        backgroundColor: '#D9D9D9',
+                        width: moderateScale(215, 0.1),
+                        height: moderateScale(37, 0.1),
+                      }}
+                      placeholder={'Expected Date'}
+                      type={'expected date'}
+                      // setValue={v => setPassword(v)}
+                      // value={password}
+                    />
 
-                      <View style={styles.btn}>
-                        <Button text={'Submit'} onPress={close} />
-                      </View>
+                    <View style={styles.btn}>
+                      <Button text={'Submit'} onPress={close} />
                     </View>
-                  ) : (
-                    <View style={styles.input}>
-                      <Input
-                        style={{backgroundColor: '#D9D9D9'}}
-                        placeholder={'Conception Date'}
-                        type={'conception date'}
-                        // setValue={v => setEmail(v)}
-                        // value={email}
-                      />
-                      <Input
-                        style={{backgroundColor: '#D9D9D9'}}
-                        placeholder={'Expected Date'}
-                        type={'expected date'}
-                        // setValue={v => setPassword(v)}
-                        // value={password}
-                      />
-
-                      <View style={styles.btn}>
-                        <Button text={'Submit'} onPress={close} />
-                      </View>
-                    </View>
-                  )}
+                  </View>
                 </View>
               </View>
 
@@ -277,7 +368,7 @@ const styles = StyleSheet.create({
   btn: {
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: moderateScale(10, 0.1),
+    paddingVertical: moderateScale(15, 0.1),
     // backgroundColor: 'red',
   },
   txt2: {
@@ -304,8 +395,8 @@ const styles = StyleSheet.create({
     bottom: 0,
   },
   txt1: {
-    fontSize: moderateScale(24, 0.1),
-    lineHeight: moderateScale(26, 0.1),
+    fontSize: moderateScale(18, 0.1),
+    lineHeight: moderateScale(22, 0.1),
     color: black,
     // fontWeight: '700',
     alignSelf: 'center',
