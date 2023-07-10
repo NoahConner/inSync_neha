@@ -29,12 +29,12 @@ const SignUp = ({navigation}) => {
   const [isSelected, setIsSelected] = useState([
     {
       id: 1,
-      name: 'male',
+      name: 'Male',
       selected: true,
     },
     {
       id: 2,
-      name: 'female',
+      name: 'Female',
       selected: false,
     },
   ]);
@@ -137,7 +137,7 @@ const SignUp = ({navigation}) => {
                 <Image
                   source={require('../../../assets/images/PNG/line.png')}
                 />
-                <Text style={s.txt3}> Or Sign UP With </Text>
+                <Text style={s.txt3}> Or Sign up with </Text>
                 <Image
                   source={require('../../../assets/images/PNG/line.png')}
                 />

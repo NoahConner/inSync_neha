@@ -16,6 +16,7 @@ import SocialLogin from '../../../Components/socialLogin';
 import {moderateScale} from 'react-native-size-matters';
 import {screenHeight} from '../../../Constants';
 import {AppContext, useAppContext} from '../../../Context/AppContext';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Login = ({navigation}) => {
   const [email, setEmail] = useState(null);
@@ -59,13 +60,19 @@ const Login = ({navigation}) => {
                 <Text style={s.Ftxt}>Forgot Password ?</Text>
               </TouchableOpacity>
               <View style={s.btn}>
-                <Button text={'Login'} onPress={() => setToken(true)} />
+                <Button
+                  text={'Login'}
+                  onPress={async () => {
+                    await AsyncStorage.setItem('userToken', 'abc');
+                    setToken(true);
+                  }}
+                />
               </View>
               <View style={s.vector1}>
                 <Image
                   source={require('../../../assets/images/PNG/line.png')}
                 />
-                <Text style={s.txt3}> or Login With </Text>
+                <Text style={s.txt3}> Or Login with </Text>
                 <Image
                   source={require('../../../assets/images/PNG/line.png')}
                 />

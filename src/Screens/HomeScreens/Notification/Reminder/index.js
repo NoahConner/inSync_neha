@@ -19,19 +19,17 @@ import SVGImg from '../../../../assets/images/svg/icon4.svg';
 import SVGImg2 from '../../../../assets/images/svg/icon5.svg';
 import SVGImg3 from '../../../../assets/images/svg/leaf2.svg';
 
-const Reminder = ({navigation}) => {
+const Reminder = ({navigation, route}) => {
   const [day, setDay] = useState(null);
   const [selectHour, setSelectHour] = useState(null);
   const [reminder, setReminder] = useState(null);
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-      
       <View
         style={{
           backgroundColor: backgroundColor,
           flex: 1,
           position: 'relative',
-          paddingHorizontal: moderateScale(30, 0.1),
         }}>
         {/* corner blob */}
         <View style={{position: 'absolute', top: 0, left: 0}}>
@@ -74,6 +72,7 @@ const Reminder = ({navigation}) => {
         <View
           style={{
             paddingTop: moderateScale(60, 0.1),
+            paddingHorizontal: moderateScale(30, 0.1),
           }}>
           <Header navigation={navigation} />
         </View>
@@ -117,7 +116,9 @@ const Reminder = ({navigation}) => {
               />
 
               <View style={s.btn}>
-                <Button text={'Add Now'} />
+                <Button
+                  text={route?.params?.option == 'edit' ? 'Update' : 'Add Now'}
+                />
               </View>
             </View>
             <View style={{}}>
@@ -139,15 +140,14 @@ const Reminder = ({navigation}) => {
               </View>
             </View>
           </View>
+          <View style={s.vector}>
+            <Image
+              style={{transform: [{rotate: '180deg'}]}}
+              resizeMode="contain"
+              source={require('../../../../assets/images/PNG/Vector.png')}
+            />
+          </View>
         </ScrollView>
-
-        <View style={s.vector}>
-          <Image
-            style={{transform: [{rotate: '180deg'}]}}
-            resizeMode="contain"
-            source={require('../../../../assets/images/PNG/Vector.png')}
-          />
-        </View>
       </View>
     </TouchableWithoutFeedback>
   );

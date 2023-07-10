@@ -79,7 +79,6 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   vector: {
-    // flex: 1,
     bottom: 0,
     right: 0,
     position: 'absolute',

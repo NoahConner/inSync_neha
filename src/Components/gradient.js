@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
-import { Checkbox } from 'react-native-paper';
-import { Calendar, CalendarList, Agenda } from 'react-native-calendars';
-import { moderateScale } from 'react-native-size-matters';
+import React, {useState, useEffect} from 'react';
+import {View, Text, StyleSheet, TouchableOpacity, Alert} from 'react-native';
+import {Checkbox} from 'react-native-paper';
+import {Calendar, CalendarList, Agenda} from 'react-native-calendars';
+import {moderateScale} from 'react-native-size-matters';
 import Entypo from 'react-native-vector-icons/Entypo';
 import {
   backgroundColor,
@@ -12,35 +12,47 @@ import {
   screenWidth,
 } from '../Constants/index';
 import LinearGradient from 'react-native-linear-gradient';
-import { BarChart } from 'react-native-chart-kit';
+import {BarChart} from 'react-native-chart-kit';
 import ModalView from './Modal';
-import { AppContext, useAppContext } from '../Context/AppContext';
-export function Linear({ type, text1, text2, text3 }) {
+import {AppContext, useAppContext} from '../Context/AppContext';
+export function Linear({type, text1, text2, text3}) {
   const data = {
-    labels: ['jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+    labels: [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec',
+    ],
     datasets: [
       {
-        data: [40, 84, 56, 40, 80, 55, 60, 40, 50],
+        data: [40, 84, 56, 40, 80, 55, 60, 40, 50, 75, 60, 90],
       },
     ],
     legend: ['Rainy Days'], // optional
   };
   const [checked, setChecked] = React.useState(false);
-  const { setExpected, setPeriod, period, expected } = useAppContext(AppContext);
+  const {setExpected, setPeriod, period, expected} = useAppContext(AppContext);
   const [modalVisible, setModalVisible] = useState(false);
 
   useEffect(() => {
     if (checked) {
       setModalVisible(true);
     }
-  }, [checked])
-
+  }, [checked]);
 
   return (
     <LinearGradient
       colors={linearGradient}
-      end={{ x: 1, y: 1 }}
-      start={{ x: 1, y: 0 }}
+      end={{x: 1, y: 1}}
+      start={{x: 1, y: 0}}
       style={{
         marginVertical: moderateScale(18, 0.1),
       }}>
@@ -129,18 +141,18 @@ export function Linear({ type, text1, text2, text3 }) {
                   flexDirection: 'row',
                   alignItems: 'center',
                   justifyContent: 'flex-start',
-                  paddingVertical: 10
+                  paddingVertical: 10,
                 }}
                 onPress={() => {
                   setChecked(!checked);
-                }}
-              >
-                <View style={{
-                  padding: 3,
-                  backgroundColor: '#D9D9D9',
-                  borderRadius: 2,
-                  marginRight: 5
                 }}>
+                <View
+                  style={{
+                    padding: 3,
+                    backgroundColor: '#D9D9D9',
+                    borderRadius: 2,
+                    marginRight: 5,
+                  }}>
                   <Entypo
                     name="check"
                     size={14}
@@ -166,7 +178,7 @@ export function Linear({ type, text1, text2, text3 }) {
             }}>
             <BarChart
               data={data}
-              width={moderateScale(screenWidth, 0.1)}
+              width={moderateScale(screenWidth + 30, 0.1)}
               height={moderateScale(180, 0.1)}
               yAxisSuffix="%"
               withInnerLines={false}
@@ -177,14 +189,14 @@ export function Linear({ type, text1, text2, text3 }) {
                 backgroundGradientFrom: 'white',
                 backgroundGradientToOpacity: 0,
                 color: (opacity = 1) => 'white',
-                barPercentage: 0.4,
+                barPercentage: 0.25,
                 decimalPlaces: 0,
               }}
               fromZero={true}
               showBarTops={true}
               style={{
-                left: moderateScale(-10, 0.1),
-                transform: [{ scale: 0.8 }],
+                left: moderateScale(-7, 0.1),
+                transform: [{scale: 0.8}],
               }}
             />
           </View>
@@ -202,7 +214,7 @@ export function Linear({ type, text1, text2, text3 }) {
     </LinearGradient>
   );
 }
-export function Calender({ type }) {
+export function Calender({type}) {
   return (
     <Calendar
       style={{
@@ -225,66 +237,66 @@ export function Calender({ type }) {
       //   '2023-06-21': {selected: true, color: '#F2F2F2', textColor: 'gray'},
       //   '2023-06-22': {selected: true, color: '#F2F2F2', endingDay: true, textColor: 'gray'}
       // }}
-    markedDates={
-      type === 'period'
-        ? {
-          '2023-06-11': {
-            selected: true,
-            marked: true,
-            selectedColor: white,
-            selectedTextColor: black,
-            dotColor: black,
-          },
-          '2023-06-12': {
-            selected: true,
-            marked: true,
-            selectedColor: white,
-            selectedTextColor: black,
-            dotColor: black,
-          },
-          '2023-06-13': {
-            selected: true,
-            marked: true,
-            selectedColor: white,
-            selectedTextColor: black,
-            dotColor: black,
-          },
-          '2023-06-14': {
-            selected: true,
-            marked: true,
-            selectedColor: white,
-            selectedTextColor: black,
-            dotColor: black,
-          },
-          '2023-06-15': {
-            selected: true,
-            marked: true,
-            selectedColor: white,
-            selectedTextColor: black,
-            dotColor: black,
-          },
-          '2023-06-16': {
-            selected: true,
-            marked: true,
-            selectedColor: white,
-            selectedTextColor: black,
-            dotColor: black,
-          },
-        }
-        : {
-          '2023-09-25': {
-            selected: true,
-            marked: true,
-            selectedColor: white,
-            selectedTextColor: black,
-            dotColor: black,
-          },
-        }
-    }
+      markedDates={
+        type === 'period'
+          ? {
+              '2023-06-11': {
+                selected: true,
+                marked: true,
+                selectedColor: white,
+                selectedTextColor: black,
+                dotColor: black,
+              },
+              '2023-06-12': {
+                selected: true,
+                marked: true,
+                selectedColor: white,
+                selectedTextColor: black,
+                dotColor: black,
+              },
+              '2023-06-13': {
+                selected: true,
+                marked: true,
+                selectedColor: white,
+                selectedTextColor: black,
+                dotColor: black,
+              },
+              '2023-06-14': {
+                selected: true,
+                marked: true,
+                selectedColor: white,
+                selectedTextColor: black,
+                dotColor: black,
+              },
+              '2023-06-15': {
+                selected: true,
+                marked: true,
+                selectedColor: white,
+                selectedTextColor: black,
+                dotColor: black,
+              },
+              '2023-06-16': {
+                selected: true,
+                marked: true,
+                selectedColor: white,
+                selectedTextColor: black,
+                dotColor: black,
+              },
+            }
+          : {
+              '2023-09-25': {
+                selected: true,
+                marked: true,
+                selectedColor: white,
+                selectedTextColor: black,
+                dotColor: black,
+              },
+            }
+      }
     />
   );
 }
-export function RadioButton({ data, onPress, selected, text, style, type }) {
+export function RadioButton({data, onPress, selected, text, style, type}) {
   return (
     <View style={[type == 'gender' ? style : styles.radioButtonContainer]}>
       <TouchableOpacity onPress={onPress} style={[styles.radioButton]}>

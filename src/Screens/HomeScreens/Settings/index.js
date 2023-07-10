@@ -19,6 +19,7 @@ import SVGImg from '../../../assets/images/svg/icon4.svg';
 import SVGImg2 from '../../../assets/images/svg/icon5.svg';
 import SVGImg3 from '../../../assets/images/svg/leaf2.svg';
 import {TouchableOpacity} from 'react-native-gesture-handler';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 const Setting = ({navigation}) => {
   const {setToken} = useAppContext(AppContext);
   return (
@@ -27,12 +28,11 @@ const Setting = ({navigation}) => {
         backgroundColor: backgroundColor,
         flex: 1,
         position: 'relative',
-        paddingHorizontal: moderateScale(30, 0.1),
       }}>
       {/* corner blob */}
-      <View style={{position: 'absolute', top: -38, left: 0 , opacity:0.7}}>
+      <View style={{position: 'absolute', top: -38, left: 0, opacity: 0.7}}>
         <Image
-        style={{width:99}}
+          style={{width: 99}}
           resizeMode="contain"
           source={require('../../../assets/images/PNG/upborder.png')}
         />
@@ -63,6 +63,7 @@ const Setting = ({navigation}) => {
       <View
         style={{
           paddingTop: moderateScale(60, 0.1),
+          paddingHorizontal: moderateScale(30, 0.1),
         }}>
         <Header navigation={navigation} />
       </View>
@@ -82,7 +83,7 @@ const Setting = ({navigation}) => {
               type="notification"
               text="Notification"
               text1="Notifications"
-              text2="App Notifications"
+              text2="Reminders"
             />
             <Account
               type="More"
@@ -99,7 +100,13 @@ const Setting = ({navigation}) => {
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
-              <Button text={'Logout'} onPress={() => setToken(null)} />
+              <Button
+                text={'Logout'}
+                onPress={async () => {
+                  await AsyncStorage.removeItem('userToken');
+                  setToken(false);
+                }}
+              />
             </View>
           </View>
 
@@ -120,15 +127,14 @@ const Setting = ({navigation}) => {
 
           {/* <View style={{height: moderateScale(50, 0.1)}}></View> */}
         </View>
+        <View style={s.vector}>
+          <Image
+            style={{width: 99, top: 45, opacity: 0.7}}
+            resizeMode="contain"
+            source={require('../../../assets/images/PNG/downborder.png')}
+          />
+        </View>
       </ScrollView>
-
-      <View style={s.vector}>
-        <Image
-          style={{width:99 , top:45 , opacity:0.7}}
-          resizeMode="contain"
-          source={require('../../../assets/images/PNG/downborder.png')}
-        />
-      </View>
     </View>
   );
 };

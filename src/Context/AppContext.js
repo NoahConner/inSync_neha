@@ -15,34 +15,8 @@ export const AppProvider = ({children}) => {
   const [token, setToken] = useState(false);
   const [expected, setExpected] = useState(false);
   const [period, setPeriod] = useState(false);
-
-  useEffect(() => {
-    async function fetchStoredValues() {
-      try {
-        const storedToken = await AsyncStorage.getItem('token');
-
-        if (storedToken !== null) {
-          setToken(JSON.parse(storedToken));
-        }
-      } catch (error) {
-        console.log('Error retrieving data from AsyncStorage:', error);
-      }
-    }
-
-    fetchStoredValues();
-  }, []);
-
-  useEffect(() => {
-    async function saveValuesToStorage() {
-      try {
-        await AsyncStorage.setItem('token', JSON.stringify(token));
-      } catch (error) {
-        console.log('Error saving data to AsyncStorage:', error);
-      }
-    }
-
-    saveValuesToStorage();
-  }, [token]);
+  const [relation, setRelation] = useState(null);
+  const [syncRelation, setSyncRelation] = useState(null);
 
   const contextValues = useMemo(
     () => ({
@@ -54,8 +28,12 @@ export const AppProvider = ({children}) => {
       setToken,
       period,
       setPeriod,
+      syncRelation,
+      setSyncRelation,
       expected,
       setExpected,
+      relation,
+      setRelation,
     }),
     [
       state,
@@ -68,6 +46,10 @@ export const AppProvider = ({children}) => {
       setPeriod,
       expected,
       setExpected,
+      relation,
+      setRelation,
+      syncRelation,
+      setSyncRelation,
     ],
   );
 

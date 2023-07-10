@@ -1,4 +1,11 @@
-import {View, Text, ImageBackground, Image, ScrollView} from 'react-native';
+import {
+  View,
+  Text,
+  ImageBackground,
+  Image,
+  ScrollView,
+  Alert,
+} from 'react-native';
 import React, {useState, useEffect, useContext} from 'react';
 import s from './style';
 import {moderateScale} from 'react-native-size-matters';
@@ -63,18 +70,34 @@ const Home = ({navigation}) => {
     }
   }, [expected]);
 
-  return (
-    // <ImageBackground
-    //   style={s.backImg}
-    //   source={require('../../../assets/images/home.jpg')}
-    //   resizeMode="contain">
-    <View style={{
-      flex: 1, backgroundColor: backgroundColor,
-      position: 'relative',
-      paddingTop:moderateScale(40)
-      // paddingBottom:0
-    }}>
+  const handleDelete = () => {
+    Alert.alert(
+      'Confirm Resume',
+      'Are you sure you want to Resume?',
+      [
+        {
+          text: 'Cancel',
+          style: 'cancel',
+        },
+        {
+          text: 'Yes',
+          onPress: () => {
+            setExpected(false);
+          },
+        },
+      ],
+      {cancelable: false},
+    );
+  };
 
+  return (
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: backgroundColor,
+        position: 'relative',
+        paddingTop: moderateScale(40),
+      }}>
       {/* butterfly */}
       <View
         style={{
@@ -89,13 +112,13 @@ const Home = ({navigation}) => {
       <View
         style={{
           position: 'absolute',
-          top: moderateScale(90, 0.1),
-          left: moderateScale(45, 0.1),
+          top: moderateScale(73, 0.1),
+          left: moderateScale(40, 0.1),
         }}>
         <Image
           style={{
             height: 120,
-            width: 90
+            width: 90,
           }}
           source={require('../../../assets/images/PNG/backflower.png')}
         />
@@ -111,12 +134,12 @@ const Home = ({navigation}) => {
         <Image
           style={{
             height: 40,
-            width: 40
+            width: 40,
           }}
           source={require('../../../assets/images/PNG/circleDot.png')}
         />
-
       </View>
+
       <View
         style={{
           position: 'absolute',
@@ -126,15 +149,14 @@ const Home = ({navigation}) => {
         <Image
           style={{
             height: 99,
-            width: 92
+            width: 92,
           }}
           source={require('../../../assets/images/PNG/downflower.png')}
         />
-
       </View>
-      <View style={{ position: 'absolute', top: -38, left: 0, opacity: 0.7 }}>
+      <View style={{position: 'absolute', top: -38, left: 0, opacity: 0.7}}>
         <Image
-          style={{ width: 99 }}
+          style={{width: 99}}
           resizeMode="contain"
           source={require('../../../assets/images/PNG/upborder.png')}
         />
@@ -158,7 +180,8 @@ const Home = ({navigation}) => {
               // width: 120,
               alignItems: 'flex-start',
               alignSelf: 'flex-end',
-              marginTop: moderateScale(0, 0.1),
+              marginTop: moderateScale(10, 0.1),
+              flexDirection: 'row',
             }}>
             {isSelected.map((item, i) => (
               <View style={[s.radio]} key={i}>
@@ -173,14 +196,14 @@ const Home = ({navigation}) => {
               </View>
             ))}
           </View>
-          <View style={{ marginBottom: moderateScale(50, 0.1), }}>
+          <View style={{marginBottom: moderateScale(50, 0.1)}}>
             {!expected ? (
               <Linear type={'graph'} />
             ) : (
               <View style={s.btn}>
                 <Button
                   text={'Resume Your Cycle'}
-                  onPress={() => setExpected(false)}
+                  onPress={() => handleDelete()}
                 />
               </View>
             )}
@@ -190,14 +213,37 @@ const Home = ({navigation}) => {
           style={{
             zIndex: -1,
             left: moderateScale(10, 0.1),
-            top: moderateScale(-85, 0)
+            bottom: moderateScale(20, 0),
           }}>
           <SVGImg1 width={130} height={130} />
         </View>
+        {expected ? (
+          <View
+            style={{
+              position: 'absolute',
+              bottom: moderateScale(60, 0.1),
+              right: moderateScale(75, 0.1),
+            }}>
+            <Image
+              style={{
+                height: 80,
+                width: 80,
+              }}
+              source={require('../../../assets/images/PNG/circleDot.png')}
+            />
+          </View>
+        ) : null}
 
-        <View style={{ position: 'absolute', right: 0, height: 35, width: 100, bottom: 0 }}>
+        <View
+          style={{
+            position: 'absolute',
+            right: 0,
+            height: 35,
+            width: 100,
+            bottom: 0,
+          }}>
           <Image
-            style={{ width: '100%', zIndex: -10, opacity: 0.7, height: '100%', }}
+            style={{width: '100%', zIndex: -10, opacity: 0.7, height: '100%'}}
             resizeMode="contain"
             source={require('../../../assets/images/PNG/downborder.png')}
           />
@@ -218,16 +264,14 @@ const Home = ({navigation}) => {
         </View>
       </View> */}
 
-
-
-      {/* <ModalView
+      <ModalView
         type={'period'}
         visible={modalVisible}
         text={'Reminder'}
         title1={'Your Cycle Is About To Start'}
         title2={'In 2 Days '}
         cancel={() => setModalVisible(!modalVisible)}
-      /> */}
+      />
     </View>
     // </ImageBackground>
   );

@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   ImageBackground,
   Image,
+  Alert,
 } from 'react-native';
 import React, {useState} from 'react';
 import s from './style';
@@ -68,6 +69,25 @@ const ReminderList = [
     dltIcon: <Icon2 name="delete" color="black" size={18} />,
   },
 ];
+const handleDelete = () => {
+  Alert.alert(
+    'Confirm Delete',
+    'Are you sure you want to delete?',
+    [
+      {
+        text: 'Cancel',
+        style: 'cancel',
+      },
+      {
+        text: 'Yes',
+        onPress: () => {
+          console.log('Deleted!');
+        },
+      },
+    ],
+    {cancelable: false},
+  );
+};
 
 const Notification = ({navigation}) => {
   const [notification, setNotification] = useState(true);
@@ -115,9 +135,26 @@ const Notification = ({navigation}) => {
               justifyContent: 'space-evenly',
               paddingRight: moderateScale(12, 0.1),
             }}>
-            {reminder ? <>{item.item.editIcon}</> : null}
+            {reminder ? (
+              <>
+                <TouchableOpacity
+                  onPress={() =>
+                    navigation.navigate('reminder', {
+                      option: 'edit',
+                    })
+                  }>
+                  {item.item.editIcon}
+                </TouchableOpacity>
+              </>
+            ) : null}
             <View style={{paddingRight: moderateScale(5, 0.1)}}>
-              {reminder ? <>{item.item.dltIcon}</> : null}
+              {reminder ? (
+                <>
+                  <TouchableOpacity onPress={handleDelete}>
+                    {item.item.dltIcon}
+                  </TouchableOpacity>
+                </>
+              ) : null}
             </View>
           </View>
         ) : null}
@@ -133,10 +170,10 @@ const Notification = ({navigation}) => {
         // paddingHorizontal: moderateScale(30, 0.1),
       }}>
       {/* corner blob */}
-      <View style={{position: 'absolute', top: -38, left: 0 , opacity:0.7}}>
+      <View style={{position: 'absolute', top: -38, left: 0, opacity: 0.7}}>
         <Image
           resizeMode="contain"
-          style={{width:99}}
+          style={{width: 99}}
           source={require('../../../assets/images/PNG/upborder.png')}
         />
       </View>
@@ -264,7 +301,7 @@ const Notification = ({navigation}) => {
 
       <View style={s.vector}>
         <Image
-          style={{width:99 , top:45 , opacity:0.7}}
+          style={{width: 99, top: 45, opacity: 0.7}}
           resizeMode="contain"
           source={require('../../../assets/images/PNG/downborder.png')}
         />

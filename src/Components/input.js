@@ -16,6 +16,7 @@ import Feather from 'react-native-vector-icons/Feather';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 import SelectDropdown from 'react-native-select-dropdown';
 import {populateEvents} from 'react-native-calendars/src/timeline/Packer';
+import {useAppContext, AppContext} from '../Context/AppContext';
 
 const Input = ({
   placeholder,
@@ -25,7 +26,9 @@ const Input = ({
   maxLength,
   style,
   placeholderTextColor,
+  syncRelation,
 }) => {
+  console.log(syncRelation, 'rr');
   const [secureTextEntry, setSecureTextEntry] = useState(true);
   const [isActive, setIsActive] = useState(false);
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -35,9 +38,9 @@ const Input = ({
   const [dob, setDob] = useState(null);
   const [expected, setExpected] = useState(null);
   const [conception, setConception] = useState(null);
-  const [selectedItem, setSelectedItem] = useState(null);
+  const {relation, setRelation, setSyncRelation} = useAppContext(AppContext);
   const hour = ['01', '02', '03', '04'];
-  const relation = ['Mother', 'Wife', 'Sister', 'other'];
+  const Relation = ['Mother', 'Wife', 'Sister', 'Other'];
   const showDatePicker = () => {
     setDatePickerVisibility(true);
   };
@@ -323,13 +326,18 @@ const Input = ({
           <SelectDropdown
             data={
               type === 'relation'
-                ? relation
+                ? Relation
                 : type === 'hourOptions'
                 ? hour
                 : null
             }
             onSelect={(selectedItem, index) => {
-              setSelectedItem(selectedItem);
+              if (syncRelation) {
+                console.log(syncRelation, 'aaya');
+                setSyncRelation(selectedItem);
+              } else {
+                setRelation(selectedItem);
+              }
               console.log(selectedItem, index);
             }}
             defaultButtonText={placeholder}
@@ -346,7 +354,7 @@ const Input = ({
               color: 'black', // Set the color to black
             }}
             buttonTextStyle={{
-              color: selectedItem ? 'black' : '#929292',
+              color: relation ? 'black' : '#929292',
               textAlign: 'left',
               left: moderateScale(10, 0.1),
               fontSize: moderateScale(13, 0.1),

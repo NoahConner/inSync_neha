@@ -4,48 +4,39 @@ import {AppContext, AppProvider, useAppContext} from './src/Context/AppContext';
 import Auth from './src/Stack/Auth';
 import {createStackNavigator} from '@react-navigation/stack';
 import {View, Text} from 'react-native';
-import RNBootSplash from "react-native-bootsplash";
+import RNBootSplash from 'react-native-bootsplash';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // import Home from './src/Stack/Home/HomeStack';
 import BottomTab from './src/BottomTab';
 
 export default function App() {
-  useEffect(() => {
-    const init = async () => {
-      // …do multiple sync or async tasks
-    };
-
-    init().finally(async () => {
-      await RNBootSplash.hide({ fade: true, duration: 500 });
-      console.log("BootSplash has been hidden successfully");
-    });
-  }, []);
-
   return (
     <AppProvider>
       <AppContent />
     </AppProvider>
   );
 }
-const Appqq = () => {
-  return (
-    <View>
-      <Text>kjfsd</Text>
-    </View>
-  );
-};
+
 const MainStack = createStackNavigator();
 const AppContent = () => {
-  const {token} = useAppContext(AppContext);
-  // const context = useContext(AppContext);
+  const {token, setToken} = useAppContext(AppContext);
   useEffect(() => {
-    console.log(token, 'app');
-  }, [token]);
+    const init = async () => {
+      let tokenn = await AsyncStorage.getItem('userToken');
+      setToken(tokenn);
+    };
+
+    init().finally(async () => {
+      await RNBootSplash.hide({fade: true, duration: 500});
+      console.log('BootSplash has been hidden successfully');
+    });
+  }, []);
 
   return (
     <NavigationContainer>
       <MainStack.Navigator screenOptions={{headerShown: false}}>
-        {token === null ? (
+        {!token ? (
           <MainStack.Screen name="AuthStack" component={Auth} />
         ) : (
           <MainStack.Screen name="BottomTabs" component={BottomTab} />

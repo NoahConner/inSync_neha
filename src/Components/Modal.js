@@ -23,6 +23,7 @@ import SVGImg from '../assets/images/svg/round.svg';
 import SVGImg2 from '../assets/images/svg/small-lf.svg';
 import SVGImg3 from '../assets/images/svg/lob.svg';
 import SVGImg1 from '../assets/images/svg/wIcon';
+import {AppContext, useAppContext} from '../Context/AppContext';
 
 const ModalView = ({
   visible,
@@ -36,6 +37,7 @@ const ModalView = ({
   title2,
 }) => {
   const robik = 'Rubik-Black';
+  const {syncRelation} = useAppContext(AppContext);
   return (
     <View>
       <Modal isVisible={visible}>
@@ -207,7 +209,7 @@ const ModalView = ({
                     style={[
                       styles.input,
                       {
-                        marginVertical: moderateScale(20, 0.1),
+                        marginVertical: moderateScale(15, 0.1),
                       },
                     ]}>
                     <Input
@@ -219,9 +221,23 @@ const ModalView = ({
                       placeholder={'Relation'}
                       placeholderTextColor={'red'}
                       type={'relation'}
+                      syncRelation={true}
                       // setValue={v => setEmail(v)}
                       // value={email}
                     />
+                    {syncRelation === 'Other' ? (
+                      <Input
+                        style={{
+                          backgroundColor: '#D9D9D9',
+                          width: moderateScale(210, 0.1),
+                          height: moderateScale(37, 0.1),
+                        }}
+                        placeholder={'Relation'}
+                        type={'email'}
+                        // setValue={v => setPassword(v)}
+                        // value={password}
+                      />
+                    ) : null}
                     <Input
                       style={{
                         backgroundColor: '#D9D9D9',

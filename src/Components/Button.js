@@ -8,6 +8,8 @@ import {
 } from 'react-native';
 import {white, black, backgroundColor} from '../Constants/index';
 import {moderateScale} from 'react-native-size-matters';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+
 const rubic = '';
 const CutomButton = ({
   backgroundColor,
@@ -21,6 +23,9 @@ const CutomButton = ({
   fontSize,
   style,
   fontFamily,
+  iconName,
+  type,
+  Ctext,
 }) => {
   return (
     <TouchableOpacity
@@ -28,7 +33,24 @@ const CutomButton = ({
       activeOpacity={0.8}
       onPress={onPress}>
       <View style={styles.view}>
-        <Text style={[styles.buttonText]}>{text}</Text>
+        {type === 'camera' ? (
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-evenly',
+              alignContent: 'center',
+            }}>
+            <View>
+              <Ionicons
+                name={iconName}
+                size={moderateScale(20, 0.1)}
+                color={'#fff'}
+              />
+            </View>
+            <Text style={[styles.buttonText]}>{Ctext}</Text>
+          </View>
+        ) :    <Text style={[styles.buttonText]}>{text}</Text> }
+     
       </View>
     </TouchableOpacity>
   );
@@ -58,6 +80,7 @@ const styles = StyleSheet.create({
     borderColor: white,
     color: white,
     alignSelf: 'center',
+    // justifyContent: 'center',
   },
   disabledText: {
     color: white,

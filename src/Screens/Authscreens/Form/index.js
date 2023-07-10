@@ -35,6 +35,7 @@ const Form = ({navigation}) => {
   const [confPassword, setConfPass] = useState(null);
   const {setToken} = useAppContext(AppContext);
   const [modalVisible, setModalVisible] = useState(false);
+  const {relation, setRelation} = useAppContext(AppContext);
 
   return (
     <View
@@ -42,7 +43,6 @@ const Form = ({navigation}) => {
         backgroundColor: backgroundColor,
         flex: 1,
         position: 'relative',
-        paddingHorizontal: moderateScale(30, 0.1),
       }}>
       {/* corner blob */}
       <View style={{position: 'absolute', top: 0, left: 0}}>
@@ -85,6 +85,7 @@ const Form = ({navigation}) => {
       <View
         style={{
           paddingTop: moderateScale(20, 0.1),
+          paddingHorizontal: moderateScale(30, 0.1),
         }}>
         <View style={{height: moderateScale(40, 0.1)}}></View>
         <Header navigation={navigation} />
@@ -128,6 +129,16 @@ const Form = ({navigation}) => {
                   paddingHorizontal: moderateScale(18, 0.1),
                 }}
               />
+              {relation === 'Other' ? (
+                <Input
+                  placeholder={'Relation'}
+                  type={'text'}
+                  style={{
+                    justifyContent: 'flex-start',
+                    paddingHorizontal: moderateScale(18, 0.1),
+                  }}
+                />
+              ) : null}
 
               <View style={s.btn}>
                 <Button
@@ -173,16 +184,22 @@ const Form = ({navigation}) => {
               source={require('../../../assets/images/form-btm.jpg')}
             />
           </View>
+          <View
+            style={{
+              position: 'absolute',
+              right: 0,
+              height: 35,
+              width: 100,
+              bottom: 0,
+            }}>
+            <Image
+              style={{width: '100%', zIndex: -10, opacity: 0.7, height: '100%'}}
+              // resizeMode="contain"
+              source={require('../../../assets/images/PNG/downborder.png')}
+            />
+          </View>
         </ScrollView>
       </TouchableWithoutFeedback>
-
-      <View style={s.vector}>
-        <Image
-          style={{transform: [{rotate: '180deg'}]}}
-          resizeMode="contain"
-          source={require('../../../assets/images/PNG/Vector.png')}
-        />
-      </View>
 
       <ModalView
         visible={modalVisible}

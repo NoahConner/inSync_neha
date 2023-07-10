@@ -18,24 +18,24 @@ const Choose = ({navigation}) => {
         backgroundColor: backgroundColor,
         flex: 1,
         position: 'relative',
-        paddingHorizontal: moderateScale(30, 0.1),
+       
       }}>
       {/* corner blob */}
 
-      <View style={{position: 'absolute', top: -38, left: 0 , opacity:0.7}}>
+      <View style={{position: 'absolute', top: -38, left: 0, opacity: 0.7}}>
         <Image
-        style={{width:99}}
+          style={{width: 99}}
           resizeMode="contain"
-          source={require('../../../assets/images/PNG/upborder.png')}
+          // source={require('../../../assets/images/PNG/upborder.png')}
         />
       </View>
       <View
         style={{
           position: 'absolute',
           left: moderateScale(18, 0.1),
-          top: moderateScale(50, 0.1),
+          top: moderateScale(40, 0.1),
         }}>
-        <SVGImg1 width={120} height={120} />
+        <SVGImg1 width={130} height={130} />
       </View>
       {/* butterfly */}
       <View
@@ -127,15 +127,21 @@ const Choose = ({navigation}) => {
             </View>
           </View>
         </View>
-      </ScrollView>
-
-      <View style={s.vector}>
+      <View
+        style={{
+          position: 'absolute',
+          right: 0,
+          height: 35,
+          width: 100,
+          bottom: 0,
+        }}>
         <Image
-          style={{width:99 , top:45 , opacity:0.7}}
-          resizeMode="contain"
+          style={{width: '100%', zIndex: -10, opacity: 0.7, height: '100%'}}
+          // resizeMode="contain"
           source={require('../../../assets/images/PNG/downborder.png')}
         />
       </View>
+      </ScrollView>
     </View>
   );
 };
