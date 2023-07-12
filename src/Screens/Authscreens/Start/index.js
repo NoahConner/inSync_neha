@@ -33,7 +33,7 @@ const StartScreen = ({navigation}) => {
           <Image
             style={s.logo}
             // resizeMode="contain"
-            source={require('../../../assets/images/PNG/logo-icon.png')}
+            source={require('../../../assets/images/PNG/logo-icon.jpg')}
           />
         </View>
         {/* <View style={{marginVertical: moderateScale(12, 0.1)}}>

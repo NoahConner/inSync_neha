@@ -36,13 +36,13 @@ const Help = ({navigation}) => {
           paddingHorizontal: moderateScale(30, 0.1),
         }}>
         {/* corner blob */}
-          <View style={{position: 'absolute', top: -38, left: 0 , opacity:0.7}}>
-            <Image
-            style={{width:99}}
-              resizeMode="contain"
-              source={require('../../../../assets/images/PNG/upborder.png')}
-            />
-          </View>
+        <View style={{position: 'absolute', top: -38, left: 0, opacity: 0.7}}>
+          <Image
+            style={{width: 99}}
+            resizeMode="contain"
+            source={require('../../../../assets/images/PNG/upborder.png')}
+          />
+        </View>
 
         {/* butterfly */}
         <View
@@ -114,11 +114,25 @@ const Help = ({navigation}) => {
                 }}>
                 <Text style={s.linkTxt}>
                   For more information email us at :
-                  <Text style={[s.linkTxt, {color: black}]}>
+                  <Text
+                    style={[
+                      s.linkTxt,
+                      {fontFamily: 'Rubik-Bold', color: 'black'},
+                    ]}>
                     abc@example.com
                   </Text>
                 </Text>
-                <Text style={s.linkTxt}>Or contact us at 123-456789-0</Text>
+                <Text style={s.linkTxt}>
+                  Or contact us
+                  <Text
+                    style={[
+                      s.linkTxt,
+                      {fontFamily: 'Rubik-Bold', color: 'black'},
+       
+       ]}>
+                    at 123-456789-0
+                  </Text>
+                </Text>
               </View>
             </View>
             <View style={{}}>
@@ -142,7 +156,7 @@ const Help = ({navigation}) => {
 
         <View style={s.vector}>
           <Image
-             style={{width:99 , top:45 , opacity:0.7}}
+            style={{width: 99, top: 45, opacity: 0.7}}
             resizeMode="contain"
             source={require('../../../../assets/images/PNG/downborder.png')}
           />

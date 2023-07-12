@@ -47,6 +47,15 @@ const Forgot = ({navigation}) => {
           </View>
         </View>
       </View>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('SignUp')}
+        style={s.link}>
+        <Text style={s.Ftxt}>Don’t have an account?</Text>
+        <Text style={[s.Ftxt, {fontFamily: 'Rubik-ExtraBold'}]}>
+          {' '}
+          Sign Up Now
+        </Text>
+      </TouchableOpacity>
 
       <View
         style={{

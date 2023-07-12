@@ -54,7 +54,9 @@ const styles = StyleSheet.create({
   fTxt: {
     justifyContent: 'flex-end',
     alignItems: 'flex-end',
-    fontFamily: robik,
+    fontFamily: 'Robik-Light',
+    fontSize: moderateScale(10, 0.1),
+    paddingHorizontal: moderateScale(10, 0.1),
   },
   btn: {
     justifyContent: 'center',
@@ -69,7 +71,7 @@ const styles = StyleSheet.create({
   },
   SLogin: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     alignSelf: 'center',
   },
   vector1: {

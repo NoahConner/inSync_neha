@@ -356,8 +356,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#D9D9D9',
   },
   radioButtonIcon: {
-    height: moderateScale(10, 0.1),
-    width: moderateScale(10, 0.1),
+    height: moderateScale(16, 0.1),
+    width: moderateScale(16, 0.1),
     borderRadius: moderateScale(10, 0.1),
     alignItems: 'center',
     justifyContent: 'center',

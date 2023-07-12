@@ -54,10 +54,57 @@ const ModalView = ({
           }>
           <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
             {type === 'period' ? (
-              <ImageBackground
-                style={styles.backImg}
-                source={require('../assets/images/rem.jpg')}
-                resizeMode="contain">
+              <View
+                style={{
+                  alignSelf: 'center',
+                  width: moderateScale(324, 0.1),
+                  height: moderateScale(210, 0.1),
+                  backgroundColor: 'white',
+                }}>
+                   <View
+                    style={{
+                      position: 'absolute',
+                      top: moderateScale(65, 0.1),
+                      right: moderateScale(8, 0.1),
+                    }}>
+                    <SVGImg2 width={50} height={50} />
+                  </View>
+                  <View
+                    style={{
+                      position: 'absolute',
+                      // left: moderateScale(10, 0.1),
+                      top: moderateScale(10, 0.1),
+                    }}>
+                    <SVGImg2 width={80} height={80} />
+                  </View>
+                  <View
+                    style={{
+                      position: 'absolute',
+                      left: moderateScale(12, 0.1),
+                      bottom: moderateScale(10, 0.1),
+                    }}>
+                    <SVGImg width={70} height={70} />
+                  </View>
+
+                  {/* left leaf */}
+
+                  {/* left leaf */}
+                  <View
+                    style={{
+                      position: 'absolute',
+                      top: moderateScale(20, 0.1),
+                      right: moderateScale(75, 0.1),
+                    }}>
+                    <SVGImg3 width={32} height={32} />
+                  </View>
+                  <View
+                    style={{
+                      position: 'absolute',
+                      bottom: moderateScale(7, 0.1),
+                      right: moderateScale(6, 0.1),
+                    }}>
+                    <SVGImg1 width={67} height={67} />
+                  </View>
                 <View
                   style={{
                     alignItems: 'center',
@@ -65,6 +112,7 @@ const ModalView = ({
                     height: moderateScale(30, 0.1),
                     marginVertical: moderateScale(10, 0.1),
                   }}>
+                 
                   <View style={{flex: 0.9}}>
                     <Text
                       style={[
@@ -132,7 +180,7 @@ const ModalView = ({
                     {title2}{' '}
                   </Text>
                 </View>
-              </ImageBackground>
+              </View>
             ) : type === 'sync' ? (
               <View
                 style={{

@@ -256,8 +256,14 @@ const Profile = ({navigation}) => {
                   />
                 </TouchableOpacity>
               </View>
-              <View style={{marginTop: moderateScale(-27, 0.1)}}>
-                <Text style={styles.name}>Laura Jenner</Text>
+              <View style={{marginTop: moderateScale(-25, 0.1)}}>
+                <Text style={styles.name}>
+                  Laura
+                  <Text style={[styles.name, {fontFamily: 'Rubik-Light'}]}>
+                    {' '}
+                    Jenner
+                  </Text>
+                </Text>
               </View>
             </View>
             <Text style={styles.name1}>Information</Text>

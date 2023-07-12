@@ -50,11 +50,11 @@ const styles = StyleSheet.create({
     // backgroundColor: 'red',
   },
   linkTxt: {
-    fontSize: moderateScale(8, 0.1),
-    lineHeight: moderateScale(10, 0.1),
+    fontSize: moderateScale(10, 0.1),
+    lineHeight: moderateScale(15, 0.1),
     textAlign: 'center',
-    fontWeight: '300',
-    color: '#919191',
+    fontFamily:'Rubik-Light',
+    color: '#909090',
   },
   center: {
     paddingHorizontal: moderateScale(20, 0.1),

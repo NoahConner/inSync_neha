@@ -58,8 +58,8 @@ const Account = ({
               }}>
               <AntDesign
                 name="user"
-                size={22}
-                color={black}
+                size={20}
+                color= 'black'
                 style={styles.icon}
               />
             </View>
@@ -81,7 +81,7 @@ const Account = ({
               <Icon
                 name="keyboard-arrow-right"
                 size={18}
-                color={black}
+                color= '#7a7a7a'
                 style={styles.icon}
               />
             </TouchableOpacity>
@@ -100,7 +100,7 @@ const Account = ({
               <Icon
                 name="keyboard-arrow-right"
                 size={18}
-                color={black}
+                color= '#7a7a7a'
                 style={styles.icon}
               />
             </TouchableOpacity>
@@ -122,8 +122,8 @@ const Account = ({
               }}>
               <Icon1
                 name="notifications-outline"
-                size={22}
-                color={black}
+                size={20}
+                color= 'black'
                 style={styles.icon}
               />
             </View>
@@ -135,7 +135,12 @@ const Account = ({
             <View style={{flex: 0.6}}>
               <Text style={styles.txt}> {text1} </Text>
             </View>
-            <View style={{flex: 0.4, justifyContent: 'flex-end', alignItems:'flex-end'}}>
+            <View
+              style={{
+                flex: 0.4,
+                justifyContent: 'flex-end',
+                alignItems: 'flex-end',
+              }}>
               <Switch
                 trackColor={{false: '#D9D9D9', true: '#D9D9D9'}}
                 thumbColor={isEnabled1 ? '#006B58' : '#FC0F0F'}
@@ -148,7 +153,12 @@ const Account = ({
             <View style={{flex: 0.6}}>
               <Text style={styles.txt}> {text2} </Text>
             </View>
-            <View style={{flex: 0.4, justifyContent: 'flex-end', alignItems:'flex-end'}}>
+            <View
+              style={{
+                flex: 0.4,
+                justifyContent: 'flex-end',
+                alignItems: 'flex-end',
+              }}>
               <Switch
                 trackColor={{false: '#D9D9D9', true: '#D9D9D9'}}
                 thumbColor={isEnabled2 ? '#006B58' : '#FC0F0F'}
@@ -201,7 +211,7 @@ const Account = ({
               <Icon
                 name="keyboard-arrow-right"
                 size={18}
-                color={black}
+                color= '#7a7a7a'
                 style={styles.icon}
               />
             </TouchableOpacity>
@@ -220,7 +230,7 @@ const Account = ({
               <Icon
                 name="keyboard-arrow-right"
                 size={18}
-                color={black}
+                color= '#7a7a7a'
                 style={styles.icon}
               />
             </TouchableOpacity>
@@ -239,7 +249,7 @@ const Account = ({
               <Icon
                 name="keyboard-arrow-right"
                 size={18}
-                color={black}
+                color= '#7a7a7a'
                 style={styles.icon}
               />
             </TouchableOpacity>

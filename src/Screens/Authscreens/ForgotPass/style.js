@@ -13,15 +13,28 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   backImg: {
-    position: 'absolute',
+    // position: 'absolute',
     backgroundColor: backgroundColor,
     height: screenHeight,
     width: screenWidth,
+  },
+  Ftxt: {
+    color: 'black',
+    fontSize: moderateScale(12, 0.1),
+    fontFamily: 'Rubik-Light',
   },
   center: {
     alignSelf: 'center',
     top: moderateScale(32, 0.1),
     // backgroundColor: 'red',
+  },
+  link: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    paddingVertical: moderateScale(5, 0.1),
+    bottom: moderateScale(50, 0.1),
+    alignSelf: 'center',
+    position: 'absolute',
   },
   txt1: {
     fontSize: moderateScale(24, 0.1),

@@ -107,7 +107,7 @@ const Form = ({navigation}) => {
                 value={last}
                 setValue={v => setLast(v)}
               />
-              <Input placeholder={'DOB'} type={'DOB'} />
+              <Input placeholder={'D.O.B'} type={'DOB'} />
               <Input
                 placeholder={'Cycle Duration'}
                 type={'number'}

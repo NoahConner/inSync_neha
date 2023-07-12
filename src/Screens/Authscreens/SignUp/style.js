@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
   },
   Ftxt: {
     color: 'black',
-    fontSize: moderateScale(13, 0.1),
+    fontSize: moderateScale(12, 0.1),
     fontFamily: 'Rubik-Light',
   },
   SLogin: {

@@ -158,7 +158,10 @@ const SignUp = ({navigation}) => {
         onPress={() => navigation.navigate('Login')}
         style={s.link}>
         <Text style={s.Ftxt}>Already have an account?</Text>
-        <Text style={[s.Ftxt, {fontFamily: 'Rubik-ExtraBold'}]}> Login</Text>
+        <Text style={[s.Ftxt, {fontFamily: 'Rubik-ExtraBold'}]}>
+              {' '}
+              Sign In Now
+            </Text>
       </TouchableOpacity>
       <View style={s.vector}>
         <Image

@@ -84,7 +84,12 @@ const Reminder = ({navigation, route}) => {
                 marginVertical: moderateScale(15, 0.1),
                 marginTop: moderateScale(30, 0.1),
               }}>
-              <Text style={s.txt2}>Add Reminder</Text>
+              <Text style={s.txt2}>
+                {' '}
+                {route?.params?.option == 'edit'
+                  ? 'Update Reminder'
+                  : 'Add Reminder'}{' '}
+              </Text>
             </View>
             <View style={s.input}>
               <Input

@@ -225,7 +225,7 @@ const Notification = ({navigation}) => {
           </View>
           <View style={{justifyContent: 'flex-end', alignItems: 'flex-end'}}>
             {reminder ? (
-              <View
+              <TouchableOpacity
                 style={{
                   flexDirection: 'row',
                   justifyContent: 'space-between',
@@ -233,11 +233,10 @@ const Notification = ({navigation}) => {
                   marginBottom: moderateScale(-30, 0.1),
                   alignItems: 'center',
                   paddingHorizontal: moderateScale(20, 0.1),
-                }}>
-                <TouchableOpacity
-                  onPress={() => navigation.navigate('reminder')}>
-                  <Icon name="md-add" color="black" size={25} />
-                </TouchableOpacity>
+                }}
+                onPress={() => navigation.navigate('reminder')}>
+                {/* <Icon name="md-add" color="black" size={22}  /> */}
+
                 <Text
                   style={{
                     color: black,
@@ -247,9 +246,10 @@ const Notification = ({navigation}) => {
                     // fontWeight: '900',
                     fontFamily: 'Rubik-Bold',
                   }}>
-                  Add Reminder
+                  <Text style={{fontSize: moderateScale(18, 0.1)}}>+</Text> Add
+                  Reminder
                 </Text>
-              </View>
+              </TouchableOpacity>
             ) : null}
           </View>
 

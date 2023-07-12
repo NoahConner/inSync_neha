@@ -29,34 +29,23 @@ const styles = StyleSheet.create({
     width: 60,
   },
   center: {
-    // justifyContent: 'center',
-    // alignItems: 'center',
-    // alignContent: 'center',
     alignSelf: 'center',
-    // top: moderateScale(190, 0.1),
-    // position: 'relative',
   },
   logo: {
-    marginTop: moderateScale(-10, 0.1),
+    alignItems: 'center',
+    justifyContent: 'center',
     marginBottom: moderateScale(10, 0.1),
-    // backgroundColor: 'red',
-    // marginTop: moderateScale(-25, 0.1),
-    // backgroundColor: 'red',
-    height: moderateScale(130, 0.1),
-    width: moderateScale(120, 0.1),
-    // marginLeft: moderateScale(18, 0.1),
+    height: moderateScale(150, 0.1),
+    width: moderateScale(134, 0.1),
   },
   text: {
     marginVertical: moderateScale(-40, 0.1),
-    // backgroundColor: 'blue',
     justifyContent: 'center',
-    // width: moderateScale(100, 0.1),
     height: moderateScale(100, 0.1),
   },
   imgRow1: {
     paddingTop: moderateScale(18, 0.1),
     flexDirection: 'row',
-    // justifyContent: 'space-between',
   },
   imgRow2: {
     flexDirection: 'row',
@@ -64,18 +53,15 @@ const styles = StyleSheet.create({
     left: moderateScale(30, 0.1),
   },
   i4: {
-    // backgroundColor: 'red',
     top: moderateScale(18, 0.1),
   },
   i13: {
     top: moderateScale(18, 0.1),
   },
   i14: {
-    // backgroundColor: 'red',
     left: moderateScale(-43),
   },
   i1: {
-    // position: 'relative',
     alignSelf: 'center',
     top: moderateScale(15, 0.1),
     left: moderateScale(-10, 0.1),

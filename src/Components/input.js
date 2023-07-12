@@ -271,56 +271,6 @@ const Input = ({
         </>
       )}
 
-      {/* {type === 'relation' ||
-        (type === 'hourOptions' && (
-          <SelectDropdown
-            data={
-              type === 'relation'
-                ? relation
-                : type === 'hourOptions'
-                  ? hour
-                  : null
-            }
-            onSelect={(selectedItem, index) => {
-              console.log(selectedItem, index);
-            }}
-            defaultButtonText={placeholder}
-            buttonStyle={[
-              styles.input,
-              {
-                justifyContent: 'space-between',
-                flexDirection: 'row-reverse',
-              },
-              style,
-            ]}
-            rowTextStyle={{
-              fontSize: moderateScale(15, 0.1),
-            }}
-            buttonTextStyle={{
-              color: '#929292',
-              textAlign: 'left',
-              left: moderateScale(10, 0.1),
-              fontSize: moderateScale(13, 0.1),
-            }}
-            renderDropdownIcon={() => {
-              return (
-                <Entypo
-                  name="chevron-down"
-                  size={18}
-                  color={black}
-                  style={[styles.icon, { marginLeft: 5 }]}
-                />
-              );
-            }}
-            buttonTextAfterSelection={(selectedItem, index) => {
-              return selectedItem;
-            }}
-            rowTextForSelection={(item, index) => {
-              return item;
-            }}
-          />
-        ))
-      } */}
       {type == 'relation' || type == 'hourOptions' ? (
         <>
           <SelectDropdown
